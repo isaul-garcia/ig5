@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
+import {
     Name,
     Description,
-    TextWrapper, 
+    TextWrapper,
     HeadText,
     HeadTextDecrease,
     SubText,
@@ -11,37 +11,37 @@ import {
     IgIcon,
     SelfTags,
     IgIconMobile,
-    HeaderContainer 
-    } from './Info.elements'; 
+    HeaderContainer
+} from './Info.elements';
 import Ig from '../../assets/ig_round_d8-01.svg'
 import IgMobile from '../../assets/ig-rectangle.svg'
 
-const Info = ({scrolledDown}) => {
+const Info = ({ scrolledDown }) => {
     return (
         <>
             <HeaderContainer scrolledDown={scrolledDown} />
-                <IconContainer>
-                    <IconWrapper>
-                        <IgIcon src={Ig} onClick={() => {window.scrollTo({top: 0, behavior: "smooth"});}}/>
-                        <IgIconMobile src={IgMobile} onClick={() => {window.scrollTo({top: 0, behavior: "smooth"});}}/>
-                    </IconWrapper>
-                </IconContainer>
-                <Name>
-                    <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Isaúl García</HeadText>              
-                        <HeadTextDecrease scrolledDown={scrolledDown}>Isaúl García</HeadTextDecrease>              
-                    </TextWrapper>
-                </Name>
-                <Description>
-                    <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>A creative developer making detailed interfaces and exploring new interactions.</SubText>
-                    </TextWrapper>
-                </Description>
-                <SelfTags scrolledDown={scrolledDown}>
-                    <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Frontend Developer, Digital Designer, Architect</SubText>
-                    </TextWrapper>
-                </SelfTags>
+            <IconContainer>
+                <IconWrapper>
+                    <IgIcon src={Ig} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
+                    <IgIconMobile src={IgMobile} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
+                </IconWrapper>
+            </IconContainer>
+            <Name>
+                <TextWrapper>
+                    <HeadText scrolledDown={scrolledDown}>Isaúl García</HeadText>
+                    <HeadTextDecrease scrolledDown={scrolledDown}>Isaúl García</HeadTextDecrease>
+                </TextWrapper>
+            </Name>
+            <Description>
+                <TextWrapper>
+                    <SubText scrolledDown={scrolledDown}>A creative developer making detailed interfaces and exploring new interactions.</SubText>
+                </TextWrapper>
+            </Description>
+            <SelfTags scrolledDown={scrolledDown}>
+                <TextWrapper>
+                    <SubText scrolledDown={scrolledDown}>Frontend Developer, Digital Designer, Architect</SubText>
+                </TextWrapper>
+            </SelfTags>
         </>
     )
 }

@@ -17,24 +17,25 @@ import {
     InteractiveSecContainer,
     DigidenSecWrapper,
     ProjNameSection,
-    IndicatorHelper
-    } from './Gallery.elements';
+    IndicatorHelper,
+    SingleVideoHelper
+} from './Gallery.elements';
 
 import Image1 from '../../assets/5digiden-01.png'
 import Image2 from '../../assets/digiden-type.svg'
 
-const Gallery = ({scrolledDown}) => {
+const Gallery = ({ scrolledDown }) => {
     return (
         <>
-            <ProjectContainer>  
-            <IndicatorHelper  id="digiden"/>      
+            <ProjectContainer>
+                <IndicatorHelper id="digiden" />
                 <ProjNameSection scrolledDown={scrolledDown} />
                 <Name>
                     <TextWrapper>
                         <HeadText scrolledDown={scrolledDown}>Digiden</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isauljosue.github.io/digiden/" target="_blank">mock-up ↗</ButtonText>                                    
+                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/digiden/" target="_blank">mock-up ↗</ButtonText>
                     </TextWrapper>
-                </Name>                
+                </Name>
                 <Description>
                     <TextWrapper>
                         <SubText scrolledDown={scrolledDown}>Tech news website prototype.</SubText>
@@ -48,8 +49,9 @@ const Gallery = ({scrolledDown}) => {
 
 
                 <GalleryWrapper>
+                    <SingleVideoHelper />
                     <SSWrapper>
-                        <ImgSS  backdrop={'#dcd5c7'} src={Image1} />
+                        <ImgSS backdrop={'#dcd5c7'} src={Image1} />
                     </SSWrapper>
                     <InteractiveSection>
                         <InteractiveSecContainer customColor={'#fdf9f0'}>
@@ -57,10 +59,10 @@ const Gallery = ({scrolledDown}) => {
                             <IntLogo src={Image2} />
                         </InteractiveSecContainer>
                     </InteractiveSection>
-                    <VideoModule 
-                        giveWidth={'100%'} 
+                    <VideoModule
+                        giveWidth={'100%'}
                         pad={true}
-                        customColor={'#e9e4dc'} 
+                        customColor={'#e9e4dc'}
                         videoURL={'./Videos/digiden1s.mp4'}
                     />
                 </GalleryWrapper>

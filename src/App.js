@@ -12,26 +12,26 @@ function App() {
         families: ['Inter']
       }
     });
-   }, []);
-   
-   const [scrolledDown, setNavbar] = useState(false);
-    
-   const changeBackground = () => {
-       if (window.scrollY >= 200) {
-           setNavbar(true);
-       } else {
-           setNavbar(false);
-       }
-   };
-   
-   window.addEventListener('scroll', changeBackground);
+  }, []);
+
+  const [scrolledDown, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 200) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
 
   return (
     <Router>
-      <GlobalStyle/>
-        <Switch>
-          <Route path="/" render={(props) => <Home scrolledDown={scrolledDown} {...props} />} />
-        </Switch>
+      <GlobalStyle />
+      <Switch>
+        <Route path="/" render={(props) => <Home scrolledDown={scrolledDown} {...props} />} />
+      </Switch>
     </Router>
   );
 }

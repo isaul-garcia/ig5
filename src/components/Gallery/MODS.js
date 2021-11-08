@@ -13,7 +13,7 @@ import {
     TextWrapper,
     HeadText,
     SubText,
-    } from './Gallery.elements';
+} from './Gallery.elements';
 
 import Image1 from '../../assets/mods1.jpg'
 import Image2 from '../../assets/mods16.png'
@@ -24,13 +24,13 @@ import Image8 from '../../assets/mods18.png'
 import Image9 from '../../assets/mods19.png'
 import Image10 from '../../assets/mods20.png'
 
-const Gallery = ({scrolledDown}) => {
+const Gallery = ({ scrolledDown }) => {
     return (
         <>
             <ProjectContainer>
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>MODs</HeadText>              
+                        <HeadText scrolledDown={scrolledDown}>MODs</HeadText>
                     </TextWrapper>
                 </Name>
                 <Description>

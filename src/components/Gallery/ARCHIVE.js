@@ -13,23 +13,23 @@ import {
     OtherTextWrapper,
     OtherText,
     OtherTag
-    } from './Gallery.elements';
+} from './Gallery.elements';
 
 import Image1 from '../../assets/sq_roca.png'
 import Image2 from '../../assets/graphx-nav-sq.png'
 import Image3 from '../../assets/mods19bc3.jpg'
 import Image4 from '../../assets/sq_sw.png'
 
-const Gallery = ({scrolledDown}) => {
+const Gallery = ({ scrolledDown }) => {
     return (
         <>
-            <ProjectContainer>        
+            <ProjectContainer>
                 <ProjNameSection scrolledDown={scrolledDown} />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Other Work</HeadText>                                  
+                        <HeadText scrolledDown={scrolledDown}>Other Work</HeadText>
                     </TextWrapper>
-                </Name>                
+                </Name>
                 <Description>
                     <TextWrapper>
                         <SubText scrolledDown={scrolledDown}></SubText>
@@ -42,7 +42,7 @@ const Gallery = ({scrolledDown}) => {
                 </Tags>
 
 
-                <GalleryWrapper>    
+                <GalleryWrapper>
                     <OtherTextWrapper>
                         <OtherText>Someware</OtherText>
                         <OtherTag>Experimenting on the phygital web.</OtherTag>
@@ -51,8 +51,8 @@ const Gallery = ({scrolledDown}) => {
                         <OtherText>MODs</OtherText>
                         <OtherTag>Modular urban intervention for the future of smart cities.</OtherTag>
                     </OtherTextWrapper>
-                    <OtherWorkImg justMobile={true} src={Image4} /> 
-                    <OtherWorkImg justMobile={true} src={Image3} /> 
+                    <OtherWorkImg justMobile={true} src={Image4} />
+                    <OtherWorkImg justMobile={true} src={Image3} />
                     <OtherTextWrapper>
                         <OtherText>Roca School</OtherText>
                         <OtherTag>Parametrically designed elementary school.</OtherTag>
@@ -61,10 +61,10 @@ const Gallery = ({scrolledDown}) => {
                         <OtherText>Artwork</OtherText>
                         <OtherTag>I also like to draw and make digital art.</OtherTag>
                     </OtherTextWrapper>
-                    <OtherWorkImg justDesktop={true} src={Image4} /> 
-                    <OtherWorkImg justDesktop={true} src={Image3} /> 
-                    <OtherWorkImg src={Image1} /> 
-                    <OtherWorkImg src={Image2} /> 
+                    <OtherWorkImg justDesktop={true} src={Image4} />
+                    <OtherWorkImg justDesktop={true} src={Image3} />
+                    <OtherWorkImg src={Image1} />
+                    <OtherWorkImg src={Image2} />
                 </GalleryWrapper>
 
             </ProjectContainer>

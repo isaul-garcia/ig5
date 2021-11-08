@@ -11,7 +11,7 @@ import {
     TextWrapper,
     HeadText,
     SubText,
-    } from './Gallery.elements';
+} from './Gallery.elements';
 
 import Image1 from '../../assets/roca1.jpg'
 import Image3 from '../../assets/roca6.png'
@@ -21,14 +21,14 @@ import Image6 from '../../assets/roca4.jpg'
 import Image8 from '../../assets/roca5B.png'
 import Image9 from '../../assets/roca9.jpg'
 
-const Gallery = ({scrolledDown}) => {
+const Gallery = ({ scrolledDown }) => {
 
     return (
         <>
             <ProjectContainer>
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>ROCA Escuela Elemental</HeadText>              
+                        <HeadText scrolledDown={scrolledDown}>ROCA Escuela Elemental</HeadText>
                     </TextWrapper>
                 </Name>
                 <Description>

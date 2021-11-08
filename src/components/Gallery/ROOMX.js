@@ -13,42 +13,42 @@ import {
     SingleVideoHelper,
     ProjNameSection,
     IndicatorHelper
-    } from './Gallery.elements';
+} from './Gallery.elements';
 
-const Gallery = ({scrolledDown}) => { 
+const Gallery = ({ scrolledDown }) => {
 
-    return ( 
+    return (
         <>
-            
+
             <ProjectContainer>
-            <IndicatorHelper  id="roomx"/>
+                <IndicatorHelper id="roomx" />
                 <ProjNameSection scrolledDown={scrolledDown} />
-                    <Name>
-                        <TextWrapper>
-                            <HeadText scrolledDown={scrolledDown}>Room X</HeadText> 
-                            <ButtonText scrolledDown={scrolledDown} href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">link ↗</ButtonText>              
-                        </TextWrapper>
-                    </Name>
-                    <Description>
-                        <TextWrapper>
-                            <SubText scrolledDown={scrolledDown}>My quarantined reality.</SubText>
-                        </TextWrapper>
-                    </Description>
-                    <Tags>
-                        <TextWrapper>
-                            <SubText scrolledDown={scrolledDown}>Artwork</SubText>
-                        </TextWrapper>
-                    </Tags>
+                <Name>
+                    <TextWrapper>
+                        <HeadText scrolledDown={scrolledDown}>Room X</HeadText>
+                        <ButtonText scrolledDown={scrolledDown} href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">link ↗</ButtonText>
+                    </TextWrapper>
+                </Name>
+                <Description>
+                    <TextWrapper>
+                        <SubText scrolledDown={scrolledDown}>My quarantined reality.</SubText>
+                    </TextWrapper>
+                </Description>
+                <Tags>
+                    <TextWrapper>
+                        <SubText scrolledDown={scrolledDown}>Artwork</SubText>
+                    </TextWrapper>
+                </Tags>
 
                 <GalleryWrapper>
                     <SingleVideoHelper />
-                    <VideoModule 
+                    <VideoModule
                         giveWidth={'100%'}
                         giveHeight={'80vh'}
                         fill={true}
                         customColor={'#a8a8a8'}
                         videoURL={'./Videos/roomx1s.mp4'}
-                    />   
+                    />
                 </GalleryWrapper>
             </ProjectContainer>
         </>

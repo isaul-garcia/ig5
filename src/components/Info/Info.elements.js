@@ -64,7 +64,7 @@ export const SelfTags = styled(Boxed)`
         margin-left: 0; 
         margin-top: 3em;
         padding-top: 1.7em;
-        border-top: ${({scrolledDown}) => (scrolledDown ? '1px solid #000' : '1px solid #333')};
+        border-top: ${({ scrolledDown }) => (scrolledDown ? '1px solid #000' : '1px solid #333')};
     }
 `
 
@@ -134,8 +134,8 @@ export const TextWrapper = styled.span`
     display: inline-block;
     pointer-events: all;
     padding: 0 4em 0 0.5vh;
-    background-color: ${({backColor}) => (backColor)};
-    color: ${({textColor}) => (textColor)};
+    background-color: ${({ backColor }) => (backColor)};
+    color: ${({ textColor }) => (textColor)};
 
     @media screen and (max-width: 991px) {
         padding: 0 0 0 0;
@@ -157,7 +157,7 @@ export const HeadText = styled.h1`
     line-height: 0.75em;
     margin-top: -0.42em;
     margin-left: -0.1em;
-    opacity: ${({scrolledDown}) => (scrolledDown ? '0' : '1')};
+    opacity: ${({ scrolledDown }) => (scrolledDown ? '0' : '1')};
 
     @media screen and (max-width: 991px) {
         margin-top: -0.1em;
@@ -177,7 +177,7 @@ export const HeadTextDecrease = styled.h1`
     font-weight: 700;
     line-height: 1em;    
     margin-top: -0.65em;
-    opacity: ${({scrolledDown}) => (scrolledDown ? '1' : '0')};
+    opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
 
     @media screen and (max-width: 991px) {
         font-size: 1.9em;
@@ -204,7 +204,7 @@ export const SubText = styled.h4`
         font-size: 1.1em;
         padding: 0em;
         margin-left: 0.8em;
-        color: ${({scrolledDown}) => (scrolledDown ? '#000' : '')};
+        color: ${({ scrolledDown }) => (scrolledDown ? '#000' : '')};
     }
 `
 
@@ -215,8 +215,8 @@ export const EndText = styled.a`
     letter-spacing: 0;
     line-height: 1.25em; 
     transition: all .2s ease-in-out;
-    color: ${({darken}) => (darken ? '#888' : '')};
-    pointer-events: ${({darken}) => (darken ? 'none' : '')};
+    color: ${({ darken }) => (darken ? '#888' : '')};
+    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
     text-decoration: none;
 
     @media screen and (max-width: 1500px) {
@@ -230,7 +230,7 @@ export const EndText = styled.a`
         font-weight: 500;
         padding: 0em;
         margin-left: 0.8em;
-        color: ${({darken}) => (darken ? '#555' : '#bfbfbf')};
+        color: ${({ darken }) => (darken ? '#555' : '#bfbfbf')};
     }
 `
 
@@ -243,7 +243,7 @@ export const HeaderContainer = styled.div`
 
     @media screen and (max-width: 991px) {
         height: 25em;
-        background-color: ${({scrolledDown}) => (scrolledDown ? '#000' : '#111')};
+        background-color: ${({ scrolledDown }) => (scrolledDown ? '#000' : '#111')};
         border-radius: 0.5em;
         margin: 0.2em;
         margin-bottom: -25em;

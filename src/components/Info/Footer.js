@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
     EndText,
     FooterTextContainer,
     AliasesContainer,
@@ -7,7 +7,7 @@ import {
     AliasesIcons,
     Footer,
     EmailText,
-    } from './Info.elements';  
+} from './Info.elements';
 
 import Alias from '../../assets/alias_line_light-01.svg'
 
@@ -19,7 +19,7 @@ const Info = () => {
                     <EndText darken={true}>isaulgarcia@protonmail.com</EndText>
                 </EmailText>
                 <FooterTextContainer>
-                    <EndText href="https://github.com/isauljosue" target="_blank">Github</EndText>
+                    <EndText href="https://github.com/isaul-garcia" target="_blank">Github</EndText>
                 </FooterTextContainer>
                 <AliasesContainer>
                     <IconWrapper>

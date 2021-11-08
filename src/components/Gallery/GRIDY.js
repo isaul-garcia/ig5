@@ -11,17 +11,12 @@ import {
     SSWrapper,
     ImgSS,
     ButtonText,
-    InteractiveSection,
-    InteractiveSecContainer,
-    InteractiveSecWrapper,
-    LomaLogo,
+    SingleVideoHelper,
     ProjNameSection,
     IndicatorHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/loma-website02.jpg'
-import Image2 from '../../assets/loma-website03.jpg'
-import Image3 from '../../assets/loma3.png'
+import Image1 from '../../assets/gridy-ss.jpg'
 
 const Gallery = ({ scrolledDown }) => {
 
@@ -32,13 +27,13 @@ const Gallery = ({ scrolledDown }) => {
                 <ProjNameSection scrolledDown={scrolledDown} />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Loma</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/loma/" target="_blank">mock-up ↗</ButtonText>
+                        <HeadText scrolledDown={scrolledDown}>Gridy</HeadText>
+                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/gridy-spotify/" target="_blank">link ↗</ButtonText>
                     </TextWrapper>
                 </Name>
                 <Description>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Customizable product website prototype.</SubText>
+                        <SubText scrolledDown={scrolledDown}>An artworks grid from your currently listening playlist.</SubText>
                     </TextWrapper>
                 </Description>
                 <Tags>
@@ -48,18 +43,9 @@ const Gallery = ({ scrolledDown }) => {
                 </Tags>
 
                 <GalleryWrapper>
-                    <SSWrapper>
-                        <ImgSS backdrop={'#bdbdbd'} src={Image1} />
-                    </SSWrapper>
-                    <InteractiveSection>
-                        <InteractiveSecContainer customColor={'#1a1a1a'}>
-                            <InteractiveSecWrapper>
-                                <LomaLogo src={Image3} />
-                            </InteractiveSecWrapper>
-                        </InteractiveSecContainer>
-                    </InteractiveSection>
+                    <SingleVideoHelper style={{ width: "89vw" }}/>
                     <SSWrapper fill100={true}>
-                        <ImgSS backdrop={'#111'} src={Image2} />
+                        <ImgSS backdrop={'#131313'} src={Image1}  style={{ border: "1px solid #333" }}/>
                     </SSWrapper>
                 </GalleryWrapper>
             </ProjectContainer>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { VideoModule } from '..';
 import {
     ProjectContainer,
@@ -20,7 +20,7 @@ import {
     ImgSS,
     ProjNameSection,
     IndicatorHelper
-    } from './Gallery.elements';
+} from './Gallery.elements';
 
 import Image1 from '../../assets/markado-home-b.jpg'
 import Image2 from '../../assets/mrkd5.jpg'
@@ -30,33 +30,33 @@ import Image5 from '../../assets/t-car1.png'
 import Image6 from '../../assets/t-comp1.png'
 import Image7 from '../../assets/t-sofa1.png'
 
-const Gallery = ({scrolledDown}) => {    
-  const [isColorAccent, setIsColorAccent] = useState('#79e8b6');
+const Gallery = ({ scrolledDown }) => {
+    const [isColorAccent, setIsColorAccent] = useState('#79e8b6');
     return (
         <>
             <ProjectContainer>
-            <IndicatorHelper  id="markado"/>
+                <IndicatorHelper id="markado" />
                 <ProjNameSection scrolledDown={scrolledDown} />
-                    <Name>
-                        <TextWrapper>
-                            <HeadText scrolledDown={scrolledDown}>Markado</HeadText>
-                            <ButtonText scrolledDown={scrolledDown} href="https://isauljosue.github.io/markado/" target="_blank">mock-up ↗</ButtonText>                                    
-                        </TextWrapper>
-                    </Name>
-                    <Description>
-                        <TextWrapper>
-                            <SubText scrolledDown={scrolledDown}>E-Commerce website prototype.</SubText>
-                        </TextWrapper>
-                    </Description>
-                    <Tags>
-                        <TextWrapper>
-                            <SubText scrolledDown={scrolledDown}>Front End Development</SubText>
-                        </TextWrapper>
-                    </Tags>
+                <Name>
+                    <TextWrapper>
+                        <HeadText scrolledDown={scrolledDown}>Markado</HeadText>
+                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/markado/" target="_blank">mock-up ↗</ButtonText>
+                    </TextWrapper>
+                </Name>
+                <Description>
+                    <TextWrapper>
+                        <SubText scrolledDown={scrolledDown}>E-Commerce website prototype.</SubText>
+                    </TextWrapper>
+                </Description>
+                <Tags>
+                    <TextWrapper>
+                        <SubText scrolledDown={scrolledDown}>Front End Development</SubText>
+                    </TextWrapper>
+                </Tags>
 
                 <GalleryWrapper>
                     <SSWrapper>
-                        <ImgSS  backdrop={'#a7caff'} src={Image1} />
+                        <ImgSS backdrop={'#a7caff'} src={Image1} />
                     </SSWrapper>
                     <Img33100 src={Image2} />
                     <DivisorSection>
@@ -69,12 +69,12 @@ const Gallery = ({scrolledDown}) => {
                             </DivisorWrapper>
                         </DivisorContainer>
                     </DivisorSection>
-                    <Img50 src={Image3} /> 
-                    <VideoModule 
-                        giveWidth={'50%'} 
+                    <Img50 src={Image3} />
+                    <VideoModule
+                        giveWidth={'50%'}
                         pad={true}
                         giveHeight={'77vh'}
-                        customColor={'#e7e789'} 
+                        customColor={'#e7e789'}
                         videoURL={'./Videos/markado2s.mp4'}
                     />
                 </GalleryWrapper>
