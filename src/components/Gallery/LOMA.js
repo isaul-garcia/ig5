@@ -19,7 +19,7 @@ import {
     IndicatorHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/loma-website02.jpg'
+import Image1 from '../../assets/loma-website02B.jpg'
 import Image2 from '../../assets/loma-website03.jpg'
 import Image3 from '../../assets/loma3.png'
 

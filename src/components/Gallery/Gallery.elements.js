@@ -651,3 +651,30 @@ export const OtherText = styled.h4`
 export const OtherTag = styled(OtherText)`
     color: #797979;
 `
+
+export const OtherId = styled.a`
+    font-size: 1.2em;
+    color:  ${({ isLink }) => ( isLink ? '#797979' : '#000')};
+    background-color: ${({ isLink }) => ( isLink ? '#000' : '#797979')};
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.25em;
+    margin-top: 0.20em;
+    transition: all .3s ease-in-out;
+    padding: 0.2em 0.5em;
+    border-radius: 1em;
+    display: inline-block;
+    cursor: ${({ isLink }) => ( isLink ? 'pointer' : 'default')};
+    text-decoration: none;
+    border: ${({ isLink }) => ( isLink ? '1px solid #797979' : '')};
+
+    &:hover {
+        color: ${({ isLink }) => ( isLink ? '#000' : '')};
+        background-color: ${({ isLink }) => ( isLink ? '#959595' : '')};
+    }
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 1.1em;
+        line-height: 1.1em;
+    }
+`

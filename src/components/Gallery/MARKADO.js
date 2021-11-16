@@ -1,11 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { VideoModule } from '..';
 import {
     ProjectContainer,
     GalleryWrapper,
-    DivisorSection,
-    DivisorContainer,
-    DivisorWrapper,
     Img50,
     Img33100,
     Name,
@@ -15,7 +12,6 @@ import {
     HeadText,
     SubText,
     ButtonText,
-    Mimg,
     SSWrapper,
     ImgSS,
     ProjNameSection,
@@ -25,13 +21,8 @@ import {
 import Image1 from '../../assets/markado-home-b.jpg'
 import Image2 from '../../assets/mrkd5.jpg'
 import Image3 from '../../assets/5markado-03.png'
-import Image4 from '../../assets/t-house1.png'
-import Image5 from '../../assets/t-car1.png'
-import Image6 from '../../assets/t-comp1.png'
-import Image7 from '../../assets/t-sofa1.png'
 
 const Gallery = ({ scrolledDown }) => {
-    const [isColorAccent, setIsColorAccent] = useState('#79e8b6');
     return (
         <>
             <ProjectContainer>
@@ -59,16 +50,6 @@ const Gallery = ({ scrolledDown }) => {
                         <ImgSS backdrop={'#a7caff'} src={Image1} />
                     </SSWrapper>
                     <Img33100 src={Image2} />
-                    <DivisorSection>
-                        <DivisorContainer accentColor={isColorAccent}>
-                            <DivisorWrapper>
-                                <Mimg onMouseEnter={() => setIsColorAccent('#a8a1ff')} onMouseLeave={() => setIsColorAccent('#79e8b6')} src={Image4} />
-                                <Mimg onMouseEnter={() => setIsColorAccent('#5397ff')} onMouseLeave={() => setIsColorAccent('#79e8b6')} src={Image5} />
-                                <Mimg onMouseEnter={() => setIsColorAccent('#fa8c4c')} onMouseLeave={() => setIsColorAccent('#79e8b6')} src={Image6} />
-                                <Mimg onMouseEnter={() => setIsColorAccent('#d5d736')} onMouseLeave={() => setIsColorAccent('#79e8b6')} src={Image7} />
-                            </DivisorWrapper>
-                        </DivisorContainer>
-                    </DivisorSection>
                     <Img50 src={Image3} />
                     <VideoModule
                         giveWidth={'50%'}

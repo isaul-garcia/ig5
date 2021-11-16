@@ -26,6 +26,7 @@ export const Name = styled(Boxed)`
     top: 3.75vh;
     mix-blend-mode: difference;
     z-index: 999;
+    pointer-events: none;
 
     @media screen and (max-width: 991px) {
         position: fixed;
@@ -72,7 +73,7 @@ export const FooterTextContainer = styled(Boxed)`
     width: 5em;
     height: 29px;
     margin-top: 22vh;
-    margin-bottom: 4.2vh;
+    margin-bottom: 2.2vh;
     margin-right: 2em;
     vertical-align: bottom;
     transition: all .2s ease-in-out;
@@ -113,7 +114,7 @@ export const FooterTextContainer = styled(Boxed)`
 `
 
 export const EmailText = styled(FooterTextContainer)`
-    cursor: default;
+    cursor: text;
 
     &:hover{
         border-left: 0px solid #000;

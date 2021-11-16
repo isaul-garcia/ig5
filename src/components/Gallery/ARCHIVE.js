@@ -12,7 +12,9 @@ import {
     OtherWorkImg,
     OtherTextWrapper,
     OtherText,
-    OtherTag
+    OtherTag,
+    OtherId,
+    ButtonText
 } from './Gallery.elements';
 
 import Image1 from '../../assets/sq_roca.png'
@@ -46,16 +48,20 @@ const Gallery = ({ scrolledDown }) => {
                     <OtherTextWrapper>
                         <OtherText>Someware</OtherText>
                         <OtherTag>Experimenting on the phygital web.</OtherTag>
+                        <OtherId>MA</OtherId>
+                        <OtherId isLink={true} href="https://isauljosue.gitlab.io/isaul.garcia/" target="_blank">Repo ↗</OtherId>
                     </OtherTextWrapper>
                     <OtherTextWrapper>
                         <OtherText>MODs</OtherText>
                         <OtherTag>Modular urban intervention for the future of smart cities.</OtherTag>
+                        <OtherId>BA</OtherId>
                     </OtherTextWrapper>
                     <OtherWorkImg justMobile={true} src={Image4} />
                     <OtherWorkImg justMobile={true} src={Image3} />
                     <OtherTextWrapper>
                         <OtherText>Roca School</OtherText>
                         <OtherTag>Parametrically designed elementary school.</OtherTag>
+                        <OtherId>BA</OtherId>
                     </OtherTextWrapper>
                     <OtherTextWrapper>
                         <OtherText>Artwork</OtherText>

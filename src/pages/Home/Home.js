@@ -23,6 +23,7 @@ const Home = ({ scrolledDown }) => {
                 <DIGIDEN scrolledDown={scrolledDown} />
                 <LOMA scrolledDown={scrolledDown} />
                 <EARTH scrolledDown={scrolledDown} />
+                <GRIDY scrolledDown={scrolledDown} />
                 <MARKADO scrolledDown={scrolledDown} />
                 <ROOMX scrolledDown={scrolledDown} />
                 <ARCHIVE scrolledDown={scrolledDown} />

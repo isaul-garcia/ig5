@@ -34,12 +34,12 @@ const Info = ({ scrolledDown }) => {
             </Name>
             <Description>
                 <TextWrapper>
-                    <SubText scrolledDown={scrolledDown}>A creative developer making detailed interfaces and exploring new interactions.</SubText>
+                    <SubText scrolledDown={scrolledDown}>A creative developer building software solutions and exploring new interactions.</SubText>
                 </TextWrapper>
             </Description>
             <SelfTags scrolledDown={scrolledDown}>
                 <TextWrapper>
-                    <SubText scrolledDown={scrolledDown}>Frontend Developer, Digital Designer, Architect</SubText>
+                    <SubText scrolledDown={scrolledDown}>Frontend Developer, Designer</SubText>
                 </TextWrapper>
             </SelfTags>
         </>
