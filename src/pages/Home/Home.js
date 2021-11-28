@@ -9,7 +9,8 @@ import {
     EARTH,
     DIGIDEN,
     ARCHIVE,
-    GRIDY
+    GRIDY,
+    ANAQUEL
 } from '../../components';
 import { Container } from '../../globalStyles';
 
@@ -25,6 +26,7 @@ const Home = ({ scrolledDown }) => {
                 <EARTH scrolledDown={scrolledDown} />
                 <GRIDY scrolledDown={scrolledDown} />
                 <MARKADO scrolledDown={scrolledDown} />
+                <ANAQUEL scrolledDown={scrolledDown} />
                 <ROOMX scrolledDown={scrolledDown} />
                 <ARCHIVE scrolledDown={scrolledDown} />
                 <Footer />

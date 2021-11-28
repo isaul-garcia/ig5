@@ -31,12 +31,12 @@ const Gallery = ({ scrolledDown }) => {
                 </Name>
                 <Description>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>My quarantined reality.</SubText>
+                        <SubText scrolledDown={scrolledDown}>My quarantined reality. Merging my digital and physical life.</SubText>
                     </TextWrapper>
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Artwork</SubText>
+                        <SubText scrolledDown={scrolledDown}>Artwork, Javascript</SubText>
                     </TextWrapper>
                 </Tags>
 

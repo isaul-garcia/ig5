@@ -23,7 +23,7 @@ const Gallery = ({ scrolledDown }) => {
     return (
         <>
             <ProjectContainer>
-                <IndicatorHelper id="loma" />
+                <IndicatorHelper id="gridy" />
                 <ProjNameSection scrolledDown={scrolledDown} />
                 <Name>
                     <TextWrapper>
@@ -33,12 +33,12 @@ const Gallery = ({ scrolledDown }) => {
                 </Name>
                 <Description>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>An artworks grid from your currently listening playlist.</SubText>
+                        <SubText scrolledDown={scrolledDown}>Generate covers grid from your currently listening playlist.</SubText>
                     </TextWrapper>
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Front End Development</SubText>
+                        <SubText scrolledDown={scrolledDown}>Front End Development, Spotify API, Axios</SubText>
                     </TextWrapper>
                 </Tags>
 

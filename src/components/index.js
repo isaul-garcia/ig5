@@ -14,4 +14,5 @@ export { default as EARTH } from './Gallery/EARTH';
 export { default as DIGIDEN } from './Gallery/DIGIDEN';
 export { default as ARCHIVE } from './Gallery/ARCHIVE';
 export { default as GRIDY } from './Gallery/GRIDY';
+export { default as ANAQUEL } from './Gallery/ANAQUEL';
 export { default as VideoModule } from './Gallery/VideoModule';

@@ -8,59 +8,57 @@ import {
     TextWrapper,
     HeadText,
     SubText,
+    ButtonText,
     SSWrapper,
     ImgSS,
-    ButtonText,
     InteractiveSection,
     InteractiveSecContainer,
     InteractiveSecWrapper,
-    LomaLogo,
+    AnaquelLogo,
     ProjNameSection,
-    IndicatorHelper
+    IndicatorHelper,
+    SingleVideoHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/loma-website02B.jpg'
-import Image2 from '../../assets/loma-website03.jpg'
-import Image3 from '../../assets/loma3.png'
+import Image2 from '../../assets/anaquel-ss.jpg'
+import Image3 from '../../assets/anaquel-logos-03.svg'
 
 const Gallery = ({ scrolledDown }) => {
 
     return (
         <>
             <ProjectContainer>
-                <IndicatorHelper id="loma" />
+                <IndicatorHelper id="anaquel" />
                 <ProjNameSection scrolledDown={scrolledDown} />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Loma</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/loma/" target="_blank">mock-up ↗</ButtonText>
+                        <HeadText scrolledDown={scrolledDown}>Anaquel</HeadText>
+                        <ButtonText scrolledDown={scrolledDown} disabled={true}>WIP</ButtonText>
                     </TextWrapper>
                 </Name>
                 <Description>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Customizable product website prototype.</SubText>
+                        <SubText scrolledDown={scrolledDown}>Bookmark manager and Chrome extension.</SubText>
                     </TextWrapper>
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Front End Development, Three.js, React Color</SubText>
+                        <SubText scrolledDown={scrolledDown}>Front End Development</SubText>
                     </TextWrapper>
                 </Tags>
 
                 <GalleryWrapper>
+                    <SingleVideoHelper style={{ width: "89vw" }}/>
                     <SSWrapper>
-                        <ImgSS backdrop={'#bdbdbd'} src={Image1} />
+                        <ImgSS backdrop={'#aaa'} src={Image2} />
                     </SSWrapper>
                     <InteractiveSection>
-                        <InteractiveSecContainer customColor={'#1a1a1a'}>
+                        <InteractiveSecContainer customColor={'#22cf'}>
                             <InteractiveSecWrapper>
-                                <LomaLogo src={Image3} />
+                                <AnaquelLogo src={Image3} />
                             </InteractiveSecWrapper>
                         </InteractiveSecContainer>
                     </InteractiveSection>
-                    <SSWrapper fill100={true}>
-                        <ImgSS backdrop={'#111'} src={Image2} />
-                    </SSWrapper>
                 </GalleryWrapper>
             </ProjectContainer>
         </>

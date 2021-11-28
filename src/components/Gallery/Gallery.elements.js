@@ -184,7 +184,6 @@ export const ButtonText = styled.a`
     line-height: 4em;
     width: 4.5em;
     padding: 0.3em 0.4em 0.4em 0.4em;
-    color: #d8d8d8;
     font-weight: 400; 
     transition: all .3s ease-in-out;
     border: 1px solid #d8d8d8;
@@ -192,6 +191,8 @@ export const ButtonText = styled.a`
     cursor: pointer;
     margin-left: 1px;
     opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
+    background-color: ${({ disabled }) => (disabled ? 'rgba(216,216,216,1)' : '')};
+    color: ${({ disabled }) => (disabled ? '#000' : '#d8d8d8')};
 
     &:hover{
         background-color: rgba(216,216,216,1);
@@ -609,6 +610,20 @@ export const LomaLogo = styled(IntLogo)`
 export const EarthLogo = styled(IntLogo)`
     padding: 0 20%;
     top: 28.5%;
+    pointer-events: all;
+
+    &:hover:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    @media screen and (max-width: 991px) {
+        top: 12%;
+    }
+`
+
+export const AnaquelLogo = styled(IntLogo)`
+    padding: 0 20%;
+    top: 42%;
     pointer-events: all;
 
     &:hover:nth-child(2) {

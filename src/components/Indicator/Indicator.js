@@ -32,12 +32,14 @@ const Indicator = () => {
             </ProgressBarContainer>
             <Container>
                 {/* they must have a summation of 92vh */}
-                <IndicatorBlockHash lenght={'3.7vh'} highlight={'#d8d8d8'} smooth to="#top" />
-                <IndicatorBlockHash lenght={'18.1vh'} highlight={'#d8d8d8'} smooth to="#digiden" />
-                <IndicatorBlockHash lenght={'18.1vh'} highlight={'#d8d8d8'} smooth to="#loma" />
-                <IndicatorBlockHash lenght={'18.1vh'} highlight={'#d8d8d8'} smooth to="#earth" />
-                <IndicatorBlockHash lenght={'23.2vh'} highlight={'#d8d8d8'} smooth to="#markado" />
-                <IndicatorBlockHash lenght={'10.8vh'} highlight={'#d8d8d8'} smooth to="#roomx" />
+                <IndicatorBlockHash lenght={'3vh'} highlight={'#d8d8d8'} smooth to="#top" />
+                <IndicatorBlockHash lenght={'15.6vh'} highlight={'#d8d8d8'} smooth to="#digiden" />
+                <IndicatorBlockHash lenght={'15.6vh'} highlight={'#d8d8d8'} smooth to="#loma" />
+                <IndicatorBlockHash lenght={'15.6vh'} highlight={'#d8d8d8'} smooth to="#earth" />
+                <IndicatorBlockHash lenght={'8.6vh'} highlight={'#d8d8d8'} smooth to="#gridy" />
+                <IndicatorBlockHash lenght={'15.6vh'} highlight={'#d8d8d8'} smooth to="#markado" />
+                <IndicatorBlockHash lenght={'8.6vh'} highlight={'#d8d8d8'} smooth to="#anaquel" />
+                <IndicatorBlockHash lenght={'9.4vh'} highlight={'#d8d8d8'} smooth to="#roomx" />
                 <IndicatorBlockHash lenght={'0vh'} last={true} />
             </Container>
         </>
