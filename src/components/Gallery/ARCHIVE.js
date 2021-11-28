@@ -14,7 +14,6 @@ import {
     OtherText,
     OtherTag,
     OtherId,
-    ButtonText
 } from './Gallery.elements';
 
 import Image1 from '../../assets/sq_roca.png'
