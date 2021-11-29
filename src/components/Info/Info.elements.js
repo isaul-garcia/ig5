@@ -317,7 +317,7 @@ export const IgIconMobile = styled(IgIcon)`
 //aliases
 
 export const AliasesContainer = styled(IconContainer)`
-    width: 9em;
+    width: 26em;
     position: relative;
     margin-right: 0vh;
     margin-top: 22.25vh;
@@ -333,7 +333,7 @@ export const AliasesContainer = styled(IconContainer)`
 
 export const AliasesIcons = styled(IgIcon)`
     vertical-align: bottom;
-    max-height: 34px;
+    max-height: 21px;
     max-width: 1300px;
     pointer-events: none;
 `

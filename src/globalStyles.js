@@ -88,7 +88,7 @@ export const Container = styled.div`
     margin-right: 3.5vh;
     margin-top: 4vh;
     padding-top: 4vh;
-    margin-bottom: 3.9vh;
+    margin-bottom: 4vh;
     border-bottom: 1px solid #d8d8d8;
     border-top: 1px solid #d8d8d8;
     z-index: 1;

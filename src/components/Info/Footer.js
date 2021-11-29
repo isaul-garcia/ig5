@@ -9,7 +9,7 @@ import {
     EmailText,
 } from './Info.elements';
 
-import Alias from '../../assets/alias_line_light-01.svg'
+import Alias from '../../assets/alias_line_light-03-01.svg'
 
 const Info = () => {
     return (

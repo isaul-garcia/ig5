@@ -18,7 +18,6 @@ export const ProjectContainer = styled.div`
     position: relative;
     overflow-x: none;
     
-
     @media screen and (max-width: 991px) {
         margin-top: 5px;
     }
@@ -32,7 +31,7 @@ export const ProjNameSection = styled.div`
         margin: 4px;
         margin-bottom: 9px;
         border-radius: 0.6em 0.6em 0 0;
-        height: 9.7em;
+        height: 10.7em;
         margin-bottom: -8.5em;
     }
 `
@@ -87,7 +86,7 @@ export const Description = styled(Boxed)`
     @media screen and (max-width: 991px){
         width: 100%;
         text-align: right;
-        margin-top: -50px;
+        margin-top: -55px;
         padding-right: 0;
         padding-left: 1.35em;
         margin-left: 0;
@@ -110,14 +109,15 @@ export const Tags = styled(Boxed)`
 
     @media screen and (max-width: 991px){
         width: 100%;
-        margin-top: -50px;
+        margin-top: -30px;
         margin-left: 1.05em;  
         padding-right: 0;
         padding-top: 0;
-        height: 75px;
+        height: 60px;
         position: static;       
         text-align: left;
         margin-bottom: 1.25em;
+        opacity: 0.5;
     }
 `
 
@@ -158,7 +158,8 @@ export const HeadText = styled.h1`
     }
 
     @media screen and (max-width: 991px) {
-        font-size: 2.5em;
+        font-size: 2.5em;        
+        line-height: 0.10em;
     }
 `
 
@@ -175,6 +176,11 @@ export const SubText = styled.h4`
     @media screen and (max-width: 1500px) {
         font-size: 1.1em;
         line-height: 0.9em;
+    }
+
+    @media screen and (max-width: 960px) {
+        color: #888;
+        line-height: 1.1em;
     }
 `
 
@@ -205,7 +211,7 @@ export const ButtonText = styled.a`
         padding: 0.35em 0.4em 0.4em 0.7em;
         line-height: 2em;
         margin-right: 1.2em;
-        margin-top: 3.7em;
+        margin-top: 6.25em;
     }
 `
 
@@ -631,7 +637,7 @@ export const AnaquelLogo = styled(IntLogo)`
     }
 
     @media screen and (max-width: 991px) {
-        top: 12%;
+        top: 36%;
     }
 `
 
