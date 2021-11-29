@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.72382246.chunk.js",
-    "main.js.map": "/static/js/main.72382246.chunk.js.map",
+    "main.js": "/static/js/main.e3c2f6a8.chunk.js",
+    "main.js.map": "/static/js/main.e3c2f6a8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e4264b08.js",
     "runtime-main.js.map": "/static/js/runtime-main.e4264b08.js.map",
     "static/css/2.e05dae3b.chunk.css": "/static/css/2.e05dae3b.chunk.css",
@@ -13,7 +13,7 @@
     "static/media/5digiden-01.97d29bef.png": "/static/media/5digiden-01.97d29bef.png",
     "static/media/5markado-03.d27cac92.png": "/static/media/5markado-03.d27cac92.png",
     "static/media/inter.css": "/static/media/Inter.var.c2fe3cb2.woff2",
-    "static/media/alias_line_light-01.da9629ea.svg": "/static/media/alias_line_light-01.da9629ea.svg",
+    "static/media/alias_line_light-03-01.caec3224.svg": "/static/media/alias_line_light-03-01.caec3224.svg",
     "static/media/anaquel-logos-03.5583afcb.svg": "/static/media/anaquel-logos-03.5583afcb.svg",
     "static/media/anaquel-ss-dark.673fe2f4.jpg": "/static/media/anaquel-ss-dark.673fe2f4.jpg",
     "static/media/ballroom.cdeb1b5f.jpg": "/static/media/ballroom.cdeb1b5f.jpg",
@@ -67,6 +67,6 @@
     "static/js/runtime-main.e4264b08.js",
     "static/css/2.e05dae3b.chunk.css",
     "static/js/2.ae63c740.chunk.js",
-    "static/js/main.72382246.chunk.js"
+    "static/js/main.e3c2f6a8.chunk.js"
   ]
 }
