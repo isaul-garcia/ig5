@@ -20,7 +20,7 @@ import {
     SingleVideoHelper
 } from './Gallery.elements';
 
-import Image2 from '../../assets/anaquel-ss-dark.jpg'
+import Image2 from '../../assets/anaquel-ss-dark.webp'
 import Image3 from '../../assets/anaquel-logos-03.svg'
 
 const Gallery = ({ scrolledDown }) => {

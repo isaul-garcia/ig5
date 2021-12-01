@@ -16,10 +16,10 @@ import {
     OtherId,
 } from './Gallery.elements';
 
-import Image1 from '../../assets/sq_roca.png'
-import Image2 from '../../assets/graphx-nav-sq.png'
-import Image3 from '../../assets/mods19bc3.jpg'
-import Image4 from '../../assets/sq_sw.png'
+import Image1 from '../../assets/sq_roca.webp'
+import Image2 from '../../assets/graphx-nav-sq.webp'
+import Image3 from '../../assets/mods19bc3.webp'
+import Image4 from '../../assets/sq_sw.webp'
 
 const Gallery = ({ scrolledDown }) => {
     return (

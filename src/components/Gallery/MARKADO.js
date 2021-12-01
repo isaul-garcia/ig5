@@ -18,9 +18,9 @@ import {
     IndicatorHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/markado-home-b.jpg'
-import Image2 from '../../assets/mrkd5.jpg'
-import Image3 from '../../assets/5markado-03.png'
+import Image1 from '../../assets/markado-home-b.webp'
+import Image2 from '../../assets/mrkd5.webp'
+import Image3 from '../../assets/5markado-03.webp'
 
 const Gallery = ({ scrolledDown }) => {
     return (

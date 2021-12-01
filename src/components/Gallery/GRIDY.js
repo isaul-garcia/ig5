@@ -16,7 +16,7 @@ import {
     IndicatorHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/gridy-ss.jpg'
+import Image1 from '../../assets/gridy-ss.webp'
 
 const Gallery = ({ scrolledDown }) => {
 

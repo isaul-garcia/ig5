@@ -20,7 +20,7 @@ import {
     IndicatorHelper
 } from './Gallery.elements';
 
-import Image2 from '../../assets/earthfo1.jpg'
+import Image2 from '../../assets/earthfo1.webp'
 import Image3 from '../../assets/earth-logo-light-green-letters-01.svg'
 import Image4 from '../../assets/earth-logo-light-green-globe-01.svg'
 

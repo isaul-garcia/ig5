@@ -21,7 +21,7 @@ import {
     SingleVideoHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/5digiden-01.png'
+import Image1 from '../../assets/5digiden-01.webp'
 import Image2 from '../../assets/digiden-type.svg'
 
 const Gallery = ({ scrolledDown }) => {
