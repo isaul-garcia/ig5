@@ -21,7 +21,7 @@ const Info = ({ scrolledDown }) => {
         <>
             <HeaderContainer scrolledDown={scrolledDown} />
             <IconContainer>
-                <IconWrapper>
+                <IconWrapper to="/">
                     <IgIcon src={Ig} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
                     <IgIconMobile src={IgMobile} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
                 </IconWrapper>

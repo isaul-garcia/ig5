@@ -44,7 +44,7 @@ const Gallery = ({ scrolledDown }) => {
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Front End Development<br/>Victory, Three.js</SubText>
+                        <SubText scrolledDown={scrolledDown}>Frontend<br/>Victory, Three.js</SubText>
                     </TextWrapper>
                 </Tags>
 

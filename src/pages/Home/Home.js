@@ -8,7 +8,7 @@ import {
     ROOMX,
     EARTH,
     DIGIDEN,
-    ARCHIVE,
+    OTHER,
     GRIDY,
     ANAQUEL
 } from '../../components';
@@ -28,7 +28,7 @@ const Home = ({ scrolledDown }) => {
                 <MARKADO scrolledDown={scrolledDown} />
                 <ANAQUEL scrolledDown={scrolledDown} />
                 <ROOMX scrolledDown={scrolledDown} />
-                <ARCHIVE scrolledDown={scrolledDown} />
+                <OTHER scrolledDown={scrolledDown} />
                 <Footer />
             </Container>
         </>

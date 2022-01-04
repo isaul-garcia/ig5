@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         background-color: #000;
+        color: #f0f0f0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-family: 'Inter', sans-serif;
@@ -45,8 +46,9 @@ const GlobalStyle = createGlobalStyle`
 
     h4 {
         font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        font-size: 1.25em;
+        font-weight: 700;
+        font-size: 1.35em;
+        cursor: default;
     }
 
     h5 {
@@ -81,6 +83,21 @@ const GlobalStyle = createGlobalStyle`
     }
 `
 
+export const SmallSpacer = styled.div`
+    height: 10px;
+    cursor: default;
+`
+
+export const MediumSpacer = styled.div`
+    height: 20px;
+    cursor: default;
+`
+
+export const LargeSpacer = styled.div`
+    height: 30px;
+    cursor: default;
+`
+
 export const Container = styled.div`
     top: 0;
     width: 89vw;
@@ -107,6 +124,27 @@ export const Container = styled.div`
         border-bottom: 1px solid #000;
         border-top: 0px solid #000;
         overflow-x: hidden;
+    }
+`
+
+export const Halved = styled.div`
+    width: 49.5%;
+    display: inline-block;
+    position: relative;
+    overflow-x: none;
+    cursor: pointer;
+    vertical-align: top;
+    border-bottom: 1px solid #fff;
+
+
+    &:nth-child(even){
+        margin-right: 1%;
+    }
+    
+    @media screen and (max-width: 1350px) {
+    }
+
+    @media screen and (max-width: 991px) {
     }
 `
 

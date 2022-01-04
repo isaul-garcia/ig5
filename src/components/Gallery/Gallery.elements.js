@@ -297,6 +297,7 @@ export const Img100Art = styled(BaseImg)`
 export const Img50 = styled(BaseImg)`
     width: 50%;
     height: 77vh;
+    height: ${({ customHeight }) => (customHeight)};
     object-fit: cover;
 
     @media screen and (max-width: 991px) {
@@ -358,6 +359,11 @@ export const ImgSS = styled(BaseImg)`
         height: 100%;    
         padding: 0.5em;
     }
+`
+
+export const ImgSSFill = styled(ImgSS)`
+    padding: 0px;    
+    object-fit: cover;
 `
 
 export const SSWrapper = styled.div`
@@ -638,6 +644,17 @@ export const AnaquelLogo = styled(IntLogo)`
 
     @media screen and (max-width: 991px) {
         top: 36%;
+    }
+`
+
+export const FillTall = styled(IntLogo)`
+    padding: 0px 0px;
+    top: 0;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (max-width: 991px) {
+        top: 33%;
     }
 `
 

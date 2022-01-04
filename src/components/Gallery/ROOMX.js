@@ -36,7 +36,7 @@ const Gallery = ({ scrolledDown }) => {
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Artwork, Javascript</SubText>
+                        <SubText scrolledDown={scrolledDown}>Artwork</SubText>
                     </TextWrapper>
                 </Tags>
 

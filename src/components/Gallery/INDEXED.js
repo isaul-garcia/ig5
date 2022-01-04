@@ -1,9 +1,6 @@
 import React from 'react';
-import { VideoModule } from '..';
 import {
     ProjectContainer,
-    GalleryWrapper,
-    IntLogo,
     Name,
     Description,
     Tags,
@@ -11,18 +8,12 @@ import {
     HeadText,
     SubText,
     ButtonText,
-    SSWrapper,
-    ImgSS,
-    InteractiveSection,
-    InteractiveSecContainer,
-    DigidenSecWrapper,
     ProjNameSection,
     IndicatorHelper,
-    SingleVideoHelper
 } from './Gallery.elements';
 
-import Image1 from '../../assets/5digiden-01.webp'
-import Image2 from '../../assets/digiden-type.svg'
+// import Image1 from '../../assets/5digiden-01.webp'
+// import Image2 from '../../assets/digiden-type.svg'
 
 const Gallery = ({ scrolledDown }) => {
     return (
@@ -46,26 +37,6 @@ const Gallery = ({ scrolledDown }) => {
                         <SubText scrolledDown={scrolledDown}>Frontend</SubText>
                     </TextWrapper>
                 </Tags>
-
-
-                <GalleryWrapper>
-                    <SingleVideoHelper />
-                    <SSWrapper>
-                        <ImgSS backdrop={'#dcd5c7'} src={Image1} />
-                    </SSWrapper>
-                    <InteractiveSection>
-                        <InteractiveSecContainer customColor={'#fdf9f0'}>
-                            <DigidenSecWrapper />
-                            <IntLogo src={Image2} />
-                        </InteractiveSecContainer>
-                    </InteractiveSection>
-                    <VideoModule
-                        giveWidth={'100%'}
-                        pad={true}
-                        customColor={'#e9e4dc'}
-                        videoURL={'./Videos/digiden1s.mp4'}
-                    />
-                </GalleryWrapper>
 
             </ProjectContainer>
         </>

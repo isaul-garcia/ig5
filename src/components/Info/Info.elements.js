@@ -1,4 +1,5 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
+import {Link} from 'react-router-dom';
 
 export const Boxed = styled.div`
     width: 30%;
@@ -283,16 +284,17 @@ export const IconContainer = styled.span`
     }
 `
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled(Link)`
     height: 100%;
     width: 100%;
     white-space: nowrap;
     text-align: right;
+    float: right;
 `
 
 export const IgIcon = styled.img`
     vertical-align: top;
-    max-height: 18px;
+    max-height: 17px;
     max-width: 100px;
     mix-blend-mode: difference;
     pointer-events: all;
