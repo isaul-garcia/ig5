@@ -23,7 +23,7 @@ const Info = () => {
                     <EndText href="https://github.com/isaul-garcia" target="_blank">Github</EndText>
                 </FooterTextContainer>
                 <FooterTextContainer>
-                    <EndTextLink to="/design">Design</EndTextLink>
+                    <EndTextLink to="/design#top" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Design</EndTextLink>
                 </FooterTextContainer>
                 <AliasesContainer>
                     <IconWrapper>

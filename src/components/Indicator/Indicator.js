@@ -3,7 +3,7 @@ import {
     Container,
     IndicatorBlockHash,
     ProgressBar,
-    ProgressBarContainer
+    ProgressBarContainer,
 } from './Indicator.elements';
 
 const Indicator = () => {

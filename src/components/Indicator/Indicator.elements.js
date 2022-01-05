@@ -18,6 +18,26 @@ export const Container = styled.div`
     }
 `
 
+export const ForArchiveRoute = styled(HashLink)`
+    position: fixed;
+    top: 0;
+    width: 4.1vh;
+    margin-top: 4vh;
+    height: 92.1%;
+    border-right: 0px solid #d8d8d8;
+    z-index: 20;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover{
+        border-right: 5px solid #d8d8d8;
+    }
+
+    @media screen and (max-width: 991px) {
+        display: none;
+    }
+`
+
 export const ProgressBarContainer = styled.div`
     position: fixed;
     z-index: 10;
