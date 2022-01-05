@@ -30,10 +30,10 @@ function App() {
     <Router>
       <GlobalStyle />
       <Switch>
-        <Route exact path="/" render={(props) => <Home scrolledDown={scrolledDown} {...props} />} />
-        <Route exact path="/design" render={(props) => <Design scrolledDown={true} {...props} />} />
-        <Route exact path="/test1" render={(props) => <h1 {...props} >test1</h1>} />
-        <Route path="/test2" render={(props) => <h1 {...props} >test2</h1>} />
+        <Route exact path='/' render={(props) => <Home scrolledDown={scrolledDown} {...props} />} />
+        <Route exact path='/design' render={(props) => <Design scrolledDown={true} {...props} />} />
+        <Route exact path='/test1/' render={(props) => <h1 {...props} >test1</h1>} />
+        <Route path='/test2' render={(props) => <h1 {...props} >test2</h1>} />
       </Switch>
     </Router>
   );

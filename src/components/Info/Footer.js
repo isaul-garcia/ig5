@@ -21,6 +21,9 @@ const Info = () => {
                 <FooterTextContainer>
                     <EndText href="https://github.com/isaul-garcia" target="_blank">Github</EndText>
                 </FooterTextContainer>
+                <FooterTextContainer>
+                    <EndText href="/design" target="_blank">Design</EndText>
+                </FooterTextContainer>
                 <AliasesContainer>
                     <IconWrapper>
                         <AliasesIcons src={Alias} alt="Aliases" />
