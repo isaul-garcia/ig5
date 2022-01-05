@@ -236,6 +236,32 @@ export const EndText = styled.a`
     }
 `
 
+export const EndTextLink = styled(Link)`
+    font-size: 1.4em;
+    color: #d8d8d8;
+    font-weight: 400; 
+    letter-spacing: 0;
+    line-height: 1.25em; 
+    transition: all .2s ease-in-out;
+    color: ${({ darken }) => (darken ? '#888' : '')};
+    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
+    text-decoration: none;
+
+    @media screen and (max-width: 1500px) {
+        font-size: 1.1em;
+        padding: 0.1em;
+        margin-left: 0;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.1em;
+        font-weight: 500;
+        padding: 0em;
+        margin-left: 0.8em;
+        color: ${({ darken }) => (darken ? '#555' : '#bfbfbf')};
+    }
+`
+
 //ig icon
 //ig icon
 //ig icon

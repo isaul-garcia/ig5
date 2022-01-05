@@ -1,6 +1,7 @@
 import React from 'react';
 import {
     EndText,
+    EndTextLink,
     FooterTextContainer,
     AliasesContainer,
     IconWrapper,
@@ -22,7 +23,7 @@ const Info = () => {
                     <EndText href="https://github.com/isaul-garcia" target="_blank">Github</EndText>
                 </FooterTextContainer>
                 <FooterTextContainer>
-                    <EndText href="/design" target="_blank">Design</EndText>
+                    <EndTextLink to="/design">Design</EndTextLink>
                 </FooterTextContainer>
                 <AliasesContainer>
                     <IconWrapper>
