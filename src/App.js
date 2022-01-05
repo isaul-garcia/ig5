@@ -31,7 +31,7 @@ function App() {
       <GlobalStyle />
       <Switch>
         <Route exact path="/" render={(props) => <Home scrolledDown={scrolledDown} {...props} />} />
-        <Route exact path="/design" render={(props) => <Design scrolledDown={true} {...props} />} />
+        <Route path="/design" render={(props) => <Design scrolledDown={true} {...props} />} />
       </Switch>
     </Router>
   );
