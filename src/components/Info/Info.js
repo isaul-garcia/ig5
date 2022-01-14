@@ -13,8 +13,7 @@ import {
     IgIconMobile,
     HeaderContainer
 } from './Info.elements';
-import Ig from '../../assets/ig_round_d8-01.svg'
-import IgMobile from '../../assets/ig-rectangle.svg'
+import Ig from '../../assets/ig_round_d8-02.svg'
 
 const Info = ({ scrolledDown }) => {
     return (
@@ -23,13 +22,13 @@ const Info = ({ scrolledDown }) => {
             <IconContainer>
                 <IconWrapper to="/">
                     <IgIcon src={Ig} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
-                    <IgIconMobile src={IgMobile} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
+                    <IgIconMobile src={Ig} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
                 </IconWrapper>
             </IconContainer>
             <Name>
                 <TextWrapper>
-                    <HeadText scrolledDown={scrolledDown}>Isaúl García</HeadText>
-                    <HeadTextDecrease scrolledDown={scrolledDown}>Isaúl García</HeadTextDecrease>
+                    <HeadText scrolledDown={scrolledDown} to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadText>
+                    <HeadTextDecrease scrolledDown={scrolledDown} to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
                 </TextWrapper>
             </Name>
             <Description>

@@ -5,18 +5,18 @@ import {
     EmptyIndicator,
     DESIGN
 } from '../../components';
-import { Container } from '../../globalStyles';
+import { OverContainer } from '../../globalStyles';
 
 const Home = ({ scrolledDown }) => {
     return (
         <>
             <EmptyIndicator />
 
-            <Container>
+            <OverContainer>
                 <Info scrolledDown={scrolledDown} />
                 <DESIGN scrolledDown={scrolledDown} />
                 <Footer />
-            </Container>
+            </OverContainer>
         </>
     )
 }

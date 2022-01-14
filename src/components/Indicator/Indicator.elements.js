@@ -24,13 +24,14 @@ export const ForArchiveRoute = styled(HashLink)`
     width: 4.1vh;
     margin-top: 4vh;
     height: 92.1%;
-    border-right: 0px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    background-color: #000;
     z-index: 20;
     transition: 0.2s;
     cursor: pointer;
 
     &:hover{
-        border-right: 5px solid #d8d8d8;
+        width: 6vh;
     }
 
     @media screen and (max-width: 991px) {

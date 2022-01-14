@@ -12,14 +12,14 @@ import {
     GRIDY,
     ANAQUEL
 } from '../../components';
-import { Container } from '../../globalStyles';
+import { OverContainer } from '../../globalStyles';
 
 const Home = ({ scrolledDown }) => {
     return (
         <>
             <Indicator />
 
-            <Container>
+            <OverContainer>
                 <Info scrolledDown={scrolledDown} />
                 <DIGIDEN scrolledDown={scrolledDown} />
                 <LOMA scrolledDown={scrolledDown} />
@@ -30,7 +30,7 @@ const Home = ({ scrolledDown }) => {
                 <ROOMX scrolledDown={scrolledDown} />
                 <OTHER scrolledDown={scrolledDown} />
                 <Footer />
-            </Container>
+            </OverContainer>
         </>
     )
 }

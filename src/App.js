@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 import "inter-ui/inter.css";
 import GlobalStyle from './globalStyles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, Design } from './pages';
+import { Home, Design, Archive } from './pages';
 
 function App() {
   useEffect(() => {
@@ -32,6 +32,7 @@ function App() {
       <Switch>
         <Route exact path='/' render={(props) => <Home scrolledDown={scrolledDown} {...props} />} />
         <Route path='/design' render={(props) => <Design scrolledDown={true} {...props} />} />
+        <Route path='/archive' render={(props) => <Archive scrolledDown={true} {...props} />} />
       </Switch>
     </Router>
   );

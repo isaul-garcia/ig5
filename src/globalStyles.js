@@ -98,7 +98,7 @@ export const LargeSpacer = styled.div`
     cursor: default;
 `
 
-export const Container = styled.div`
+export const OverContainer = styled.div`
     top: 0;
     width: 89vw;
     float: right;

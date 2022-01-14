@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled from 'styled-components/macro';
 
 export const IndicatorHelper = styled.span`
     width: 1.25vh;
@@ -59,7 +59,8 @@ export const Boxed = styled.div`
 export const Name = styled(Boxed)`
     width: 25%;
     top: 3.85em;
-    z-index: 999;
+    z-index: 9;
+    cursor: default;
 
     @media screen and (max-width: 1500px) {
         top: 48px;

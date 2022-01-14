@@ -4,6 +4,7 @@ import {
     IndicatorBlockHash,
     ProgressBar,
     ProgressBarContainer,
+    ForArchiveRoute
 } from './Indicator.elements';
 
 const Indicator = () => {
@@ -30,6 +31,7 @@ const Indicator = () => {
             <ProgressBarContainer>
                 <ProgressBar scroll={scroll} />
             </ProgressBarContainer>
+            {/* <ForArchiveRoute to="/archive" /> */}
             <Container>
                 {/* they must have a summation of 92vh */}
                 <IndicatorBlockHash lenght={'3vh'} highlight={'#d8d8d8'} smooth to="#top" />

@@ -10,9 +10,6 @@ export const Boxed = styled.div`
     display: inline-block; 
     vertical-align: top;
 
-    @media screen and (max-width: 1500px) {
-    }
-
     @media screen and (max-width: 991px) {
         width: 100%;
         padding-left: 5px;
@@ -62,8 +59,9 @@ export const SelfTags = styled(Boxed)`
     }
 
     @media screen and (max-width: 991px){
-        padding-right: 1.1em;
-        margin-left: 0; 
+        width: 98.1%;
+        margin-left: 0.2em; 
+        margin-right: 2em; 
         margin-top: 3em;
         padding-top: 1.7em;
         border-top: ${({ scrolledDown }) => (scrolledDown ? '1px solid #000' : '1px solid #333')};
@@ -77,7 +75,7 @@ export const FooterTextContainer = styled(Boxed)`
     margin-bottom: 2.2vh;
     margin-right: 2em;
     vertical-align: bottom;
-    transition: all .2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
 
     &:nth-child(1) {
@@ -85,8 +83,7 @@ export const FooterTextContainer = styled(Boxed)`
     }
 
     &:hover{
-        border-left: 1px solid #d8d8d8;
-        padding-left: 0.5em;
+        opacity: 0.7;
     }
 
     @media screen and (max-width: 1500px) {
@@ -116,10 +113,13 @@ export const FooterTextContainer = styled(Boxed)`
 
 export const EmailText = styled(FooterTextContainer)`
     cursor: text;
+    user-select: all;
 
     &:hover{
         border-left: 0px solid #000;
         padding-left: 0;
+        transform: scale(100%);
+        opacity: 1;
     }
 
     @media screen and (max-width: 991px) {
@@ -149,8 +149,8 @@ export const TextWrapper = styled.span`
 //text elements
 //text elements
 
-export const HeadText = styled.h1`
-    transition: all .2s ease-in-out;
+export const HeadText = styled(Link)`
+    transition: all .1s ease-in-out;
     position: absolute;
     letter-spacing: -1px;
     color: #d8d8d8;
@@ -160,6 +160,13 @@ export const HeadText = styled.h1`
     margin-top: -0.42em;
     margin-left: -0.1em;
     opacity: ${({ scrolledDown }) => (scrolledDown ? '0' : '1')};
+    cursor: pointer;
+    pointer-events:  ${({ scrolledDown }) => (scrolledDown ? 'none' : 'all')};
+    text-decoration: none;
+
+    &:hover {
+        color: #9f9f9f;
+    }
 
     @media screen and (max-width: 991px) {
         margin-top: -0.1em;
@@ -170,8 +177,8 @@ export const HeadText = styled.h1`
     }
 `
 
-export const HeadTextDecrease = styled.h1`
-    transition: all .2s ease-in-out;
+export const HeadTextDecrease = styled(Link)`
+    transition: all .1s ease-in-out;
     position: absolute;
     letter-spacing: -1px;
     color: #d8d8d8;
@@ -180,11 +187,19 @@ export const HeadTextDecrease = styled.h1`
     line-height: 1em;    
     margin-top: -0.65em;
     opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
+    cursor: pointer;
+    pointer-events:  ${({ scrolledDown }) => (scrolledDown ? 'all' : 'none')};
+    text-decoration: none;
+
+    &:hover {
+        color: #9f9f9f;
+    }
 
     @media screen and (max-width: 991px) {
         font-size: 1.9em;
         margin-left: 0.4em;        
         line-height: 2.05em;  
+        display: none;
     }
 `
 
@@ -281,7 +296,7 @@ export const HeaderContainer = styled.div`
 export const Footer = styled(HeaderContainer)`
     @media screen and (max-width: 991px) {
         margin-top: 13em;
-        height: 7.5em;
+        height: 11em;
         margin-bottom: 0;
     }
 `
@@ -316,11 +331,17 @@ export const IconWrapper = styled(Link)`
     white-space: nowrap;
     text-align: right;
     float: right;
+    transition: all .1s ease-in-out;
+
+    &:hover{
+        opacity: 0.75;
+    }
 `
 
 export const IgIcon = styled.img`
     vertical-align: top;
-    max-height: 17px;
+    margin-top: -1px;
+    max-height: 20px;
     max-width: 100px;
     mix-blend-mode: difference;
     pointer-events: all;
@@ -334,6 +355,7 @@ export const IgIconMobile = styled(IgIcon)`
     display: none;
     max-height: 26px;
     text-align: right;
+    margin-top: 2px;
 
     @media screen and (max-width: 991px) {
         display: block;
