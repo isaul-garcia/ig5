@@ -38,7 +38,7 @@ const Info = ({ scrolledDown }) => {
             </Description>
             <SelfTags scrolledDown={scrolledDown}>
                 <TextWrapper>
-                    <SubText scrolledDown={scrolledDown}>Frontend Developer, Designer</SubText>
+                    <SubText scrolledDown={scrolledDown}>Frontend Engineer, Designer</SubText>
                 </TextWrapper>
             </SelfTags>
         </>
