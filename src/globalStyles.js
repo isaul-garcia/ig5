@@ -7,11 +7,14 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: 'Inter', sans-serif; 
+
+        &::-moz-selection { background: #f15a38; }
+        &::selection { background: #f15a38; }
     }    
 
     body {
-        background-color: #000;
-        color: #f0f0f0;
+        background-color: #bcbcbc;
+        color: #222;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-family: 'Inter', sans-serif;
@@ -49,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         font-size: 1.35em;
         cursor: default;
+        letter-spacing: -1px;
     }
 
     h5 {
@@ -64,88 +68,238 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.25em;
     }
 
-    @keyframes cyclingColorPalette {
+    @keyframes cyclingColor {
 	0% {
-        border-color: #1e31e3;
+        background-color: #1e31e3;
 	}
 	50% {
-		border-color: #ff00ff;
+		background-color: #ff00ff;
 	}
 	100% {
-		border-color: #e0ae01;
+		background-color: #e0ae01;
 	}
     }
 
     @media screen and (max-width: 991px) {
-        body {
-            padding: 0.5vh;
-        }
     }
 `
 
+// SPACERS
+// SPACERS
+// SPACERS
+
 export const SmallSpacer = styled.div`
-    height: 10px;
+    height: ${({ justMobile }) => (justMobile ? 'none' : '10px')};
     cursor: default;
+
+    @media screen and (max-width: 991px) {
+        height: ${({ justMobile }) => (justMobile ? '10px' : '')};
+    }
 `
 
 export const MediumSpacer = styled.div`
-    height: 20px;
+    height: ${({ justMobile }) => (justMobile ? 'none' : '20px')};
     cursor: default;
+
+    @media screen and (max-width: 991px) {
+        height: ${({ justMobile }) => (justMobile ? '20px' : '')};
+    }
 `
 
 export const LargeSpacer = styled.div`
-    height: 30px;
+    height: ${({ justMobile }) => (justMobile ? 'none' : '60px')};
     cursor: default;
+
+    @media screen and (max-width: 991px) {
+        height: ${({ justMobile }) => (justMobile ? '60px' : '')};
+    }
 `
+
+//HOME LAYOUT
+//HOME LAYOUT
+//HOME LAYOUT
 
 export const OverContainer = styled.div`
     top: 0;
-    width: 89vw;
     float: right;
-    margin-right: 3.5vh;
+    width: 50vw;
+    margin-right: 25vw;
     margin-top: 4vh;
     padding-top: 4vh;
     margin-bottom: 4vh;
-    border-bottom: 1px solid #d8d8d8;
-    border-top: 1px solid #d8d8d8;
-    z-index: 1;
+    border-bottom: 1px solid #222;
+    border-top: 1px solid #222;
+    z-index: 2;
     transition: all .5s ease-in-out;
+    background-color: #bcbcbc;
     
-    @media screen and (max-width: 1350px) {
-        width: 87vw;  
+    @media screen and (max-width: 1300px) {
+        width: 62vw;
+        margin-right: 19vw;
     }
 
     @media screen and (max-width: 991px) {
-        width: 100%;
+        width: 90vw;
         margin-right: 0px;
-        margin-top: 0vw;
         padding-top: 0vw;
-        margin-bottom: 1vw;
+        margin-bottom: 10vw;
+        margin-top: 10vw;
         border-bottom: 1px solid #000;
-        border-top: 0px solid #000;
+        border-top: 1px solid #000;
         overflow-x: hidden;
+        position: relative;
+        margin: 5vw;
+        margin-top: 0vw;
     }
 `
 
-export const Halved = styled.div`
-    width: 49.5%;
+// HOME ITEMS
+// HOME ITEMS
+// HOME ITEMS
+
+export const HomeImg = styled.img`
+    object-fit: contain;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    
+    @media screen and (max-width: 991px) {
+        margin-top: 8vh;
+        margin-bottom: -2vh;
+        height: 100%;
+    }
+`
+
+export const Separator = styled.div`
+    width: 100%;
     display: inline-block;
     position: relative;
     overflow-x: none;
     cursor: pointer;
     vertical-align: top;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #222;
 
 
     &:nth-child(even){
         margin-right: 1%;
     }
-    
-    @media screen and (max-width: 1350px) {
-    }
+`
 
+export const TextContainer = styled.div`
+    width: 100%;
+    transition: all .5s ease-in-out;
+    text-align: left;
+    display: inline-block; 
+    vertical-align: top;
+    
     @media screen and (max-width: 991px) {
+        width: 100%;
+        margin-left: 3px;
     }
 `
+
+export const TextWrapper = styled.div`
+    text-decoration: none;
+    color: #000;
+    width: 100%;
+    display: inline-block;
+    pointer-events: all;
+    padding: 0 0 0 -1px;
+    background-color: ${({ backColor }) => (backColor)};
+    color: ${({ textColor }) => (textColor)};
+    
+    @media screen and (max-width: 991px) {
+        width: 100%;
+    }
+`
+
+export const SubText = styled.h4`
+    font-size: 1em;  
+    font-weight: 500; 
+    letter-spacing: 0;
+    line-height: 1.5em; 
+    transition: all .2s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+`
+
+export const MainText = styled(SubText)`
+    font-size: 1.25em;  
+    font-family: Georgia;
+    font-weight: 500; 
+`
+
+
+//ARTICLE PARTS
+//ARTICLE PARTS
+//ARTICLE PARTS
+
+export const ArticleTitle = styled.h1`
+    margin-left: -2px;
+`
+
+export const ArticleImg = styled.img`
+    border-radius: 0.75em;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 64vh;
+    
+    @media screen and (max-width: 991px) {
+    height: 105vw;
+    }
+`
+
+export const ArticleFrame = styled.div`
+    background-color: #00f;
+    width: 100%;
+    height: 65vh;
+`
+
+//NEW BUBBLE
+//NEW BUBBLE
+
+export const NewBubble = styled.a`
+    font-size: 8px;
+    line-height: 13px;
+    font-weight: 600;
+    color: #222;
+    vertical-align: top;
+    padding: 1px 3px;
+    margin-left: 0.35vh;
+    max-width: 50px;
+    max-height: 22px;
+    border-radius: 4px;
+    animation-name: cyclingColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-decoration: none;
+    display: ${({ isNew }) => (isNew ? '' : 'none')};
+    letter-spacing: 0px;
+`
+
+//BUBBLE TAG
+//BUBBLE TAG
+
+export const TagBubble = styled.a`
+    font-size: 8px;
+    line-height: 13px;
+    font-weight: 600;
+    color: #bcbcbc;
+    vertical-align: top;
+    padding: 1px 3px;
+    margin-left: 0.35vh;
+    max-width: 50px;
+    max-height: 22px;
+    border-radius: 4px;
+    background-color: #2f2f2f;
+    text-decoration: none;
+    display: ${({ hasTag }) => (hasTag ? '' : 'none')};
+    letter-spacing: 0px;
+`
+
 
 export default GlobalStyle

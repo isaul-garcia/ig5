@@ -1,50 +1,51 @@
 import React from 'react';
-import { VideoModule } from '..';
+import { Info, VideoModule } from '..';
+import { MediumSpacer, TextContainer, SubText } from '../../globalStyles';
 import {
     ProjectContainer,
     GalleryWrapper,
     ButtonText,
     Name,
-    Description,
-    Tags,
     TextWrapper,
     HeadText,
-    SubText,
     SingleVideoHelper,
     ProjNameSection,
     IndicatorHelper
 } from './Gallery.elements';
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
 
     return (
         <>
-
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="roomx" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Room X</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">link ↗</ButtonText>
+                        <HeadText>Room X</HeadText>
+                        <ButtonText href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">link ↗</ButtonText>
                     </TextWrapper>
                 </Name>
-                <Description>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>My quarantined reality. Merging my digital and physical life.</SubText>
+                        <SubText>My quarantined reality: Merging my digital and physical life.</SubText>
                     </TextWrapper>
-                </Description>
-                <Tags>
+                </TextContainer>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Artwork</SubText>
+                        <SubText>Artwork</SubText>
                     </TextWrapper>
-                </Tags>
+                </TextContainer>
+
+                <MediumSpacer />
 
                 <GalleryWrapper>
                     <SingleVideoHelper />
                     <VideoModule
                         giveWidth={'100%'}
-                        giveHeight={'80vh'}
+                        giveHeight={'52vh'}
                         fill={true}
                         customColor={'#a8a8a8'}
                         videoURL={'./Videos/roomx1s.mp4'}

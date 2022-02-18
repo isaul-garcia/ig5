@@ -35,42 +35,37 @@ import Image12 from '../../assets/designs/opsu3.jpg'
 import Image13 from '../../assets/designs/opsu2.jpg'
 import Image14 from '../../assets/designs/opsu11.jpg'
 import Image16 from '../../assets/designs/bfit2.jpg'
+import { MediumSpacer } from '../../globalStyles';
+import { Info } from '..';
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
 
     return (
         <>
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="design" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Design</HeadText>
+                        <HeadText>Design</HeadText>
                     </TextWrapper>
                 </Name>
                 <Description>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}></SubText>
+                        <SubText></SubText>
                     </TextWrapper>
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}></SubText>
+                        <SubText></SubText>
                     </TextWrapper>
                 </Tags>
 
                 <GalleryWrapper>
-                    <SingleVideoHelper style={{ width: "89vw" }}/>
-                    <SSWrapper>
-                        <ImgSSFill backdrop={'#131313'} src={Image1} style={{ border: "1px solid #333" }}/>
-                    </SSWrapper>
-                    <InteractiveSection>
-                        <InteractiveSecContainer customColor={'#1a1a1a'} style={{ border: "1px solid #333" }}>
-                            <FillTall src={Image3} />
-                        </InteractiveSecContainer>
-                    </InteractiveSection>
-                    <Img50 src={Image2} customHeight={'50vh'}/>
-                    <Img50 src={Image4} customHeight={'50vh'}/>
+                    <SingleVideoHelper />
+                    
 
                     <SSWrapper fill100={true}>
                         <ImgSS backdrop={'#131313'} src={Image5}  style={{ border: "1px solid #333" }}/>
@@ -82,23 +77,34 @@ const Gallery = ({ scrolledDown }) => {
                     </SSWrapper>  
 
                     <SSWrapper>
-                        <ImgSSFill backdrop={'#131313'} src={Image9} style={{ border: "1px solid #333" }}/>
+                        <ImgSSFill backdrop={'#131313'} src={Image9} style={{ border: "1px solid #aaa" }}/>
                     </SSWrapper>
                     <InteractiveSection>
-                        <InteractiveSecContainer customColor={'#1a1a1a'} style={{ border: "1px solid #333" }}>
+                        <InteractiveSecContainer customColor={'#1a1a1a'} >
                             <FillTall src={Image16} />
                         </InteractiveSecContainer>
                     </InteractiveSection>
                     <SSWrapper fill100={true}>
                         <ImgSS backdrop={'#131313'} src={Image10}  style={{ border: "1px solid #333" }}/>
                     </SSWrapper>
+
+                    <SSWrapper>
+                        <ImgSSFill backdrop={'#131313'} src={Image1} style={{ border: "1px solid #aaa" }}/>
+                    </SSWrapper>
+                    <InteractiveSection>
+                        <InteractiveSecContainer customColor={'#1a1a1a'} style={{ border: "1px solid #333" }}>
+                            <FillTall src={Image3} />
+                        </InteractiveSecContainer>
+                    </InteractiveSection>
+                    <Img50 src={Image2} customHeight={'40vh'}/>
+                    <Img50 src={Image4} customHeight={'40vh'}/>
                 
                     <SSWrapper fill100={true}>
                         <ImgSS backdrop={'#131313'} src={Image11}  style={{ border: "1px solid #333" }}/>
                     </SSWrapper>
 
-                    <Img50 src={Image14} customHeight={'50vh'}/>
-                    <Img50 src={Image13} customHeight={'50vh'}/>
+                    <Img50 src={Image14} customHeight={'30vh'}/>
+                    <Img50 src={Image13} customHeight={'30vh'}/>
                     <SSWrapper fill100={true}>
                         <ImgSS backdrop={'#131313'} src={Image12}  style={{ border: "1px solid #333" }}/>
                     </SSWrapper>  

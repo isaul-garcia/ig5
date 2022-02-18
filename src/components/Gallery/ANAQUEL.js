@@ -3,11 +3,8 @@ import {
     ProjectContainer,
     GalleryWrapper,
     Name,
-    Description,
-    Tags,
     TextWrapper,
     HeadText,
-    SubText,
     ButtonText,
     SSWrapper,
     ImgSS,
@@ -19,36 +16,42 @@ import {
     IndicatorHelper,
     SingleVideoHelper
 } from './Gallery.elements';
+import { MediumSpacer, TextContainer, SubText } from '../../globalStyles'
 
 import Image2 from '../../assets/anaquel-ss-dark.webp'
 import Image3 from '../../assets/anaquel-logos-03.svg'
+import { Info } from '..';
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
 
     return (
         <>
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="anaquel" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Anaquel</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} disabled={true}>WIP</ButtonText>
+                        <HeadText>Anaquel</HeadText>
+                        <ButtonText disabled={true}>WIP</ButtonText>
                     </TextWrapper>
                 </Name>
-                <Description>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Bookmark manager and Chrome extension.</SubText>
+                        <SubText>Bookmark manager and Chrome extension.</SubText>
                     </TextWrapper>
-                </Description>
-                <Tags>
+                </TextContainer>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Fullstack</SubText>
+                        <SubText>Fullstack</SubText>
                     </TextWrapper>
-                </Tags>
+                </TextContainer>
+
+                <MediumSpacer />
 
                 <GalleryWrapper>
-                    <SingleVideoHelper style={{ width: "89vw" }}/>
+                    <SingleVideoHelper />
                     <SSWrapper>
                         <ImgSS backdrop={'#aaa'} src={Image2} />
                     </SSWrapper>

@@ -1,15 +1,12 @@
 import React from 'react';
-import { VideoModule } from '..';
+import { Info, VideoModule } from '..';
 import {
     ProjectContainer,
     GalleryWrapper,
     IntLogo,
     Name,
-    Description,
-    Tags,
     TextWrapper,
     HeadText,
-    SubText,
     ButtonText,
     SSWrapper,
     ImgSS,
@@ -23,30 +20,34 @@ import {
 
 import Image1 from '../../assets/5digiden-01.webp'
 import Image2 from '../../assets/digiden-type.svg'
+import { MediumSpacer, TextContainer, SubText } from '../../globalStyles';
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
     return (
         <>
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="digiden" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Digiden</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/digiden/" target="_blank">mock-up ↗</ButtonText>
+                        <HeadText>Digiden</HeadText>
+                        <ButtonText href="https://isaul-garcia.github.io/digiden/" target="_blank">mock-up ↗</ButtonText>
                     </TextWrapper>
                 </Name>
-                <Description>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Tech news website prototype.</SubText>
+                        <SubText>Tech news website prototype.</SubText>
                     </TextWrapper>
-                </Description>
-                <Tags>
+                </TextContainer>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Frontend</SubText>
+                        <SubText>Frontend</SubText>
                     </TextWrapper>
-                </Tags>
+                </TextContainer>
 
+                <MediumSpacer />
 
                 <GalleryWrapper>
                     <SingleVideoHelper />

@@ -1,38 +1,69 @@
 import React from 'react';
 import {
     Info,
-    Footer,
-    Indicator,
-    LOMA,
-    MARKADO,
-    ROOMX,
-    EARTH,
-    DIGIDEN,
-    OTHER,
-    GRIDY,
-    ANAQUEL
+    ListItemOfThree,
+    ListItemOfTwo,
 } from '../../components';
-import { OverContainer } from '../../globalStyles';
+import { Separator, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg } from '../../globalStyles';
+import { myProjects, myArticles, myOthers } from './Data';
+import Image from '../../assets/red-estrella-s.webp'
 
-const Home = ({ scrolledDown }) => {
+const Module = () => {
     return (
         <>
-            <Indicator />
+            <Info removeBack={true} />
+    
+            <MediumSpacer />
 
-            <OverContainer>
-                <Info scrolledDown={scrolledDown} />
-                <DIGIDEN scrolledDown={scrolledDown} />
-                <LOMA scrolledDown={scrolledDown} />
-                <EARTH scrolledDown={scrolledDown} />
-                <GRIDY scrolledDown={scrolledDown} />
-                <MARKADO scrolledDown={scrolledDown} />
-                <ANAQUEL scrolledDown={scrolledDown} />
-                <ROOMX scrolledDown={scrolledDown} />
-                <OTHER scrolledDown={scrolledDown} />
-                <Footer />
-            </OverContainer>
+            <HomeImg src={Image}/>
+
+            <LargeSpacer />
+
+
+            <TextContainer>
+                <TextWrapper>
+                    <SubText>A creative developer building software solutions and exploring new interactions.</SubText>
+                </TextWrapper>
+            </TextContainer>
+            <TextContainer>
+                <TextWrapper>
+                    <SubText>Frontend Engineer, Designer</SubText>
+                </TextWrapper>
+            </TextContainer>
+
+            <LargeSpacer />
+
+            <Separator>
+                <h4>Featured</h4>
+                <MediumSpacer />
+                {myProjects.map((props) => (
+                    <ListItemOfThree {...props} />
+                ))}
+            </Separator>
+
+            <LargeSpacer />
+
+            <Separator>
+                <h4>Writing</h4>
+                <MediumSpacer />
+                {myArticles.map((props) => (
+                    <ListItemOfTwo {...props} />
+                ))}
+            </Separator>
+
+            <LargeSpacer />
+
+            <Separator>
+                <h4>More</h4>
+                <MediumSpacer />
+                {myOthers.map((props) => (
+                    <ListItemOfThree {...props} />
+                ))}
+            </Separator>
+
+            <MediumSpacer />
         </>
     )
 }
 
-export default Home;
+export default Module;

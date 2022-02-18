@@ -13,10 +13,11 @@ export const IndicatorHelper = styled.span`
 `
 
 export const ProjectContainer = styled.div`
-    margin-top: 100px;
+    width: 101.1%;
     display: inline-block;
     position: relative;
     overflow-x: none;
+    margin: -0.5vh;    
     
     @media screen and (max-width: 991px) {
         margin-top: 5px;
@@ -25,12 +26,10 @@ export const ProjectContainer = styled.div`
 
 export const ProjNameSection = styled.div`
     @media screen and (max-width: 991px) {        
-        border: ${({ scrolledDown }) => (scrolledDown ? '1px solid #bbb' : '1px solid #000')};;
         border-bottom: none;
-        padding-top: 20px;
+        padding-top: 90px;
         margin: 4px;
         margin-bottom: 9px;
-        border-radius: 0.6em 0.6em 0 0;
         height: 10.7em;
         margin-bottom: -8.5em;
     }
@@ -57,7 +56,7 @@ export const Boxed = styled.div`
 `
 
 export const Name = styled(Boxed)`
-    width: 25%;
+    width: 80%;
     top: 3.85em;
     z-index: 9;
     cursor: default;
@@ -68,8 +67,8 @@ export const Name = styled(Boxed)`
 
     @media screen and (max-width: 991px) {
         width: 100%;
-        top: 55px; 
-        padding-left: 1.3em;
+        top: 42px;
+        margin-bottom: 10px;
     }
 `
 
@@ -151,7 +150,6 @@ export const HeadText = styled.h1`
     font-weight: 800;
     line-height: 0.75em;
     transition: all .3s ease-in-out;
-    opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
 
     @media screen and (max-width: 1500px) {
         line-height: 1em;
@@ -159,8 +157,7 @@ export const HeadText = styled.h1`
     }
 
     @media screen and (max-width: 991px) {
-        font-size: 2.5em;        
-        line-height: 0.10em;
+        font-size: 2.5em;      
     }
 `
 
@@ -172,7 +169,6 @@ export const SubText = styled.h4`
     line-height: 1.25em;
     margin-top: 0.20em;
     transition: all .3s ease-in-out;
-    opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
 
     @media screen and (max-width: 1500px) {
         font-size: 1.1em;
@@ -197,7 +193,6 @@ export const ButtonText = styled.a`
     border-radius: 0.5em;
     cursor: pointer;
     margin-left: 1px;
-    opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
     background-color: ${({ disabled }) => (disabled ? 'rgba(216,216,216,1)' : '')};
     color: ${({ disabled }) => (disabled ? '#000' : '#d8d8d8')};
 
@@ -211,8 +206,8 @@ export const ButtonText = styled.a`
         width: 6.75em;        
         padding: 0.35em 0.4em 0.4em 0.7em;
         line-height: 2em;
-        margin-right: 1.2em;
-        margin-top: 6.25em;
+        margin-right: 0.1em;
+        margin-top: -2.85em;
     }
 `
 
@@ -297,7 +292,8 @@ export const Img100Art = styled(BaseImg)`
 
 export const Img50 = styled(BaseImg)`
     width: 50%;
-    height: 77vh;
+    width: ${({ customWidth }) => (customWidth)};
+    height: 55vh;
     height: ${({ customHeight }) => (customHeight)};
     object-fit: cover;
 
@@ -329,7 +325,7 @@ export const Img33 = styled(BaseImg)`
 
 export const Img33100 = styled(BaseImg)`
     width: 33.33%;
-    height: 77vh;
+    height: 50vh;
 
     @media screen and (max-width: 991px) {
         width: 100%;        
@@ -350,7 +346,7 @@ export const Img25 = styled(BaseImg)`
 export const ImgSS = styled(BaseImg)`
     width: 100%;
     height: 100%;
-    padding: 50px;
+    padding: 2em;
     object-fit: contain;
     border-radius: 0.5em;
     background-color: ${({ backdrop }) => (backdrop)}; 
@@ -375,16 +371,27 @@ export const SSWrapper = styled.div`
     padding:0.5vh;
     position: relative;
     width: 66.66%;
-    height: 77vh;
+    height: 50vh;
 
     ${({ fill100 }) => (fill100 ? `
     width: 100%;
     ` : '')}
 
+    ${({ fill50 }) => (fill50 ? `
+        width: 50%;
+        ` : '')}
+    
+    height: ${({ customHeight }) => (customHeight)};
+    width: ${({ customWidth }) => (customWidth)};
+
     @media screen and (max-width: 991px) {
-        width: 100%;
+        width: 100.75%;
         height: 28em;
     }
+`
+
+export const OneWrapper = styled.div`
+
 `
 
 //
@@ -465,7 +472,7 @@ export const VContainer = styled.div`
 export const VWrapper = styled.div`
     width: 100%;
     height: ${({ fill }) => (fill ? '' : '100%')};
-    padding: ${({ pad }) => (pad ? '50px' : '0')};
+    padding: ${({ pad }) => (pad ? '2em' : '0')};
     vertical-align: middle;
 
     @media screen and (max-width: 991px) {
@@ -476,10 +483,9 @@ export const VWrapper = styled.div`
 `
 
 export const SingleVideoHelper = styled.div`
-    width: 87vw;
+    width: 106.1vh;
     display: block;
     position: relative;
-    
 `
 
 //divisor
@@ -548,7 +554,7 @@ export const Mimg = styled.img`
 ///Interactive logo
 export const InteractiveSection = styled.div`
     width: 33.33%;
-    height: 77vh;
+    height: 50vh;
     padding: 0.5vh;
     display: block;
     float: left;
@@ -573,7 +579,7 @@ export const InteractiveSecWrapper = styled.div`
     background: ${({ customColor }) => (customColor)};
     height: 100%;
     width: 100%;
-    transition: all .3s ease-in-out;    
+    transition: all .3s ease-in-out; 
     position: relative;
 `
 

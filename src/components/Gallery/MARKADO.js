@@ -1,16 +1,13 @@
 import React from 'react'
-import { VideoModule } from '..';
+import { Info, VideoModule } from '..';
 import {
     ProjectContainer,
     GalleryWrapper,
     Img50,
     Img33100,
     Name,
-    Description,
-    Tags,
     TextWrapper,
     HeadText,
-    SubText,
     ButtonText,
     SSWrapper,
     ImgSS,
@@ -21,29 +18,34 @@ import {
 import Image1 from '../../assets/markado-home-b.webp'
 import Image2 from '../../assets/mrkd5.webp'
 import Image3 from '../../assets/5markado-03.webp'
+import { MediumSpacer, TextContainer, SubText } from '../../globalStyles';
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
     return (
         <>
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="markado" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Markado</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/markado/" target="_blank">mock-up ↗</ButtonText>
+                        <HeadText>Markado</HeadText>
+                        <ButtonText href="https://isaul-garcia.github.io/markado/" target="_blank">mock-up ↗</ButtonText>
                     </TextWrapper>
                 </Name>
-                <Description>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>E-Commerce website prototype.</SubText>
+                        <SubText>E-Commerce website prototype.</SubText>
                     </TextWrapper>
-                </Description>
-                <Tags>
+                </TextContainer>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Frontend</SubText>
+                        <SubText>Frontend</SubText>
                     </TextWrapper>
-                </Tags>
+                </TextContainer>
+
+                <MediumSpacer />
 
                 <GalleryWrapper>
                     <SSWrapper>
@@ -54,7 +56,7 @@ const Gallery = ({ scrolledDown }) => {
                     <VideoModule
                         giveWidth={'50%'}
                         pad={true}
-                        giveHeight={'77vh'}
+                        giveHeight={'55vh'}
                         customColor={'#e7e789'}
                         videoURL={'./Videos/markado2s.mp4'}
                     />

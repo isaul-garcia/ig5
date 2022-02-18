@@ -1,9 +1,12 @@
 import styled from 'styled-components/macro';
 import {Link} from 'react-router-dom';
 
+//TOP BAR
+//TOP BAR
+//TOP BAR
+
 export const Boxed = styled.div`
-    width: 30%;
-    height: 220px;
+    width: 100%;
     transition: all .5s ease-in-out;
     z-index: 2;  
     text-align: left;
@@ -17,293 +20,72 @@ export const Boxed = styled.div`
     }
 `
 
-export const Name = styled(Boxed)`
+export const TextContainer = styled.div`
+    transition: all .5s ease-in-out;
+    text-align: left;
+    vertical-align: top;
     width: 25%;
     position: sticky;
-    display: block;
-    top: 3.75vh;
-    mix-blend-mode: difference;
+    display: inline-block;
+    top: 4vh;
     z-index: 999;
     pointer-events: none;
+    mix-blend-mode: difference;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
 
     @media screen and (max-width: 991px) {
         position: fixed;
         width: 50%;
-        top: 0.75em; 
+        top: 4vw; 
+        mix-blend-mode: difference;
+
+        ${({ removeBack }) => (removeBack ? '' : 'margin-left: 60px;')}
     }
 `
 
-export const Description = styled(Boxed)`
-    padding-right: 90px;
-    margin-left: 25%;
-    margin-top: -220px;
-
-    @media screen and (max-width: 1500px) {
-        padding-right: 50px;
-    margin-left: 25%;
-    }
-
-    @media screen and (max-width: 991px){
-        padding-right: 1.1em;
-        margin-left: 0; 
-        margin-top: 10.25em;
-    }
-`
-
-export const SelfTags = styled(Boxed)`
-    padding-right: 90px;    
-    margin-top: -220px;
-
-    @media screen and (max-width: 1500px) {
-        padding-right: 50px;
-    }
-
-    @media screen and (max-width: 991px){
-        width: 98.1%;
-        margin-left: 0.2em; 
-        margin-right: 2em; 
-        margin-top: 3em;
-        padding-top: 1.7em;
-        border-top: ${({ scrolledDown }) => (scrolledDown ? '1px solid #000' : '1px solid #333')};
-    }
-`
-
-export const FooterTextContainer = styled(Boxed)`
-    width: 5em;
-    height: 29px;
-    margin-top: 22vh;
-    margin-bottom: 2.2vh;
-    margin-right: 2em;
-    vertical-align: bottom;
-    transition: all 0.1s ease-in-out;
-    cursor: pointer;
-
-    &:nth-child(1) {
-        width: 19em;
-    }
-
-    &:hover{
-        opacity: 0.7;
-    }
-
-    @media screen and (max-width: 1500px) {
-        width: 6%;
-        
-        &:nth-child(1) {
-            width: 16em;
-        }
-    }
-
-    @media screen and (max-width: 991px) {
-        width: 100%;
-        text-align: left;
-        margin-top: 22px;
-        margin-bottom: 0;
-        border-left: 1px solid #bbb;
-        padding-left: 10px;
-        margin-right: 0;
-        border-left: none;
-
-        &:hover{
-            border-left: 1px solid #bbb;
-            padding-left: 20px;
-        }
-    }
-`
-
-export const EmailText = styled(FooterTextContainer)`
-    cursor: text;
-    user-select: all;
-
-    &:hover{
-        border-left: 0px solid #000;
-        padding-left: 0;
-        transform: scale(100%);
-        opacity: 1;
-    }
-
-    @media screen and (max-width: 991px) {
-        &:hover{
-        padding-left: 10px;
-    }
-    }
-`
-
-export const TextWrapper = styled.span`
+export const TextWrapper = styled.div`
     text-decoration: none;
-    color: #000;
     width: 100%;
     display: inline-block;
     pointer-events: all;
-    padding: 0 4em 0 0.5vh;
     background-color: ${({ backColor }) => (backColor)};
     color: ${({ textColor }) => (textColor)};
-
-    @media screen and (max-width: 991px) {
-        padding: 0 0 0 0;
-    }
-`
-
-//text elements
-//text elements
-//text elements
-//text elements
-
-export const HeadText = styled(Link)`
-    transition: all .1s ease-in-out;
-    position: absolute;
-    letter-spacing: -1px;
-    color: #d8d8d8;
-    font-size: 2.5em;
-    font-weight: 800;
-    line-height: 0.75em;
-    margin-top: -0.42em;
-    margin-left: -0.1em;
-    opacity: ${({ scrolledDown }) => (scrolledDown ? '0' : '1')};
-    cursor: pointer;
-    pointer-events:  ${({ scrolledDown }) => (scrolledDown ? 'none' : 'all')};
-    text-decoration: none;
-
-    &:hover {
-        color: #9f9f9f;
-    }
-
-    @media screen and (max-width: 991px) {
-        margin-top: -0.1em;
-        font-size: 3.1em;        
-        line-height: 0.9em;
-        margin-left: 0.25em;
-        position: absolute;
-    }
 `
 
 export const HeadTextDecrease = styled(Link)`
     transition: all .1s ease-in-out;
     position: absolute;
     letter-spacing: -1px;
-    color: #d8d8d8;
     font-size: 1.5em;
     font-weight: 700;
-    line-height: 1em;    
-    margin-top: -0.65em;
-    opacity: ${({ scrolledDown }) => (scrolledDown ? '1' : '0')};
+    margin-top: -0.85em;
     cursor: pointer;
-    pointer-events:  ${({ scrolledDown }) => (scrolledDown ? 'all' : 'none')};
     text-decoration: none;
+    color: #dbdbdb;
 
     &:hover {
-        color: #9f9f9f;
+        color: #7e7e7e;
     }
 
     @media screen and (max-width: 991px) {
-        font-size: 1.9em;
-        margin-left: 0.4em;        
-        line-height: 2.05em;  
-        display: none;
+        font-size: 28px;
+        line-height: 36px;
+        margin-left: -1px;
+        top: 9vw; 
     }
 `
 
-export const SubText = styled.h4`
-    font-size: 1.4em;  
-    color: #d8d8d8;
-    font-weight: 400; 
-    letter-spacing: 0;
-    line-height: 1.25em; 
-    transition: all .2s ease-in-out;
+//IG ICON
+//IG ICON
+//IG ICON
 
-    @media screen and (max-width: 1500px) {
-        font-size: 1.1em;
-        padding: 0.1em;
-        margin-left: 0.8em;
-    }
-
-    @media screen and (max-width: 991px) {
-        font-size: 1.1em;
-        padding: 0em;
-        margin-left: 0.8em;
-        color: ${({ scrolledDown }) => (scrolledDown ? '#000' : '')};
-    }
-`
-
-export const EndText = styled.a`
-    font-size: 1.4em;
-    color: #d8d8d8;
-    font-weight: 400; 
-    letter-spacing: 0;
-    line-height: 1.25em; 
-    transition: all .2s ease-in-out;
-    color: ${({ darken }) => (darken ? '#888' : '')};
-    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
-    text-decoration: none;
-
-    @media screen and (max-width: 1500px) {
-        font-size: 1.1em;
-        padding: 0.1em;
-        margin-left: 0;
-    }
-
-    @media screen and (max-width: 991px) {
-        font-size: 1.1em;
-        font-weight: 500;
-        padding: 0em;
-        margin-left: 0.8em;
-        color: ${({ darken }) => (darken ? '#555' : '#bfbfbf')};
-    }
-`
-
-export const EndTextLink = styled(Link)`
-    font-size: 1.4em;
-    color: #d8d8d8;
-    font-weight: 400; 
-    letter-spacing: 0;
-    line-height: 1.25em; 
-    transition: all .2s ease-in-out;
-    color: ${({ darken }) => (darken ? '#888' : '')};
-    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
-    text-decoration: none;
-
-    @media screen and (max-width: 1500px) {
-        font-size: 1.1em;
-        padding: 0.1em;
-        margin-left: 0;
-    }
-
-    @media screen and (max-width: 991px) {
-        font-size: 1.1em;
-        font-weight: 500;
-        padding: 0em;
-        margin-left: 0.8em;
-        color: ${({ darken }) => (darken ? '#555' : '#bfbfbf')};
-    }
-`
-
-//ig icon
-//ig icon
-//ig icon
-
-export const HeaderContainer = styled.div`
-    transition: all .2s ease-in-out;
-
-    @media screen and (max-width: 991px) {
-        height: 25em;
-        background-color: ${({ scrolledDown }) => (scrolledDown ? '#000' : '#111')};
-        border-radius: 0.5em;
-        margin: 0.2em;
-        margin-bottom: -25em;
-    }
-`
-
-export const Footer = styled(HeaderContainer)`
-    @media screen and (max-width: 991px) {
-        margin-top: 13em;
-        height: 11em;
-        margin-bottom: 0;
-    }
-`
-
-export const IconContainer = styled.span`
-    width: 4.5em;
-    margin-right: 0.6vh;
+export const IconContainer = styled.div`
+    width: 7%;
     top: 4vh;
     cursor: pointer;
     position: sticky;
@@ -311,17 +93,23 @@ export const IconContainer = styled.span`
     text-decoration: none;
     pointer-events: none;
     transition: all .1s ease-in-out;
-    float: right;
-    right: 0;
     z-index: 20;
     mix-blend-mode: difference;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+
+    ${({ toLeft }) => (toLeft ? '' : `float: right; right: 0;`)}
 
     @media screen and (max-width: 991px) {
-        text-align: right;
         position: fixed;
-        top: 26px;       
-        width: 3.45em;
-        margin-right: 25px;
+        max-height: 23px;
+        width: 60px;
+        top: 9vw; 
+        margin-right: 5vw;
     }
 `
 
@@ -332,6 +120,7 @@ export const IconWrapper = styled(Link)`
     text-align: right;
     float: right;
     transition: all .1s ease-in-out;
+    text-decoration: none;
 
     &:hover{
         opacity: 0.75;
@@ -343,22 +132,247 @@ export const IgIcon = styled.img`
     margin-top: -1px;
     max-height: 20px;
     max-width: 100px;
-    mix-blend-mode: difference;
     pointer-events: all;
 
     @media screen and (max-width: 991px) {
-        display: none;
+        margin-top: 0px;
+        max-height: 23px;
+        max-width: 100%;
     }
 `
 
-export const IgIconMobile = styled(IgIcon)`
-    display: none;
-    max-height: 26px;
-    text-align: right;
-    margin-top: 2px;
+
+//breadcrumb
+//breadcrumb
+//breadcrumb
+//breadcrumb
+
+
+export const CrumbContainer = styled.div`
+    top: 4vh;
+    margin-left: 1em;
+    cursor: pointer;
+    position: sticky;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    z-index: 20;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    float: right;
+
+    ${({ removeBack }) => (removeBack ? 'display: none;' : '')}
 
     @media screen and (max-width: 991px) {
-        display: block;
+        position: fixed;
+        max-height: 23px;
+        right: 0;
+        width: 60px;
+        top: 3.4vw; 
+        margin-right: 5em;
+        top: 9vw; 
+    }
+`
+
+export const CrumbWrapper = styled(Link)`
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    text-align: right;
+    margin-top: 0.1em;
+    float: right;
+    transition: all .1s ease-in-out;
+    text-decoration: none;
+`
+
+export const Breadcrumb = styled.a`
+    vertical-align: top;
+    font-size: 0.7em;
+    font-weight: 500;
+    max-height: 23px;
+    width: 100%;
+    pointer-events: all;
+    text-decoration: none;
+    color: #222;
+    background-color: #92ff24;
+    padding: 3px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0px;
+    transition: all .1s ease-in-out;
+
+    &:hover{
+    background-color: #75ea00;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 1em;
+        padding: 2px 4px;
+        margin-top: 0px;
+        border-radius: 6px;
+        max-height: 23px;
+        max-width: 100%;
+    }
+`
+
+//BACK ICON
+//BACK ICON
+//BACK ICON
+
+export const BackIconContainer = styled.div`
+    width: 50px;
+    top: 4vh;
+    cursor: pointer;
+    position: sticky;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .1s ease-in-out;
+    z-index: 20;
+    mix-blend-mode: difference;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+
+    ${({ removeBack }) => (removeBack ? 'display: none;' : '')}
+
+    @media screen and (max-width: 991px) {
+        position: fixed;
+        max-height: 23px;
+        width: 46px;
+        top: 3.5vw; 
+        top: 9vw; 
+    }
+`
+
+export const BackIconWrapper = styled(Link)`
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
+    float: left;
+    transition: all .1s ease-in-out;
+
+    &:hover{
+        opacity: 0.75;
+    }
+`
+
+export const BackIcon = styled.img`
+    vertical-align: top;
+    pointer-events: all;
+    margin-top: 0px;
+    max-height: 19px;
+    max-width: 100px;
+    
+    @media screen and (max-width: 991px) {
+        margin-top: 0px;
+        max-height: 23px;
+        max-width: 100%;
+    }
+`
+
+//FOOTER MOBILE
+//FOOTER MOBILE
+//FOOTER MOBILE
+
+export const HeaderContainer = styled.div`
+    transition: all .2s ease-in-out;
+
+    @media screen and (max-width: 991px) {
+    }
+`
+
+//FOOTER
+//FOOTER
+//FOOTER
+
+export const Footer = styled(HeaderContainer)`
+    @media screen and (max-width: 991px) {
+    }
+`
+
+export const FooterTextContainer = styled.div`
+    width: 24%;
+    transition: all .5s ease-in-out;
+    z-index: 2;  
+    text-align: left;
+    display: inline-block; 
+    vertical-align: top;
+    height: 29px;
+    margin-top: 22vh;
+    margin-bottom: 2.2vh;
+    margin-right: 2em;
+    vertical-align: bottom;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+
+    @media screen and (max-width: 1300px) {
+        width: 28%;
+    }
+
+    @media screen and (max-width: 991px) {
+        width: 50%;
+    }
+`
+
+export const EmailTextContainer = styled(FooterTextContainer)`
+    cursor: text;
+    user-select: all;
+
+    &:hover{
+        opacity: 0.9;
+    }
+`
+
+//text elements
+//text elements
+//text elements
+//text elements
+
+
+export const FooterText = styled.a`
+    font-size: 1em;
+    font-weight: 500; 
+    letter-spacing: 0;
+    line-height: 1.25em; 
+    transition: all .1s ease-in-out;
+    color: ${({ darken }) => (darken ? '#666' : '#333')};
+    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
+    text-decoration: none;
+
+    &:hover{
+        opacity: 0.7;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+`
+
+export const FooterTextLink = styled(Link)`
+    font-size: 1em;
+    font-weight: 500; 
+    letter-spacing: 0;
+    line-height: 1.25em; 
+    transition: all .1s ease-in-out;
+    color: ${({ darken }) => (darken ? '#666' : '#333')};
+    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
+    text-decoration: none;
+
+    &:hover{
+        opacity: 0.6;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.1em;
+        font-weight: 500;
     }
 `
 
@@ -369,7 +383,7 @@ export const IgIconMobile = styled(IgIcon)`
 export const AliasesContainer = styled(IconContainer)`
     width: 26em;
     position: relative;
-    margin-right: 0vh;
+    margin-right: 0vw;
     margin-top: 22.25vh;
     margin-bottom: 4vh;
     vertical-align: bottom;
@@ -386,4 +400,48 @@ export const AliasesIcons = styled(IgIcon)`
     max-height: 21px;
     max-width: 1300px;
     pointer-events: none;
+`
+
+//social buttons
+//social buttons
+
+export const SocialIconContainer = styled.div`
+    width: 21px;
+    margin-top: 22vh;
+    margin-right: 2vh;
+    display: inline-block;
+    vertical-align: top;
+
+    @media screen and (max-width: 991px) {
+        width: 30px;
+        margin-top: 20.25vh;
+        float: right;
+        margin-right: 0vh;
+        margin-left: 0.75vh;
+    }
+`
+
+export const SocialIconWrapper = styled.a`
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    text-align: left;
+    float: left;
+    transition: all .1s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        opacity: 0.75;
+    }
+`
+
+export const SocialIcon = styled.img`
+    vertical-align: top;
+    max-height: 21px;
+    max-width: 100px;
+    pointer-events: all;
+
+    @media screen and (max-width: 991px) {
+        max-height: 40px;
+    }
 `

@@ -1,14 +1,11 @@
 import React from 'react';
-import { VideoModule } from '..';
+import { Info, VideoModule } from '..';
 import {
     ProjectContainer,
     GalleryWrapper,
     Name,
-    Description,
-    Tags,
     TextWrapper,
     HeadText,
-    SubText,
     ButtonText,
     SSWrapper,
     ImgSS,
@@ -23,30 +20,35 @@ import {
 import Image2 from '../../assets/earthfo1.webp'
 import Image3 from '../../assets/earth-logo-light-green-letters-01.svg'
 import Image4 from '../../assets/earth-logo-light-green-globe-01.svg'
+import { MediumSpacer, TextContainer, SubText } from '../../globalStyles'
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
 
     return (
         <>
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="earth" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Here on Earth</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/earthfo/" target="_blank">mock-up ↗</ButtonText>
+                        <HeadText>Here on Earth</HeadText>
+                        <ButtonText href="https://isaul-garcia.github.io/earthfo/" target="_blank">mock-up ↗</ButtonText>
                     </TextWrapper>
                 </Name>
-                <Description>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Informational website prototype.</SubText>
+                        <SubText>Informational website prototype.</SubText>
                     </TextWrapper>
-                </Description>
-                <Tags>
+                </TextContainer>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Frontend<br/>Victory, Three.js</SubText>
+                        <SubText>Frontend | Victory, Three.js</SubText>
                     </TextWrapper>
-                </Tags>
+                </TextContainer>
+
+                <MediumSpacer />
 
                 <GalleryWrapper>
                     <SSWrapper>

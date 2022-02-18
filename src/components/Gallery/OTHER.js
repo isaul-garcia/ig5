@@ -21,24 +21,24 @@ import Image2 from '../../assets/graphx-nav-sq.webp'
 import Image3 from '../../assets/mods19bc3.webp'
 import Image4 from '../../assets/sq_sw.webp'
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
     return (
         <>
             <ProjectContainer>
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Other Work</HeadText>
+                        <HeadText>Other Work</HeadText>
                     </TextWrapper>
                 </Name>
                 <Description>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}></SubText>
+                        <SubText></SubText>
                     </TextWrapper>
                 </Description>
                 <Tags>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}></SubText>
+                        <SubText></SubText>
                     </TextWrapper>
                 </Tags>
 

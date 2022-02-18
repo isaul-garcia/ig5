@@ -3,11 +3,8 @@ import {
     ProjectContainer,
     GalleryWrapper,
     Name,
-    Description,
-    Tags,
     TextWrapper,
     HeadText,
-    SubText,
     SSWrapper,
     ImgSS,
     ButtonText,
@@ -22,34 +19,40 @@ import {
 import Image1 from '../../assets/loma-website02B.webp'
 import Image2 from '../../assets/loma-website03.webp'
 import Image3 from '../../assets/loma3.webp'
+import { MediumSpacer, TextContainer, SubText } from '../../globalStyles';
+import { Info } from '..';
 
-const Gallery = ({ scrolledDown }) => {
+const Gallery = () => {
 
     return (
         <>
+            <Info />
+            <MediumSpacer />
             <ProjectContainer>
                 <IndicatorHelper id="loma" />
-                <ProjNameSection scrolledDown={scrolledDown} />
+                <ProjNameSection />
                 <Name>
                     <TextWrapper>
-                        <HeadText scrolledDown={scrolledDown}>Loma</HeadText>
-                        <ButtonText scrolledDown={scrolledDown} href="https://isaul-garcia.github.io/loma/" target="_blank">mock-up ↗</ButtonText>
+                        <HeadText>Loma</HeadText>
+                        <ButtonText href="https://isaul-garcia.github.io/loma/" target="_blank">mock-up ↗</ButtonText>
                     </TextWrapper>
                 </Name>
-                <Description>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Customizable product website prototype.</SubText>
+                        <SubText>Customizable product website prototype.</SubText>
                     </TextWrapper>
-                </Description>
-                <Tags>
+                </TextContainer>
+                <TextContainer>
                     <TextWrapper>
-                        <SubText scrolledDown={scrolledDown}>Frontend<br/>Three.js, React Color</SubText>
+                        <SubText>Frontend<br/>Three.js, React Color</SubText>
                     </TextWrapper>
-                </Tags>
+                </TextContainer>
+
+                <MediumSpacer />
 
                 <GalleryWrapper>
                     <SSWrapper>
-                        <ImgSS backdrop={'#bdbdbd'} src={Image1} />
+                        <ImgSS backdrop={'#a2a2a2'} src={Image1} />
                     </SSWrapper>
                     <InteractiveSection>
                         <InteractiveSecContainer customColor={'#1a1a1a'}>

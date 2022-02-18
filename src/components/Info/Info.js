@@ -1,46 +1,49 @@
 import React from 'react';
 import {
-    Name,
-    Description,
+    TextContainer,
     TextWrapper,
-    HeadText,
     HeadTextDecrease,
-    SubText,
     IconContainer,
     IconWrapper,
     IgIcon,
-    SelfTags,
-    IgIconMobile,
-    HeaderContainer
+    BackIconContainer,
+    BackIconWrapper,
+    BackIcon,
+    Breadcrumb,
+    CrumbContainer,
+    CrumbWrapper,
 } from './Info.elements';
 import Ig from '../../assets/ig_round_d8-02.svg'
+import Back from '../../assets/arrow_button-01.svg'
 
-const Info = ({ scrolledDown }) => {
+const Info = ({removeBack}) => {
     return (
         <>
-            <HeaderContainer scrolledDown={scrolledDown} />
+            <BackIconContainer removeBack={removeBack}>
+                <BackIconWrapper to="/">
+                    <BackIcon src={Back} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
+                </BackIconWrapper>
+            </BackIconContainer>
+            
+            <TextContainer removeBack={removeBack}>
+                <TextWrapper>
+                    <HeadTextDecrease to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
+                </TextWrapper>
+            </TextContainer>
+
+            {/* --ForBreadCrumbs-- */}
+
             <IconContainer>
                 <IconWrapper to="/">
                     <IgIcon src={Ig} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
-                    <IgIconMobile src={Ig} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
                 </IconWrapper>
             </IconContainer>
-            <Name>
-                <TextWrapper>
-                    <HeadText scrolledDown={scrolledDown} to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadText>
-                    <HeadTextDecrease scrolledDown={scrolledDown} to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
-                </TextWrapper>
-            </Name>
-            <Description>
-                <TextWrapper>
-                    <SubText scrolledDown={scrolledDown}>A creative developer building software solutions and exploring new interactions.</SubText>
-                </TextWrapper>
-            </Description>
-            <SelfTags scrolledDown={scrolledDown}>
-                <TextWrapper>
-                    <SubText scrolledDown={scrolledDown}>Frontend Engineer, Designer</SubText>
-                </TextWrapper>
-            </SelfTags>
+
+            <CrumbContainer removeBack={false}>
+                <CrumbWrapper to="/design">
+                    <Breadcrumb onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>Design</Breadcrumb>
+                </CrumbWrapper>
+            </CrumbContainer>
         </>
     )
 }
