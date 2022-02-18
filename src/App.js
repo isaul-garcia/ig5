@@ -21,6 +21,28 @@ import {
 } from './components';
 import { OverContainer } from './globalStyles';
 
+//to do in ig5.5
+//
+//first article image
+// +
+//PWW
+//Anaquel
+//Sketchbook
+//el hoyo
+//gridy
+//
+//3d maybe/interactive banner art
+//extend about?
+//make articles actually work as publications
+//navigation breadcrumbs
+//special featured projects?
+//digital garden
+//español
+//drawing scans + graphic collage page
+//fix mobile scroll up white on difference effect
+//conssolidate hooks text wrappers, containers, etc.
+//smaller images on architecture projects
+
 function App() {
   useEffect(() => {
     WebFont.load({

@@ -79,7 +79,7 @@ export const myArticles = ([
         isNew: true,
         linkId: 'articles/hello-internet',
         header: 'Hello, Internet',
-        tags: '2/16/2022',
+        tags: '2/18/2022',
         Img: require('../../assets/unknown.png').default
     },
 ]);
