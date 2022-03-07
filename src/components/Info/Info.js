@@ -16,7 +16,7 @@ import {
 import Ig from '../../assets/ig_round_d8-02.svg'
 import Back from '../../assets/arrow_button-01.svg'
 
-const Info = ({removeBack}) => {
+const Info = ({ removeBack, noTabButtons }) => {
     return (
         <>
             <BackIconContainer removeBack={removeBack}>
@@ -24,7 +24,7 @@ const Info = ({removeBack}) => {
                     <BackIcon src={Back} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
                 </BackIconWrapper>
             </BackIconContainer>
-            
+
             <TextContainer removeBack={removeBack}>
                 <TextWrapper>
                     <HeadTextDecrease to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
@@ -39,11 +39,17 @@ const Info = ({removeBack}) => {
                 </IconWrapper>
             </IconContainer>
 
-            <CrumbContainer removeBack={false}>
-                <CrumbWrapper to="/design">
-                    <Breadcrumb onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>Design</Breadcrumb>
-                </CrumbWrapper>
-            </CrumbContainer>
+            {noTabButtons ?
+                null
+                :
+                (<CrumbContainer removeBack={false}>
+                    <CrumbWrapper to="/design">
+                        <Breadcrumb onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>Design</Breadcrumb>
+                    </CrumbWrapper>
+                </CrumbContainer>)
+            }
+
+
         </>
     )
 }

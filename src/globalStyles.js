@@ -214,10 +214,10 @@ export const TextWrapper = styled.div`
 `
 
 export const SubText = styled.h4`
-    font-size: 1em;  
-    font-weight: 500; 
+    font-size: 1em;
+    font-weight: 500;
     letter-spacing: 0;
-    line-height: 1.5em; 
+    line-height: 1.5em;
     transition: all .2s ease-in-out;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

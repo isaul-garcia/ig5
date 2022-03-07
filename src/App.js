@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 import "inter-ui/inter.css";
 import GlobalStyle, { MediumSpacer } from './globalStyles';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, Article } from './pages';
+import { Home, Article, ScopeReview } from './pages';
 
 import {
   Footer,
@@ -31,6 +31,7 @@ import { OverContainer } from './globalStyles';
 //el hoyo
 //gridy
 //
+//freelance page
 //3d maybe/interactive banner art
 //extend about?
 //make articles actually work as publications

@@ -14,7 +14,7 @@ export const myProjects = ([
         helperId: 'anaquel',
         header: 'Anaquel',
         description: 'Bookmark manager and Chrome extension',
-        tags: 'Fullstack',
+        tags: 'Frontend',
         Img: require('../../assets/ss-an2.jpg').default
     },
 
@@ -22,7 +22,7 @@ export const myProjects = ([
         helperId: 'gridy',
         header: 'Gridy',
         description: 'Generate covers grid from your currently listening playlist',
-        tags: 'Fullstack',
+        tags: 'Frontend',
         Img: require('../../assets/ss-gr.jpg').default
     },
 

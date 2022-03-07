@@ -1,5 +1,7 @@
 export { default as Info } from './Info/Info';
 export { default as Footer } from './Info/Footer';
+export { default as Form } from './Form/Form';
+export { default as Receipt } from './Form/Receipt';
 
 export { default as LOMA } from './Gallery/LOMA';
 export { default as MARKADO } from './Gallery/MARKADO';
@@ -17,5 +19,3 @@ export { default as VideoModule } from './Gallery/VideoModule';
 
 export { default as ListItemOfThree } from './ListItem/ListItemOfThree';
 export { default as ListItemOfTwo } from './ListItem/ListItemOfTwo';
-
-export { default as Featured } from './Featured/Featured';
