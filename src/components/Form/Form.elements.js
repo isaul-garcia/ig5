@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import { Link } from 'react-router-dom'
 
 
 //form
@@ -188,7 +187,7 @@ export const MediumText = styled.h1`
 export const CardSection = styled.div`
     width: 100%;
     position: relative;
-    display:flex;
+    display: flex;
 `
 
 export const CardWrapper = styled.div`

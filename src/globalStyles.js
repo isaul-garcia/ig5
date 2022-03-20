@@ -68,19 +68,34 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.25em;
     }
 
+    .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear infinite;
+    }
+
     @keyframes cyclingColor {
-	0% {
-        background-color: #1e31e3;
-	}
-	50% {
-		background-color: #ff00ff;
-	}
-	100% {
-		background-color: #e0ae01;
-	}
+        0% {
+            background-color: #1e31e3;
+        }
+        50% {
+            background-color: #ff00ff;
+        }
+        100% {
+            background-color: #e0ae01;
+        }
     }
 
     @media screen and (max-width: 991px) {
+    }
+
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 2000;
+        }
+        to {
+            stroke-dashoffset: 0;
+        }
     }
 `
 
@@ -132,6 +147,7 @@ export const OverContainer = styled.div`
     z-index: 2;
     transition: all .5s ease-in-out;
     background-color: #bcbcbc;
+    position: relative;
     
     @media screen and (max-width: 1300px) {
         width: 62vw;
@@ -146,10 +162,34 @@ export const OverContainer = styled.div`
         margin-top: 10vw;
         border-bottom: 1px solid #000;
         border-top: 1px solid #000;
-        overflow-x: hidden;
         position: relative;
         margin: 5vw;
         margin-top: 0vw;
+    }
+`
+
+export const FillContainer = styled.div`
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: -4.1vh;
+    left: -25vw;
+    background-color: #bcbcbc;
+    z-index: 999;
+    overflow: hidden;
+
+    @media screen and (max-width: 1300px) {
+        left: -19vw;
+    }
+
+    @media screen and (max-width: 991px) {
+        position: absolute;
+        width: 100vw;
+        overflow-x: visible;        
+        top: 0;
+        left: 0;
+        margin: -5vw;        
+        margin-top: -5.1vw;
     }
 `
 
@@ -213,6 +253,20 @@ export const TextWrapper = styled.div`
     }
 `
 
+export const HeadText = styled.h1`
+    letter-spacing: -0.04em;
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1.27em;
+    color: ${({ customColor }) => (customColor)};
+
+    @media screen and (max-width: 991px) {
+        font-size: 2em;        
+        line-height: 2.2em;        
+        padding: 0% 25%;
+    }
+`
+
 export const SubText = styled.h4`
     font-size: 1em;
     font-weight: 500;
@@ -222,6 +276,7 @@ export const SubText = styled.h4`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    color: ${({ customColor }) => (customColor)};
 `
 
 export const MainText = styled(SubText)`

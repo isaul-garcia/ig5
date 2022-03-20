@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 import "inter-ui/inter.css";
 import GlobalStyle, { MediumSpacer } from './globalStyles';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, Article, ScopeReview } from './pages';
+import { Home, Article, ScopeReview, HireMe } from './pages';
 
 import {
   Footer,
@@ -75,6 +75,9 @@ function App() {
           <Route path='/mods' render={(props) => <MODS {...props} />} />
 
           <Route path='/articles' render={(props) => <Article {...props} />} />
+
+          {/* <Route path='/scope+review' render={(props) => <ScopeReview {...props} />} />
+          <Route path='/hire+me' render={(props) => <HireMe {...props} />} /> */}
         </Switch>
 
         <Footer />

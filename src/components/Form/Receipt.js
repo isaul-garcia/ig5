@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LargeSpacer, MediumSpacer } from '../../globalStyles';
+import { MediumSpacer } from '../../globalStyles';
 import * as s from './Form.elements'
 
 const Question = ({ Answer, ...props }) => {
@@ -10,9 +10,11 @@ const Question = ({ Answer, ...props }) => {
         setTotal(event.target.value)
     }
     
+//quitar total de medium spacer
+
     return (
         <>
-            <MediumSpacer />
+            <MediumSpacer total={total}/>
             <h4>Receipt</h4>
             <MediumSpacer />
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { MediumSpacer, LargeSpacer, TextWrapper, SubText, ArticleImg, ArticleFrame } from '../../globalStyles';
-import * as s from './Data';
 
 
 const ArticleFormat = ({props}) => {

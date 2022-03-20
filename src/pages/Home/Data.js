@@ -76,7 +76,7 @@ export const myProjects = ([
 
 export const myArticles = ([
     {
-        isNew: true,
+        isNew: false,
         linkId: 'articles/hello-internet',
         header: 'Hello, Internet',
         tags: '2/18/2022',
