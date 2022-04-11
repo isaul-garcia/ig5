@@ -1,22 +1,47 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Info,
     ListItemOfThree,
     ListItemOfTwo,
 } from '../../components';
-import { Separator, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg, SparkImg } from '../../globalStyles';
+import { Separator, SmallSpacer, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg, SparkImg } from '../../globalStyles';
 import { myProjects, myArticles, myOthers } from './Data';
 import Image from '../../assets/3d-array-b-min.png'
+import ImageM from '../../assets/3d-array-m-min.png'
 import Image2 from '../../assets/red-estrella-s.webp'
 
 const Module = () => {
+    const [mobile, setMobile] = useState(true);
+
+    const showMobileImg = () => {
+        if (window.innerWidth <= 960) {
+            setMobile(false)
+        } else {
+            setMobile(true)
+        }
+    };
+
+    useEffect(() => {
+        showMobileImg();
+    }, []);
+
+    window.addEventListener('resize', showMobileImg);
+
     return (
         <>
             <Info removeBack={true} />
-    
+
             <MediumSpacer />
 
-            <HomeImg src={Image}/>
+            {mobile ? (
+                <HomeImg src={Image} />
+            ) : (
+                <>
+                    <SmallSpacer />
+                    <HomeImg src={ImageM} />
+                    <MediumSpacer />
+                </>
+            )}
 
             <LargeSpacer />
 
@@ -32,7 +57,7 @@ const Module = () => {
                 </TextWrapper>
             </TextContainer>
 
-            <SparkImg src={Image2}/>
+            <SparkImg src={Image2} />
 
             <MediumSpacer />
             <MediumSpacer />

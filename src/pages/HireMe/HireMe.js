@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Button, MyCanvas } from '../../components';
-import { FillContainer, MediumSpacer, SmallSpacer } from '../../globalStyles';
-import { TitleWrapper, Container1, Container2, Container3, Container4, ContactWrapper, TopWrapper, Emoji, BigText, SubText, TopText, MessageText, TagWrapper, BubbleWrapper, SparksWrapper, ElsewhereWrapper, Container5, Orn, OrnWrapper } from './HireMe.elements';
+import { FillContainer, MediumSpacer} from '../../globalStyles';
+import { TitleWrapper, Container1, Container2, Container3, Container4, ContactWrapper, TopWrapper, Emoji, BigText, SubText, TopText, MessageText, TagWrapper, BubbleWrapper, SparksWrapper } from './HireMe.elements';
 import { tagsData, tagsDataSecond } from './Data';
 import Marquee from "react-fast-marquee";
 import Postbox from "../../assets/Postbox.png"
-import Ornament from "../../assets/khaft-orn.png"
 
 const Module = () => {
     const [expand, setExpand] = useState(false);
