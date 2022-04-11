@@ -75,9 +75,6 @@ function App() {
           <Route path='/mods' render={(props) => <MODS {...props} />} />
 
           <Route path='/articles' render={(props) => <Article {...props} />} />
-
-          {/* <Route path='/scope+review' render={(props) => <ScopeReview {...props} />} />
-          <Route path='/hire+me' render={(props) => <HireMe {...props} />} /> */}
         </Switch>
 
         <Footer />

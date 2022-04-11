@@ -4,9 +4,10 @@ import {
     ListItemOfThree,
     ListItemOfTwo,
 } from '../../components';
-import { Separator, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg } from '../../globalStyles';
+import { Separator, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg, SparkImg } from '../../globalStyles';
 import { myProjects, myArticles, myOthers } from './Data';
-import Image from '../../assets/red-estrella-s.webp'
+import Image from '../../assets/3d-array-b-min.png'
+import Image2 from '../../assets/red-estrella-s.webp'
 
 const Module = () => {
     return (
@@ -31,7 +32,10 @@ const Module = () => {
                 </TextWrapper>
             </TextContainer>
 
-            <LargeSpacer />
+            <SparkImg src={Image2}/>
+
+            <MediumSpacer />
+            <MediumSpacer />
 
             <Separator>
                 <h4>Featured</h4>
@@ -61,7 +65,6 @@ const Module = () => {
                 ))}
             </Separator>
 
-            <MediumSpacer />
         </>
     )
 }

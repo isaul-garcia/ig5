@@ -62,7 +62,6 @@ export const Container4 = styled.div`
     overflow: hidden;
 
     @media screen and (max-width: 1300px) {
-    height: 59vh;
     }
 
     @media screen and (max-width: 991px) {
@@ -73,7 +72,7 @@ export const Container4 = styled.div`
 
 export const Container5 = styled.div`
     width: 50vw;
-    height: 35vh;
+    height: 20vh;
     background-color: #ff6009;
     float: left;
     overflow: hidden;
@@ -207,6 +206,12 @@ export const Emoji = styled.img`
     transition: all 0.2s ease-in-out;
 `
 
+export const OrnWrapper = styled.div`  
+    width: 100%;
+    margin-top: -77%;
+`
+
+
 //Text
 //Text
 //Text
@@ -281,4 +286,13 @@ export const MessageText = styled(BigText)`
             transform: scale(1,1);
         } 
     }
+`
+
+export const Orn = styled.img`
+    width: 175%;
+    height: 175%;
+    margin-left: -37.5%;
+    object-fit: cover;
+    bottom: 0;
+    animation: rotation 120s linear infinite;
 `

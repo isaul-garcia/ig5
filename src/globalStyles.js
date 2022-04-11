@@ -97,6 +97,15 @@ const GlobalStyle = createGlobalStyle`
             stroke-dashoffset: 0;
         }
     }
+
+    @keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 `
 
 // SPACERS
@@ -208,6 +217,12 @@ export const HomeImg = styled.img`
         margin-bottom: -2vh;
         height: 100%;
     }
+`
+
+export const SparkImg = styled(HomeImg)`
+    margin-top: -100vh;
+    opacity: 0;
+    z-index: -1;
 `
 
 export const Separator = styled.div`
