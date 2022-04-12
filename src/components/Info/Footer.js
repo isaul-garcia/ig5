@@ -20,7 +20,7 @@ const Info = () => {
         <>
             <Footer>
                 <EmailTextContainer>
-                    <FooterText darken={true}>isaulgarcia@protonmail.com</FooterText>
+                    <FooterText darken={true}>isaulgarcia@proton.me</FooterText>
                 </EmailTextContainer>
 
                 <SocialIconContainer>
