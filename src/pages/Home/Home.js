@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
     Info,
     ListItemOfThree,
+    ListItemOfThree0,
     ListItemOfTwo,
 } from '../../components';
 import { Separator, SmallSpacer, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg, SparkImg } from '../../globalStyles';
@@ -88,7 +89,11 @@ const Module = () => {
                 {myOthers.map((props) => (
                     <ListItemOfThree {...props} />
                 ))}
+                   
             </Separator>
+            <LargeSpacer />
+
+            <ListItemOfThree0 lnk={'https://isauljosue.gitlab.io/isaul.garcia/'} header={"MDEF"} description={"Master's thesis documentation"} tags={'Research'} Imag={'../../assets/sq_sw.webp'} />
 
         </>
     )

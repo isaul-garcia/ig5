@@ -18,6 +18,7 @@ export { default as TH } from './Gallery/TH';
 export { default as VideoModule } from './Gallery/VideoModule';
 
 export { default as ListItemOfThree } from './ListItem/ListItemOfThree';
+export { default as ListItemOfThree0 } from './ListItem/ListItemOfThree0';
 export { default as ListItemOfTwo } from './ListItem/ListItemOfTwo';
 
 export { default as Button } from './Button/Button';

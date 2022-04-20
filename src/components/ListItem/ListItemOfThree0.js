@@ -16,8 +16,7 @@ import {
 const Gallery = ({ ...props }) => {
     return (
         <>
-            <ItemContainer onClick={() => {window.scrollTo({top: 0, behavior: "smooth"});}} to={props.helperId} >
-                <PreviewImg  src={props.Img} />
+            <ItemContainer0 href={props.lnk} target="_blank" >
                 <Name>
                     <TextWrapper>
                         <HeadText>{props.header}<TagBubble hasTag={props.hasTag}>Mock</TagBubble></HeadText>
@@ -33,7 +32,7 @@ const Gallery = ({ ...props }) => {
                         <TagText>{props.tags}</TagText>
                     </TextWrapper>
                 </Tag>
-            </ItemContainer>
+            </ItemContainer0>
         </>
     )
 }

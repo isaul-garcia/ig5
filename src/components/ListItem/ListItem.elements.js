@@ -27,12 +27,43 @@ export const ItemContainer = styled(Link)`
     }
 `
 
+export const ItemContainer0 = styled.a`
+    width: 100%;
+    height: 100%;
+    padding: 8px 18px;
+    display: block;
+    position: relative;
+    overflow-y: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #aaa;
+    transition: 0.1s;
+    
+    &:hover {
+        background-color: #888;        
+        padding: 8px 26px;
+    }
+
+    &:nth-child(even){
+        margin-right: 1%;
+    }
+
+    @media screen and (max-width: 991px) {
+        margin-top: 0px;
+        
+        &:hover {
+            background-color: #bcbcbc;
+        }
+    }
+`
+
 export const Boxed = styled.div`
     width: 25%;
     padding: 12px 0px;
     transition: all .4s ease-in-out;
     display: inline-block;
     vertical-align: top;
+    cursor: pointer;
 
     @media screen and (max-width: 991px) {
         width: 100%;
@@ -59,6 +90,7 @@ export const Name = styled(Boxed)`
 
 export const Desc = styled(Boxed)`
     width: 60%; 
+    cursor: pointer;
     
     @media screen and (min-width: 991px) {
         ${ItemContainer}:hover & {
@@ -75,6 +107,7 @@ export const Desc = styled(Boxed)`
 export const Tag = styled(Boxed)`
     width: 15%;
     float: right;
+    cursor: pointer;
 
     @media screen and (min-width: 991px) {
         ${ItemContainer}:hover & {
@@ -131,6 +164,7 @@ export const TextWrapper = styled.div`
     text-decoration: none;
     width: 100%;
     display: inline-block;
+    cursor: pointer;
     color: #222;
     text-align: ${({ isLast }) => (isLast ? 'right' : 'left')};
     transition: 0s;
@@ -177,6 +211,7 @@ export const HeadText = styled.h1`
     font-size: 1.1em;
     font-weight: 700;
     line-height: 1.1em;
+    cursor: pointer;
 
     @media screen and (max-width: 991px) {
         font-size: 1.75em;        
@@ -190,6 +225,7 @@ export const SubText = styled.h4`
     letter-spacing: 0;
     line-height: 1em;
     opacity: 1;
+    cursor: pointer;
 
     @media screen and (max-width: 1500px) {
         font-size: 0.9em;

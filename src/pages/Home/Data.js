@@ -134,4 +134,13 @@ export const myOthers = ([
         tags: 'Architecture',
         Img: require('../../assets/sq_mods.png').default
     },
+
+    {
+        helperId: '',
+        lnk: 'https://isauljosue.gitlab.io/isaul.garcia/',
+        header: 'MDEF',
+        description: `Master's thesis documentation`,
+        tags: 'Research',
+        Img: require('../../assets/sq_sw.webp').default
+    },
 ]);
