@@ -89,12 +89,7 @@ const Module = () => {
                 {myOthers.map((props) => (
                     <ListItemOfThree {...props} />
                 ))}
-                   
             </Separator>
-            <LargeSpacer />
-
-            <ListItemOfThree0 lnk={'https://isauljosue.gitlab.io/isaul.garcia/'} header={"MDEF"} description={"Master's thesis documentation"} tags={'Research'} Imag={'../../assets/sq_sw.webp'} />
-
         </>
     )
 }
