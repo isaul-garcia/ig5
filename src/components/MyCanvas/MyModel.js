@@ -9,7 +9,7 @@ export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useLoader(GLTFLoader, model)
   return (    
-    <group ref={group} {...props} position={[0, -3.5, 0]} dispose={null}>
+    <group ref={group} {...props} position={[0, -3.5, -1]} dispose={null}>
       <mesh
         geometry={nodes.RockOn.geometry}
         material={materials.Yellow}

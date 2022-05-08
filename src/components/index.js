@@ -15,12 +15,14 @@ export { default as DESIGN } from './Gallery/DESIGN';
 export { default as ROCA } from './Gallery/ROCA';
 export { default as MODS } from './Gallery/MODS';
 export { default as TH } from './Gallery/TH';
+export { default as SOMEWARE } from './Gallery/SOMEWARE';
 export { default as VideoModule } from './Gallery/VideoModule';
 
 export { default as ListItemOfThree } from './ListItem/ListItemOfThree';
-export { default as ListItemOfThree0 } from './ListItem/ListItemOfThree0';
 export { default as ListItemOfTwo } from './ListItem/ListItemOfTwo';
 
 export { default as Button } from './Button/Button';
+
+export { default as Banner } from './Banner/Banner';
 
 export { default as MyCanvas } from './MyCanvas/MyCanvas'

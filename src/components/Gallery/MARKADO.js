@@ -18,50 +18,52 @@ import {
 import Image1 from '../../assets/markado-home-b.webp'
 import Image2 from '../../assets/mrkd5.webp'
 import Image3 from '../../assets/5markado-03.webp'
-import { MediumSpacer, TextContainer, SubText } from '../../globalStyles';
+import { MediumSpacer, TextContainer, SubText, FullContainer } from '../../globalStyles';
 
 const Gallery = () => {
     return (
         <>
-            <Info />
-            <MediumSpacer />
-            <ProjectContainer>
-                <IndicatorHelper id="markado" />
-                <ProjNameSection />
-                <Name>
-                    <TextWrapper>
-                        <HeadText>Markado</HeadText>
-                        <ButtonText href="https://isaul-garcia.github.io/markado/" target="_blank">mock-up ↗</ButtonText>
-                    </TextWrapper>
-                </Name>
-                <TextContainer>
-                    <TextWrapper>
-                        <SubText>E-Commerce website prototype.</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
-                        <SubText>Frontend</SubText>
-                    </TextWrapper>
-                </TextContainer>
-
+            <FullContainer>
+                <Info />
                 <MediumSpacer />
+                <ProjectContainer>
+                    <IndicatorHelper id="markado" />
+                    <ProjNameSection />
+                    <Name>
+                        <TextWrapper>
+                            <HeadText>Markado</HeadText>
+                            <ButtonText href="https://isaul-garcia.github.io/markado/" target="_blank">mock-up ↗</ButtonText>
+                        </TextWrapper>
+                    </Name>
+                    <TextContainer>
+                        <TextWrapper>
+                            <SubText>E-Commerce website prototype.</SubText>
+                        </TextWrapper>
+                    </TextContainer>
+                    <TextContainer>
+                        <TextWrapper>
+                            <SubText>Frontend</SubText>
+                        </TextWrapper>
+                    </TextContainer>
 
-                <GalleryWrapper>
-                    <SSWrapper>
-                        <ImgSS backdrop={'#a7caff'} src={Image1} />
-                    </SSWrapper>
-                    <Img33100 src={Image2} />
-                    <Img50 src={Image3} />
-                    <VideoModule
-                        giveWidth={'50%'}
-                        pad={true}
-                        giveHeight={'55vh'}
-                        customColor={'#e7e789'}
-                        videoURL={'./Videos/markado2s.mp4'}
-                    />
-                </GalleryWrapper>
-            </ProjectContainer>
+                    <MediumSpacer />
+
+                    <GalleryWrapper>
+                        <SSWrapper>
+                            <ImgSS backdrop={'#a7caff'} src={Image1} />
+                        </SSWrapper>
+                        <Img33100 src={Image2} />
+                        <Img50 src={Image3} />
+                        <VideoModule
+                            giveWidth={'50%'}
+                            pad={true}
+                            giveHeight={'55vh'}
+                            customColor={'#e7e789'}
+                            videoURL={'./Videos/markado2s.mp4'}
+                        />
+                    </GalleryWrapper>
+                </ProjectContainer>
+            </FullContainer>
         </>
     )
 }

@@ -10,7 +10,6 @@ import {
     SubText,
     TagText,
     PreviewImg,
-    ItemContainer0
 } from './ListItem.elements';
 
 const Gallery = ({ ...props }) => {

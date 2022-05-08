@@ -9,14 +9,14 @@ import {
     BackIconContainer,
     BackIconWrapper,
     BackIcon,
-    Breadcrumb,
+    TinyTextBox,
     CrumbContainer,
     CrumbWrapper,
 } from './Info.elements';
 import Ig from '../../assets/ig_round_d8-02.svg'
 import Back from '../../assets/arrow_button-01.svg'
 
-const Info = ({ removeBack, noTabButtons }) => {
+const Info = ({ removeBack, noTabButtons, loading }) => {
     return (
         <>
             <BackIconContainer removeBack={removeBack}>
@@ -27,11 +27,10 @@ const Info = ({ removeBack, noTabButtons }) => {
 
             <TextContainer removeBack={removeBack}>
                 <TextWrapper>
-                    <HeadTextDecrease to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
+                    <HeadTextDecrease to="/" textColor={"#dbdbdb"} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
+                   
                 </TextWrapper>
             </TextContainer>
-
-            {/* --ForBreadCrumbs-- */}
 
             <IconContainer>
                 <IconWrapper to="/">
@@ -42,14 +41,17 @@ const Info = ({ removeBack, noTabButtons }) => {
             {noTabButtons ?
                 null
                 :
-                (<CrumbContainer removeBack={false}>
-                    <CrumbWrapper to="/design">
-                        <Breadcrumb onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>Design</Breadcrumb>
-                    </CrumbWrapper>
-                </CrumbContainer>)
+                (
+                    <>
+                        <CrumbContainer removeBack={false}>
+                            <CrumbWrapper to="/design">
+                                <TinyTextBox onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>Design</TinyTextBox>
+                            </CrumbWrapper>
+                        </CrumbContainer>
+
+                    </>
+                )
             }
-
-
         </>
     )
 }

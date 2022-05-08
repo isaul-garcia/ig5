@@ -723,3 +723,15 @@ export const OtherId = styled.a`
         line-height: 1.1em;
     }
 `
+
+
+export const DescriptionWrapper = styled.div`
+    padding: 0 0.25em;
+    z-index: 1;
+`
+
+export const PackWrapper = styled.div`
+    width: 100%;
+    display: inline-block;
+`
+

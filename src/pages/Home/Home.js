@@ -1,95 +1,105 @@
 import React, { useState, useEffect } from 'react';
 import {
+    Banner,
     Info,
     ListItemOfThree,
-    ListItemOfThree0,
     ListItemOfTwo,
 } from '../../components';
-import { Separator, SmallSpacer, MediumSpacer, LargeSpacer, TextWrapper, SubText, TextContainer, HomeImg, SparkImg } from '../../globalStyles';
+import {
+    Separator,
+    MediumSpacer,
+    LargeSpacer,
+    TextWrapper,
+    SubText,
+    TextContainer,
+    SparkImg,
+    Backdrop,
+    OverContainer,
+    BannerContainer,
+    BannerWrapper,
+    GiantSpacer,
+    SmallSpacer
+} from '../../globalStyles';
 import { myProjects, myArticles, myOthers } from './Data';
-import Image from '../../assets/3d-array-b-min.png'
-import ImageM from '../../assets/3d-array-m-min.png'
 import Image2 from '../../assets/red-estrella-s.webp'
+import { Loader } from './Home.elements';
 
-const Module = () => {
-    const [mobile, setMobile] = useState(true);
+//
 
-    const showMobileImg = () => {
-        if (window.innerWidth <= 960) {
-            setMobile(false)
-        } else {
-            setMobile(true)
-        }
-    };
-
+const Module = ({ scrolled }) => {
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
-        showMobileImg();
-    }, []);
-
-    window.addEventListener('resize', showMobileImg);
-
+        setTimeout(() => {
+            setLoading(false)
+        }, 200);
+    }, [])
     return (
         <>
-            <Info removeBack={true} />
 
-            <MediumSpacer />
+            <BannerContainer scrolled={scrolled}>
+                <BannerWrapper>
+                    <Loader loading={loading} />
+                    <Banner />
+                </BannerWrapper>
+            </BannerContainer>
 
-            {mobile ? (
-                <HomeImg src={Image} />
-            ) : (
-                <>
-                    <SmallSpacer />
-                    <HomeImg src={ImageM} />
+            <GiantSpacer />
+
+            <OverContainer>
+                <Backdrop scrolled={scrolled} />
+                <Info removeBack={true} />
+
+                <MediumSpacer />
+
+                <LargeSpacer />
+
+                <TextContainer>
+                    <TextWrapper>
+                        <SubText>
+                        A creative developer building software solutions and exploring new interactions. With a particular interest in the evolution of the web, data visualization and mixed realities.
+                        </SubText>
+                    </TextWrapper>
+                </TextContainer>
+                <SmallSpacer />
+                <TextContainer>
+                    <TextWrapper>
+                        <SubText>Frontend Engineer, Designer</SubText>
+                    </TextWrapper>
+                </TextContainer>
+
+                <SparkImg src={Image2} />
+
+                <MediumSpacer />
+                <MediumSpacer />
+
+                <Separator>
+                    <h4>Featured</h4>
                     <MediumSpacer />
-                </>
-            )}
+                    {myProjects.map((props) => (
+                        <ListItemOfThree {...props} />
+                    ))}
+                </Separator>
 
-            <LargeSpacer />
+                <LargeSpacer />
 
+                <Separator>
+                    <h4>Writing</h4>
+                    <MediumSpacer />
+                    {myArticles.map((props) => (
+                        <ListItemOfTwo {...props} />
+                    ))}
+                </Separator>
 
-            <TextContainer>
-                <TextWrapper>
-                    <SubText>A creative developer building software solutions and exploring new interactions.</SubText>
-                </TextWrapper>
-            </TextContainer>
-            <TextContainer>
-                <TextWrapper>
-                    <SubText>Frontend Engineer, Designer</SubText>
-                </TextWrapper>
-            </TextContainer>
+                <LargeSpacer />
 
-            <SparkImg src={Image2} />
-
-            <MediumSpacer />
-            <MediumSpacer />
-
-            <Separator>
-                <h4>Featured</h4>
-                <MediumSpacer />
-                {myProjects.map((props) => (
-                    <ListItemOfThree {...props} />
-                ))}
-            </Separator>
-
-            <LargeSpacer />
-
-            <Separator>
-                <h4>Writing</h4>
-                <MediumSpacer />
-                {myArticles.map((props) => (
-                    <ListItemOfTwo {...props} />
-                ))}
-            </Separator>
-
-            <LargeSpacer />
-
-            <Separator>
-                <h4>More</h4>
-                <MediumSpacer />
-                {myOthers.map((props) => (
-                    <ListItemOfThree {...props} />
-                ))}
-            </Separator>
+                <Separator>
+                    <h4>More</h4>
+                    <MediumSpacer />
+                    {myOthers.map((props) => (
+                        <ListItemOfThree {...props} />
+                    ))}
+                </Separator>
+            </OverContainer>
         </>
     )
 }

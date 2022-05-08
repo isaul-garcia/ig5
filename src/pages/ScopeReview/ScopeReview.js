@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Info, Receipt } from '../../components';
-import {  } from '../../globalStyles';
+import { Backdrop, OverContainer } from '../../globalStyles';
 
 //to do:::
 //
@@ -21,9 +21,12 @@ const Scope = () => {
 
     return (
         <>
-            <Info noTabButtons={true}/>
-            <Receipt total={total} setTotal={setTotal}/>
-            <Form />
+            <OverContainer>
+                <Backdrop scrolled={true} />
+                <Info noTabButtons={true} />
+                <Receipt total={total} setTotal={setTotal} />
+                <Form />
+            </OverContainer>
         </>
     )
 }

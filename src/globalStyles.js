@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Inter', sans-serif; 
 
-        &::-moz-selection { background: #f15a38; }
-        &::selection { background: #f15a38; }
+        &::-moz-selection { background: #f15a38; color: #bcbcbc;}
+        &::selection { background: #f15a38; color: #bcbcbc; }
     }    
 
     body {
@@ -138,6 +138,14 @@ export const LargeSpacer = styled.div`
         height: ${({ justMobile }) => (justMobile ? '60px' : '')};
     }
 `
+export const GiantSpacer = styled.div`
+    height: ${({ justMobile }) => (justMobile ? 'none' : '86vh')};
+    cursor: default;
+
+    @media screen and (max-width: 991px) {
+        height: ${({ justMobile }) => (justMobile ? '0px' : '97vh')};
+    }
+`
 
 //HOME LAYOUT
 //HOME LAYOUT
@@ -150,12 +158,9 @@ export const OverContainer = styled.div`
     margin-right: 25vw;
     margin-top: 4vh;
     padding-top: 4vh;
-    margin-bottom: 4vh;
-    border-bottom: 1px solid #222;
     border-top: 1px solid #222;
     z-index: 2;
     transition: all .5s ease-in-out;
-    background-color: #bcbcbc;
     position: relative;
     
     @media screen and (max-width: 1300px) {
@@ -168,12 +173,44 @@ export const OverContainer = styled.div`
         margin-right: 0px;
         padding-top: 0vw;
         margin-bottom: 10vw;
-        margin-top: 10vw;
-        border-bottom: 1px solid #000;
-        border-top: 1px solid #000;
+        margin-top: 0;
+        border-bottom: 1px solid #222;
+        border-top: 1px solid #222;
         position: relative;
         margin: 5vw;
         margin-top: 0vw;
+    }
+`
+
+export const FooterContainer = styled(OverContainer)`
+    margin-top: 0vh;
+    padding-top: 0vh;
+    margin-bottom: 4vh;
+    background-color: #bcbcbc;
+    border-top: 0px solid #bcbcbc;
+    border-bottom: 1px solid #222;    
+    z-index: 1;
+`
+
+export const FullContainer = styled(OverContainer)`
+    background-color: #bcbcbc;
+`
+
+export const BlogContainer = styled.div`
+    padding: 0 80px 0 80px;
+`
+
+export const Backdrop = styled.div` 
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    background-color: #bcbcbc;
+    transition: 0.5s;
+    z-index: -2;
+    margin-top: ${({ scrolled }) => (scrolled ? '-4vh' : '6vh')};
+
+    @media screen and (max-width: 991px) {
+        margin-top: ${({ scrolled }) => (scrolled ? '3vh' : '3vh')};
     }
 `
 
@@ -186,6 +223,7 @@ export const FillContainer = styled.div`
     background-color: #bcbcbc;
     z-index: 999;
     overflow: hidden;
+    z-index: 2;
 
     @media screen and (max-width: 1300px) {
         left: -19vw;
@@ -200,6 +238,48 @@ export const FillContainer = styled.div`
         margin: -5vw;        
         margin-top: -5.1vw;
     }
+`
+
+// Banner
+// Banner
+// Banner
+
+export const BannerContainer = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-left: 0%;
+    background-color: #000000;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: -1;
+
+    @media screen and (min-width: 991px) {
+        ${({ scrolled }) => (scrolled ? `
+            width: 62%;
+            height: 90%;
+            margin-left: 19%;
+        ` : ``)}
+    }
+
+    @media screen and (min-width: 1300px) {
+        ${({ scrolled }) => (scrolled ? `
+            width: 50%;
+            height: 90%;
+            margin-left: 25%;
+        ` : ``)}
+    }
+
+    @media screen and (max-width: 991px) {
+        width: 100%;
+        height: 100%;
+    }
+`
+
+export const BannerWrapper = styled.div`
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 `
 
 // HOME ITEMS
@@ -291,7 +371,9 @@ export const SubText = styled.h4`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    color: #222;
     color: ${({ customColor }) => (customColor)};
+
 `
 
 export const MainText = styled(SubText)`
@@ -300,32 +382,8 @@ export const MainText = styled(SubText)`
     font-weight: 500; 
 `
 
-
-//ARTICLE PARTS
-//ARTICLE PARTS
-//ARTICLE PARTS
-
-export const ArticleTitle = styled.h1`
-    margin-left: -2px;
-`
-
-export const ArticleImg = styled.img`
-    border-radius: 0.75em;
-    object-fit: cover;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    height: 64vh;
-    
-    @media screen and (max-width: 991px) {
-    height: 105vw;
-    }
-`
-
-export const ArticleFrame = styled.div`
-    background-color: #00f;
-    width: 100%;
-    height: 65vh;
+export const SubTitle = styled.h4` 
+    color: #666;
 `
 
 //NEW BUBBLE
@@ -370,6 +428,5 @@ export const TagBubble = styled.a`
     display: ${({ hasTag }) => (hasTag ? '' : 'none')};
     letter-spacing: 0px;
 `
-
 
 export default GlobalStyle

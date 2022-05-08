@@ -188,7 +188,7 @@ export const CrumbWrapper = styled(Link)`
     text-decoration: none;
 `
 
-export const Breadcrumb = styled.a`
+export const TinyTextBox = styled.a`
     vertical-align: top;
     font-size: 0.7em;
     font-weight: 500;

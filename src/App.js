@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import WebFont from 'webfontloader';
 import "inter-ui/inter.css";
-import GlobalStyle, { MediumSpacer } from './globalStyles';
+import GlobalStyle, { FooterContainer } from './globalStyles';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, Article, ScopeReview, HireMe } from './pages';
+import { Home, HireMe } from './pages';
 
 import {
   Footer,
@@ -17,34 +17,38 @@ import {
   DESIGN,
   TH,
   ROCA,
-  MODS
+  MODS,
+  SOMEWARE
 } from './components';
-import { OverContainer } from './globalStyles';
+import { BlogHello } from './blogs';
 
-//to do in ig5.5
+//TODO ::
 //
-//first article image
-// +
-//PWW
-//Anaquel
-//Sketchbook
-//el hoyo
-//gridy
+//CLEAN CODE >> consolidate hooks text wrappers, containers, etc.
 //
-//freelance page
-//3d maybe/interactive banner art
-//extend about?
-//make articles actually work as publications
-//navigation breadcrumbs
-//special featured projects?
-//digital garden
+//Someware (to document)
+//Anaquel (undone)
+//gridy (not public)
+//
+//extend about into a page
 //español
-//drawing scans + graphic collage page
-//fix mobile scroll up white on difference effect
-//conssolidate hooks text wrappers, containers, etc.
+//
+//drawings scans + graphic collage page
 //smaller images on architecture projects
 
 function App() {
+  const [isScroll, setIsScroll] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 50) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
+
   useEffect(() => {
     WebFont.load({
       google: {
@@ -56,29 +60,31 @@ function App() {
   return (
     <Router>
       <GlobalStyle />
-      <MediumSpacer justMobile={true} />
-      <OverContainer>
 
-        <Switch>
-          <Route exact path='/' render={(props) => <Home {...props} />} />
-          <Route path='/design' render={(props) => <DESIGN {...props} />} />
-          <Route path='/digiden' render={(props) => <DIGIDEN {...props} />} />
-          <Route path='/loma' render={(props) => <LOMA {...props} />} />
-          <Route path='/earth' render={(props) => <EARTH {...props} />} />
-          <Route path='/gridy' render={(props) => <GRIDY {...props} />} />
-          <Route path='/markado' render={(props) => <MARKADO {...props} />} />
-          <Route path='/anaquel' render={(props) => <ANAQUEL {...props} />} />
-          
-          <Route path='/room-x' render={(props) => <ROOMX {...props} />} />
-          <Route path='/treehouse' render={(props) => <TH {...props} />} />
-          <Route path='/roca' render={(props) => <ROCA {...props} />} />
-          <Route path='/mods' render={(props) => <MODS {...props} />} />
+      <Switch>
+        <Route exact path='/' render={(props) => <Home scrolled={isScroll}{...props} />} />
+        <Route path='/design' render={(props) => <DESIGN {...props} />} />
+        <Route path='/digiden' render={(props) => <DIGIDEN {...props} />} />
+        <Route path='/loma' render={(props) => <LOMA {...props} />} />
+        <Route path='/earth' render={(props) => <EARTH {...props} />} />
+        <Route path='/gridy' render={(props) => <GRIDY {...props} />} />
+        <Route path='/markado' render={(props) => <MARKADO {...props} />} />
+        <Route path='/anaquel' render={(props) => <ANAQUEL {...props} />} />
+        <Route path='/someware' render={(props) => <SOMEWARE {...props} />} />
 
-          <Route path='/articles' render={(props) => <Article {...props} />} />
-        </Switch>
+        <Route path='/room-x' render={(props) => <ROOMX {...props} />} />
+        <Route path='/treehouse' render={(props) => <TH {...props} />} />
+        <Route path='/roca' render={(props) => <ROCA {...props} />} />
+        <Route path='/mods' render={(props) => <MODS {...props} />} />
 
+        <Route path='/blog/hello-internet' render={(props) => <BlogHello {...props} />} />
+
+        <Route path='/hire-me' render={(props) => <HireMe {...props} />} />
+      </Switch>
+
+      <FooterContainer>
         <Footer />
-      </OverContainer>
+      </FooterContainer>
     </Router>
   );
 }
