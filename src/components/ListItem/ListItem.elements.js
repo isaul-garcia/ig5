@@ -89,13 +89,13 @@ export const Name = styled(Boxed)`
 `
 
 export const Desc = styled(Boxed)`
-    width: 60%; 
+    width: 57%; 
     cursor: pointer;
     
     @media screen and (min-width: 991px) {
         ${ItemContainer}:hover & {
-        margin-left: 1%;
-        width: 53%;
+        margin-left: 0%;
+        width: 47%;
         padding: 40px 0px;
         }      
     }
@@ -105,13 +105,13 @@ export const Desc = styled(Boxed)`
     }
 `
 export const Tag = styled(Boxed)`
-    width: 15%;
+    width: 18%;
     float: right;
     cursor: pointer;
 
     @media screen and (min-width: 991px) {
         ${ItemContainer}:hover & {
-        width: 10%;
+        width: 17%;
         margin-right: 4%;
         padding: 40px 0px;
         }    

@@ -8,8 +8,8 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Inter', sans-serif; 
 
-        &::-moz-selection { background: #f15a38; color: #bcbcbc;}
-        &::selection { background: #f15a38; color: #bcbcbc; }
+        &::-moz-selection { background: #222; color: #bcbcbc;}
+        &::selection { background: #222; color: #bcbcbc; }
     }    
 
     body {
@@ -99,19 +99,16 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }  
 `
 
 // SPACERS
-// SPACERS
-// SPACERS
-
 export const SmallSpacer = styled.div`
     height: ${({ justMobile }) => (justMobile ? 'none' : '10px')};
     cursor: default;
@@ -147,10 +144,8 @@ export const GiantSpacer = styled.div`
     }
 `
 
-//HOME LAYOUT
-//HOME LAYOUT
-//HOME LAYOUT
-
+//CONTAINERS
+//Mainly to ensure side margins
 export const OverContainer = styled.div`
     top: 0;
     float: right;
@@ -163,7 +158,7 @@ export const OverContainer = styled.div`
     transition: all .5s ease-in-out;
     position: relative;
     
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1780px) {
         width: 62vw;
         margin-right: 19vw;
     }
@@ -182,6 +177,10 @@ export const OverContainer = styled.div`
     }
 `
 
+export const FullContainer = styled(OverContainer)`
+    background-color: #bcbcbc;
+`
+
 export const FooterContainer = styled(OverContainer)`
     margin-top: 0vh;
     padding-top: 0vh;
@@ -192,26 +191,10 @@ export const FooterContainer = styled(OverContainer)`
     z-index: 1;
 `
 
-export const FullContainer = styled(OverContainer)`
+export const BlogContainer = styled(OverContainer)`
     background-color: #bcbcbc;
-`
-
-export const BlogContainer = styled.div`
-    padding: 0 80px 0 80px;
-`
-
-export const Backdrop = styled.div` 
-    position: absolute;
-    height: 99%;
-    width: 100%;
-    background-color: #bcbcbc;
-    transition: 0.5s;
-    z-index: -2;
-    margin-top: ${({ scrolled }) => (scrolled ? '-4vh' : '6vh')};
-
-    @media screen and (max-width: 991px) {
-        margin-top: ${({ scrolled }) => (scrolled ? '3vh' : '3vh')};
-    }
+    width: 40vw;
+    margin-right: 30vw;
 `
 
 export const FillContainer = styled.div`
@@ -240,86 +223,8 @@ export const FillContainer = styled.div`
     }
 `
 
-// Banner
-// Banner
-// Banner
-
-export const BannerContainer = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin-left: 0%;
-    background-color: #000000;
-    transition: 0.5s;
-    overflow: hidden;
-    z-index: -1;
-
-    @media screen and (min-width: 991px) {
-        ${({ scrolled }) => (scrolled ? `
-            width: 62%;
-            height: 90%;
-            margin-left: 19%;
-        ` : ``)}
-    }
-
-    @media screen and (min-width: 1300px) {
-        ${({ scrolled }) => (scrolled ? `
-            width: 50%;
-            height: 90%;
-            margin-left: 25%;
-        ` : ``)}
-    }
-
-    @media screen and (max-width: 991px) {
-        width: 100%;
-        height: 100%;
-    }
-`
-
-export const BannerWrapper = styled.div`
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-`
-
-// HOME ITEMS
-// HOME ITEMS
-// HOME ITEMS
-
-export const HomeImg = styled.img`
-    object-fit: contain;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    
-    @media screen and (max-width: 991px) {
-        margin-top: 8vh;
-        margin-bottom: -2vh;
-        height: 100%;
-    }
-`
-
-export const SparkImg = styled(HomeImg)`
-    margin-top: -100vh;
-    opacity: 0;
-    z-index: -1;
-`
-
-export const Separator = styled.div`
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    overflow-x: none;
-    cursor: pointer;
-    vertical-align: top;
-    border-bottom: 1px solid #222;
-
-
-    &:nth-child(even){
-        margin-right: 1%;
-    }
-`
-
+//TEXT
+//Text wrappers and containers
 export const TextContainer = styled.div`
     width: 100%;
     transition: all .5s ease-in-out;
@@ -348,20 +253,7 @@ export const TextWrapper = styled.div`
     }
 `
 
-export const HeadText = styled.h1`
-    letter-spacing: -0.04em;
-    font-size: 5em;
-    font-weight: 800;
-    line-height: 1.27em;
-    color: ${({ customColor }) => (customColor)};
-
-    @media screen and (max-width: 991px) {
-        font-size: 2em;        
-        line-height: 2.2em;        
-        padding: 0% 25%;
-    }
-`
-
+//Actual text components
 export const SubText = styled.h4`
     font-size: 1em;
     font-weight: 500;
@@ -376,19 +268,34 @@ export const SubText = styled.h4`
 
 `
 
+export const SubTitle = styled.h4` 
+    color: #666;
+`
+
 export const MainText = styled(SubText)`
     font-size: 1.25em;  
     font-family: Georgia;
     font-weight: 500; 
 `
 
-export const SubTitle = styled.h4` 
-    color: #666;
+//BACKDROP
+//Backdrop to ensure the blend effect of the "Info" component with the name and the logo
+export const Backdrop = styled.div` 
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    background-color: #bcbcbc;
+    transition: 0.5s;
+    z-index: -2;
+    margin-top: ${({ scrolled }) => (scrolled ? '-4vh' : '6vh')};
+
+    @media screen and (max-width: 991px) {
+        margin-top: ${({ scrolled }) => (scrolled ? '3vh' : '3vh')};
+    }
 `
 
 //NEW BUBBLE
-//NEW BUBBLE
-
+//Used to highlight new blog posts
 export const NewBubble = styled.a`
     font-size: 8px;
     line-height: 13px;
@@ -410,8 +317,7 @@ export const NewBubble = styled.a`
 `
 
 //BUBBLE TAG
-//BUBBLE TAG
-
+//Used to provide a tag for particular project like "Mocks"
 export const TagBubble = styled.a`
     font-size: 8px;
     line-height: 13px;
@@ -427,6 +333,22 @@ export const TagBubble = styled.a`
     text-decoration: none;
     display: ${({ hasTag }) => (hasTag ? '' : 'none')};
     letter-spacing: 0px;
+`
+
+//PARAGRAPH LINK
+//Used to put in a link within the paragraphs of articles
+//[[ Doesn't work on blog posts yet !!! ]]
+export const ParagLink = styled.a`
+    font-size: 1em;  
+    font-family: Georgia;
+    font-weight: 500; 
+    text-decoration: none;
+    color: #222;
+    color: #0449ff;
+
+    &:hover{
+        color: #0038ce;
+    }
 `
 
 export default GlobalStyle

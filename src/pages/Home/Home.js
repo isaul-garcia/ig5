@@ -6,25 +6,28 @@ import {
     ListItemOfTwo,
 } from '../../components';
 import {
-    Separator,
     MediumSpacer,
     LargeSpacer,
-    TextWrapper,
-    SubText,
-    TextContainer,
-    SparkImg,
-    Backdrop,
-    OverContainer,
-    BannerContainer,
-    BannerWrapper,
     GiantSpacer,
-    SmallSpacer
+    SmallSpacer,
+    Backdrop,
+    SubText,
+    OverContainer,
+    TextContainer,
+    TextWrapper,
 } from '../../globalStyles';
-import { myProjects, myArticles, myOthers } from './Data';
+import {
+    myProjects, 
+    myArticles, 
+    myOthers,
+} from './Data';
+import { 
+    Loader,
+    Separator,
+    SparkImg,
+    BannerContainer,
+    BannerWrapper } from './Home.elements';
 import Image2 from '../../assets/red-estrella-s.webp'
-import { Loader } from './Home.elements';
-
-//
 
 const Module = ({ scrolled }) => {
     const [loading, setLoading] = useState(true);
@@ -35,7 +38,6 @@ const Module = ({ scrolled }) => {
     }, [])
     return (
         <>
-
             <BannerContainer scrolled={scrolled}>
                 <BannerWrapper>
                     <Loader loading={loading} />
@@ -56,7 +58,7 @@ const Module = ({ scrolled }) => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>
-                        A creative developer building software solutions and exploring new interactions. With a particular interest in the evolution of the web, data visualization and mixed realities.
+                            I'm a creative developer with an interest in the evolution of the web, data visualization and mixed realities. I enjoy exploring digital technologies and experimenting for fun innovative interactions.
                         </SubText>
                     </TextWrapper>
                 </TextContainer>
@@ -83,7 +85,7 @@ const Module = ({ scrolled }) => {
                 <LargeSpacer />
 
                 <Separator>
-                    <h4>Writing</h4>
+                    <h4>Blog</h4>
                     <MediumSpacer />
                     {myArticles.map((props) => (
                         <ListItemOfTwo {...props} />

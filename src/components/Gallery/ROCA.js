@@ -78,7 +78,7 @@ const Gallery = () => {
 
                         <TextWrapper>
                             <MainText>
-                                Its skin is made up of 3D printed bricks, some of them see through. The school holds a nursery garden on its center. ROCa's program consists on an education that revolves around nature, teaching children to nurture and enjoy their natural environment.
+                                Its skin is made up of 3D printed bricks, some of them see through. The school holds a nursery garden on its center. ROCa's program consists on an education that revolves around nature, teaching children to nurture, protect and enjoy their natural environment.
                             </MainText>
                         </TextWrapper>
 

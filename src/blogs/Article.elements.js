@@ -6,7 +6,7 @@ export const DetailsWrapper = styled.div`
 `
 
 export const SubTitle = styled.h4` 
-    color: #666;
+    color: #555;
 `
 
 export const ArticleTitle = styled.h1`
@@ -31,4 +31,10 @@ export const ArticleFrame = styled.div`
     background-color: #00f;
     width: 100%;
     height: 65vh;
+`
+
+export const Separator = styled.img`
+    width: 100%;
+    height: 20px;
+    display: inline-block;
 `

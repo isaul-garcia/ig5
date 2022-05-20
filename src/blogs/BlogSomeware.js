@@ -1,14 +1,15 @@
 import React from 'react';
 import { Info } from '../components';
-import { MediumSpacer, LargeSpacer, TextWrapper, MainText, FullContainer, SubText } from '../globalStyles';
+import { MediumSpacer, LargeSpacer, TextWrapper, MainText, BlogContainer, SubText } from '../globalStyles';
 import * as s from './Data';
 import Image from '../assets/sw_big.webp'
-import { ArticleFrame, ArticleImg, ArticleTitle, SubTitle } from './Article.elements';
+import Sep from '../assets/sep.svg'
+import { ArticleFrame, ArticleImg, ArticleTitle, Separator, SubTitle } from './Article.elements';
 
 const Archive = () => {
     return (
         <>
-            <FullContainer>
+            <BlogContainer>
                 <Info />
                 <LargeSpacer />
 
@@ -16,23 +17,40 @@ const Archive = () => {
 
                 <MediumSpacer />
 
-                <ArticleTitle>Someware: Exploring Phygital Placemaking</ArticleTitle>
-                <MediumSpacer />
-                <SubTitle><i>Re-Documenting the work I did for my Master's Thesis.</i></SubTitle>
-                <MediumSpacer />
-                <h5>05/04/2022</h5>
-
                 {s.blogSomeware.map((props) => (
                     <>
+
+                        {props.isTitle === true ?
+
+                            <>
+                                <ArticleTitle>{props.articleTitle}</ArticleTitle>
+                                <MediumSpacer />
+                                <SubTitle><i>{props.subTitle}</i></SubTitle>
+                                <MediumSpacer />
+                                <h5>{props.datePosted}</h5>
+                            </>
+                            :
+                            null
+                        }
+
+                        {props.isDesc === true ?
+
+                            <>
+                                <h5 style={{color: "#777"}}>{props.descText}</h5>
+                            </>
+                            :
+                            null
+                        }
+
                         <MediumSpacer />
 
                         {props.isText === true ?
-                            
-                                <TextWrapper>
-                                    <MainText>
-                                        {props.articleText}
-                                    </MainText>
-                                </TextWrapper>
+
+                            <TextWrapper>
+                                <MainText>
+                                    {props.articleText}
+                                </MainText>
+                            </TextWrapper>
                             :
                             null
                         }
@@ -44,7 +62,17 @@ const Archive = () => {
                         }
 
                         {props.isFrame === true ?
-                            <ArticleFrame src={props.Img}>Log In</ArticleFrame>
+                            <ArticleFrame src={props.Img}>Empty</ArticleFrame>
+                            :
+                            null
+                        }
+
+                        {props.isSeparator === true ?
+                            (<>
+                                <MediumSpacer />
+                                <Separator src={Sep} />
+                                <MediumSpacer />
+                            </>)
                             :
                             null
                         }
@@ -62,7 +90,7 @@ const Archive = () => {
                 ))}
 
                 <MediumSpacer />
-            </FullContainer>
+            </BlogContainer>
 
         </>
     )

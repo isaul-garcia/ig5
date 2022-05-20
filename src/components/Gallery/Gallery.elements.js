@@ -734,4 +734,3 @@ export const PackWrapper = styled.div`
     width: 100%;
     display: inline-block;
 `
-

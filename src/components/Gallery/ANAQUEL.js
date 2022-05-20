@@ -45,7 +45,7 @@ const Gallery = () => {
                     </TextContainer>
                     <TextContainer>
                         <TextWrapper>
-                            <SubText>Fullstack</SubText>
+                            <SubText>Chrome API</SubText>
                         </TextWrapper>
                     </TextContainer>
 

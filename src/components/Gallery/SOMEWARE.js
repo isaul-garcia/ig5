@@ -13,9 +13,9 @@ import {
     SingleVideoHelper,
     Img33100
 } from './Gallery.elements';
-import { MediumSpacer, TextContainer, SubText, FullContainer, MainText } from '../../globalStyles'
+import { MediumSpacer, TextContainer, SubText, FullContainer, MainText, ParagLink } from '../../globalStyles'
 
-import Image2 from '../../assets/sw-place.jpg'
+import Image2 from '../../assets/antillia_0.png'
 import Image3 from '../../assets/ballnet-red.jpg'
 import { Info } from '..';
 
@@ -60,7 +60,14 @@ const Gallery = () => {
                     <MediumSpacer />
                     <TextWrapper>
                         <MainText>
-                            With Someware, you'll be able to create your own phygital web place. At the moment, what that is remains a mystery to be explored. But from what we have until now, the goal is to create a project that intersects multiple tools to merge the physical and the digital world into a compatible experience. Mixing concepts from open source projects like Home Assistant and WebGL, to create an experience that encourages integration in an open manner, and ideally allows for a mix of mediums to interact with the same "phygital experience"... or in other words, creates an experience that can be interacted with throughout a multiplicity of devices.
+                            With Someware, you'll be able to create your own phygital web place. At the moment, what that is remains a mystery to be explored. But from what we have until now, the goal is to create a project that intersects multiple tools to merge the physical and the digital world into a compatible experience. Mixing parts from open source projects like Home Assistant and WebGL, to create an experience that encourages integration in a secure and open manner when world building. Ideally it allows for a mix of mediums to interact with the same "phygital experience"... or in other words; create an experience that can be interacted with, throughout a multiplicity of devices.
+                        </MainText>
+                    </TextWrapper>
+
+                    <MediumSpacer />
+                    <TextWrapper>
+                        <MainText>
+                            This project is the continuation of my thesis. Follow the links to check out more on the thesis <ParagLink href={'/#/blog/someware'} target={'_blank'}>final presentation</ParagLink>, and the entire  <ParagLink href={'https://isauljosue.gitlab.io/isaul.garcia/index.html'} target={'_blank'}>process documentation</ParagLink>.
                         </MainText>
                     </TextWrapper>
 

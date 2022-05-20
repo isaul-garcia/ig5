@@ -20,14 +20,14 @@ import {
   MODS,
   SOMEWARE
 } from './components';
-import { BlogHello } from './blogs';
+import { BlogHello, BlogSomeware } from './blogs';
 
 //TODO ::
 //
+//Rearrange for home, from gloabl
 //CLEAN CODE >> consolidate hooks text wrappers, containers, etc.
 //
-//Someware (to document)
-//Anaquel (undone)
+//Anaquel (wip)
 //gridy (not public)
 //
 //extend about into a page
@@ -35,6 +35,7 @@ import { BlogHello } from './blogs';
 //
 //drawings scans + graphic collage page
 //smaller images on architecture projects
+//neocities el hoyo
 
 function App() {
   const [isScroll, setIsScroll] = useState(false);
@@ -78,6 +79,7 @@ function App() {
         <Route path='/mods' render={(props) => <MODS {...props} />} />
 
         <Route path='/blog/hello-internet' render={(props) => <BlogHello {...props} />} />
+        <Route path='/blog/someware' render={(props) => <BlogSomeware {...props} />} />
 
         <Route path='/hire-me' render={(props) => <HireMe {...props} />} />
       </Switch>

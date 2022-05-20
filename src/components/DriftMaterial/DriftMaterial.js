@@ -10,20 +10,20 @@ const DriftMaterial = shaderMaterial(
     time: 0.1
   },
   glsl`
-      varying vec2 vUv;
-      void main() {
-        vec4 modelPosition = modelMatrix * vec4(position, 1.0);
-        vec4 viewPosition = viewMatrix * modelPosition;
-        vec4 projectionPosition = projectionMatrix * viewPosition;
-        gl_Position = projectionPosition;
-        vUv = uv;
-      }`,
+    varying vec2 vUv;
+    void main() {
+      vec4 modelPosition = modelMatrix * vec4(position, 1.0);
+      vec4 viewPosition = viewMatrix * modelPosition;
+      vec4 projectionPosition = projectionMatrix * viewPosition;
+      gl_Position = projectionPosition;
+      vUv = uv;
+    }`,
   glsl`
-  varying vec2 vUv;
+    varying vec2 vUv;
 
-  uniform float time;
+    uniform float time;
 
-  void main()	{
+    void main()	{
 
     vec2 p = - 0.25 * vUv;
     float a = time * 3.5;
