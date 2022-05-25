@@ -5,6 +5,24 @@ import glsl from 'babel-plugin-glsl/macro'
 
 // Shader made with https://github.com/mrdoob/three.js/blob/master/examples/webgl_shader.html
 
+
+//Shader Projection Width
+let proj = 400.0;
+function intToFloat(proj, decPlaces) { return proj.toFixed(decPlaces) };
+
+const isMobile = () => {
+  if (window.innerWidth <= 960) {
+    proj = intToFloat(10.0, 1)
+  } else {
+    proj = intToFloat(400.0, 1)
+  }
+};
+
+isMobile();
+console.log(proj);
+
+window.addEventListener('resize', isMobile);
+
 const DriftMaterial = shaderMaterial(
   {
     time: 0.1
@@ -29,7 +47,7 @@ const DriftMaterial = shaderMaterial(
     float a = time * 3.5;
     float d, e, f, g = 0.1 ,h ,i ,r ,q;
 
-    e = 400.0 * ( p.x * 0.9 + 0.7 );
+    e = ${proj} * ( p.x * 0.9 + 0.7 );
     f = 300.0 * ( p.y * 0.5 + 0.5 );
     d = 400.0 + cos( g );
     r = sqrt( pow( abs( i - e ), 2.0 ) + pow( abs( d - f ), 2.0 ) );

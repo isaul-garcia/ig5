@@ -67,7 +67,7 @@ export const Name = styled(Boxed)`
 
     @media screen and (max-width: 991px) {
         width: 100%;
-        top: 42px;
+        top: 75px;
         margin-bottom: 10px;
     }
 `

@@ -25,6 +25,10 @@ const GlobalStyle = createGlobalStyle`
         &::-webkit-scrollbar {
         display: none;
         }
+
+        @media screen and (max-width: 991px) {
+            background-color: #000000;
+        }
     }
 
     h1 {
@@ -110,37 +114,37 @@ const GlobalStyle = createGlobalStyle`
 
 // SPACERS
 export const SmallSpacer = styled.div`
-    height: ${({ justMobile }) => (justMobile ? 'none' : '10px')};
+    height: 10px;
     cursor: default;
 
     @media screen and (max-width: 991px) {
-        height: ${({ justMobile }) => (justMobile ? '10px' : '')};
+        height: 8px;
     }
 `
 
 export const MediumSpacer = styled.div`
-    height: ${({ justMobile }) => (justMobile ? 'none' : '20px')};
+    height: 20px;
     cursor: default;
 
     @media screen and (max-width: 991px) {
-        height: ${({ justMobile }) => (justMobile ? '20px' : '')};
+        height: 20px;
     }
 `
 
 export const LargeSpacer = styled.div`
-    height: ${({ justMobile }) => (justMobile ? 'none' : '60px')};
+    height: 60px;
     cursor: default;
 
     @media screen and (max-width: 991px) {
-        height: ${({ justMobile }) => (justMobile ? '60px' : '')};
+        height: ${({ disableMobi }) => (disableMobi ? '0px' : '80px')};
     }
 `
 export const GiantSpacer = styled.div`
-    height: ${({ justMobile }) => (justMobile ? 'none' : '86vh')};
+    height: 86vh;
     cursor: default;
 
     @media screen and (max-width: 991px) {
-        height: ${({ justMobile }) => (justMobile ? '0px' : '97vh')};
+        height: 107vh;
     }
 `
 
@@ -163,17 +167,26 @@ export const OverContainer = styled.div`
         margin-right: 19vw;
     }
 
-    @media screen and (max-width: 991px) {
-        width: 90vw;
-        margin-right: 0px;
-        padding-top: 0vw;
+    @media screen and (max-width: 991px) {        
+        border-radius: 10px 10px 0px 0px;
+        width: 100vw;
+        margin-right: 0;
+        padding-top: 0;
+        padding: 0 5vw;
         margin-bottom: 10vw;
         margin-top: 0;
-        border-bottom: 1px solid #222;
-        border-top: 1px solid #222;
+        border-top: 0px solid #222;
+        border-bottom: 0px;
         position: relative;
-        margin: 5vw;
-        margin-top: 0vw;
+        margin: 0;
+        margin-top: 0;
+        transition: 0.5s;
+    }
+`
+
+export const HomeContainer = styled(OverContainer)`    
+    @media screen and (max-width: 991px) {
+        background-color: #bcbcbc;
     }
 `
 
@@ -195,6 +208,11 @@ export const BlogContainer = styled(OverContainer)`
     background-color: #bcbcbc;
     width: 40vw;
     margin-right: 30vw;
+    
+    @media screen and (max-width: 991px) {
+        width: 100vw;
+        margin-right: 0;
+    }
 `
 
 export const FillContainer = styled.div`
@@ -265,11 +283,14 @@ export const SubText = styled.h4`
     text-rendering: optimizeLegibility;
     color: #222;
     color: ${({ customColor }) => (customColor)};
-
 `
 
 export const SubTitle = styled.h4` 
     color: #666;
+    
+    @media screen and (max-width: 991px) {
+        font-size: 1em;
+    }
 `
 
 export const MainText = styled(SubText)`
@@ -290,6 +311,7 @@ export const Backdrop = styled.div`
     margin-top: ${({ scrolled }) => (scrolled ? '-4vh' : '6vh')};
 
     @media screen and (max-width: 991px) {
+        width: 90%;
         margin-top: ${({ scrolled }) => (scrolled ? '3vh' : '3vh')};
     }
 `

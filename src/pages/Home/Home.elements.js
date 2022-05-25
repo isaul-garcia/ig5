@@ -51,6 +51,7 @@ export const BannerContainer = styled.div`
     overflow: hidden;
     z-index: -1;
 
+    //Size adjustment for small DESKTOP displays
     @media screen and (min-width: 991px) {
         ${({ scrolled }) => (scrolled ? `
             width: 62%;
@@ -58,7 +59,7 @@ export const BannerContainer = styled.div`
             margin-left: 19%;
         ` : ``)}
     }
-
+    //Size adjustment for bigger DESKTOP displays
     @media screen and (min-width: 1300px) {
         ${({ scrolled }) => (scrolled ? `
             width: 50%;
@@ -67,9 +68,12 @@ export const BannerContainer = styled.div`
         ` : ``)}
     }
 
+    //Mobile static banner size
     @media screen and (max-width: 991px) {
         width: 100%;
-        height: 100%;
+        height: 130%;
+        position: fixed;
+    border-radius: 10px 10px 0px 0px;
     }
 `
 

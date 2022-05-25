@@ -16,7 +16,7 @@ import {
 import Ig from '../../assets/ig_round_d8-02.svg'
 import Back from '../../assets/arrow_button-01.svg'
 
-const Info = ({ removeBack, noTabButtons, loading }) => {
+const Info = ({ removeBack, noTabButtons, loading, scrolled }) => {
     return (
         <>
             <BackIconContainer removeBack={removeBack}>
@@ -45,7 +45,7 @@ const Info = ({ removeBack, noTabButtons, loading }) => {
                     <>
                         <CrumbContainer removeBack={false}>
                             <CrumbWrapper to="/design">
-                                <TinyTextBox onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>Design</TinyTextBox>
+                                <TinyTextBox onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} scrolled={scrolled}>Design</TinyTextBox>
                             </CrumbWrapper>
                         </CrumbContainer>
 

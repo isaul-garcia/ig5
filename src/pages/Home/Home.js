@@ -12,24 +12,24 @@ import {
     SmallSpacer,
     Backdrop,
     SubText,
-    OverContainer,
+    HomeContainer,
     TextContainer,
     TextWrapper,
 } from '../../globalStyles';
 import {
-    myProjects, 
-    myArticles, 
+    myProjects,
+    myArticles,
     myOthers,
 } from './Data';
-import { 
+import {
     Loader,
     Separator,
-    SparkImg,
     BannerContainer,
-    BannerWrapper } from './Home.elements';
-import Image2 from '../../assets/red-estrella-s.webp'
+    BannerWrapper
+} from './Home.elements';
 
 const Module = ({ scrolled }) => {
+    //Loader
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         setTimeout(() => {
@@ -47,13 +47,13 @@ const Module = ({ scrolled }) => {
 
             <GiantSpacer />
 
-            <OverContainer>
+            <HomeContainer scrolled={scrolled}>
                 <Backdrop scrolled={scrolled} />
-                <Info removeBack={true} />
+                <Info removeBack={true} scrolled={scrolled} />
 
                 <MediumSpacer />
 
-                <LargeSpacer />
+                <LargeSpacer disableMobi={true}/>
 
                 <TextContainer>
                     <TextWrapper>
@@ -65,14 +65,11 @@ const Module = ({ scrolled }) => {
                 <SmallSpacer />
                 <TextContainer>
                     <TextWrapper>
-                        <SubText>Frontend Engineer, Designer</SubText>
+                        <SubText><i>Frontend Engineer, Designer</i></SubText>
                     </TextWrapper>
                 </TextContainer>
 
-                <SparkImg src={Image2} />
-
-                <MediumSpacer />
-                <MediumSpacer />
+                <LargeSpacer />
 
                 <Separator>
                     <h4>Featured</h4>
@@ -101,7 +98,7 @@ const Module = ({ scrolled }) => {
                         <ListItemOfThree {...props} />
                     ))}
                 </Separator>
-            </OverContainer>
+            </HomeContainer>
         </>
     )
 }

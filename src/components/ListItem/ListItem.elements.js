@@ -20,6 +20,7 @@ export const ItemContainer = styled(Link)`
 
     @media screen and (max-width: 991px) {
         margin-top: 0px;
+        padding: 18px 0px;
         
         &:hover {
             background-color: #bcbcbc;
@@ -67,7 +68,7 @@ export const Boxed = styled.div`
 
     @media screen and (max-width: 991px) {
         width: 100%;
-        padding: 8px 0px;
+        padding: 0px 0px;
     }
 `
 
@@ -102,6 +103,7 @@ export const Desc = styled(Boxed)`
 
     @media screen and (max-width: 991px) {
         width: 75%;
+        opacity: 0.3;
     }
 `
 export const Tag = styled(Boxed)`
@@ -119,6 +121,7 @@ export const Tag = styled(Boxed)`
 
     @media screen and (max-width: 991px) {
         width: 25%;
+        opacity: 0.3;
     }
 `
 
@@ -135,9 +138,10 @@ export const Title = styled(Boxed)`
     }
 
     @media screen and (max-width: 991px) {
-        width: 82%;
+        width: 75%;
         line-height: 1.6em;
         padding: 10px 0px;  
+        overflow: hidden;
     }
 `
 
@@ -154,9 +158,10 @@ export const Date = styled(Boxed)`
     }
 
     @media screen and (max-width: 991px) {
-        width: 18%;
+        width: 25%;
         line-height: 1.25em;
         vertical-align: top;
+        overflow: hidden;
     }
 `
 
@@ -214,8 +219,7 @@ export const HeadText = styled.h1`
     cursor: pointer;
 
     @media screen and (max-width: 991px) {
-        font-size: 1.75em;        
-        line-height: 1em;
+        font-size: 1.4em;
     }
 `
 

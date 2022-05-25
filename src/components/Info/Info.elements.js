@@ -202,10 +202,12 @@ export const TinyTextBox = styled.a`
     border-radius: 4px;
     text-decoration: none;
     letter-spacing: 0px;
-    transition: all .1s ease-in-out;
+    transition-delay: 1s;
+    transition-duration: 0.2s;
+    z-index: 3;
 
     &:hover{
-    background-color: #75ea00;
+        opacity: 0.75;
     }
 
     @media screen and (max-width: 991px) {
@@ -215,6 +217,7 @@ export const TinyTextBox = styled.a`
         border-radius: 6px;
         max-height: 23px;
         max-width: 100%;
+        opacity: ${({ scrolled }) => (scrolled ? '1' : '0')};
     }
 `
 
@@ -277,23 +280,41 @@ export const BackIcon = styled.img`
     }
 `
 
-//FOOTER MOBILE
-//FOOTER MOBILE
-//FOOTER MOBILE
 
-export const HeaderContainer = styled.div`
-    transition: all .2s ease-in-out;
+//FOOTER
+//FOOTER
+//FOOTER
 
-    @media screen and (max-width: 991px) {
+export const Footer = styled.div`
+    top: 0;
+    float: right;
+    width: 50vw;
+    margin-right: 25vw;
+    transition: all .5s ease-in-out;
+    position: relative;    
+    margin-bottom: 4vh;
+    background-color: #bcbcbc;
+    border-bottom: 1px solid #222;    
+    z-index: 1;
+    
+    //Smaller DESKTOP displays
+    @media screen and (max-width: 1780px) {
+        width: 62vw;
+        margin-right: 19vw;
     }
-`
 
-//FOOTER
-//FOOTER
-//FOOTER
-
-export const Footer = styled(HeaderContainer)`
+    //Mobile
     @media screen and (max-width: 991px) {
+        width: 100vw;
+        margin-right: 0px;
+        padding-top: 0vw;
+        padding: 5vw;
+        margin-bottom: 10vw;
+        margin-top: 0;
+        border-bottom: 1px solid #222;
+        position: relative;
+        margin-top: 0vw;
+        border-radius: 0px 0px 10px 10px;
     }
 `
 

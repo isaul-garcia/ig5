@@ -84,9 +84,8 @@ function App() {
         <Route path='/hire-me' render={(props) => <HireMe {...props} />} />
       </Switch>
 
-      <FooterContainer>
-        <Footer />
-      </FooterContainer>
+
+      <Footer />
     </Router>
   );
 }
