@@ -7,7 +7,7 @@ import glsl from 'babel-plugin-glsl/macro'
 
 
 //Shader Projection Width
-let proj = 400.0;
+let proj = intToFloat(400.0, 1);
 function intToFloat(proj, decPlaces) { return proj.toFixed(decPlaces) };
 
 const isMobile = () => {
