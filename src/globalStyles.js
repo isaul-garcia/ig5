@@ -194,16 +194,6 @@ export const FullContainer = styled(OverContainer)`
     background-color: #bcbcbc;
 `
 
-export const FooterContainer = styled(OverContainer)`
-    margin-top: 0vh;
-    padding-top: 0vh;
-    margin-bottom: 4vh;
-    background-color: #bcbcbc;
-    border-top: 0px solid #bcbcbc;
-    border-bottom: 1px solid #222;    
-    z-index: 1;
-`
-
 export const BlogContainer = styled(OverContainer)`
     background-color: #bcbcbc;
     width: 40vw;

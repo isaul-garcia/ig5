@@ -13,7 +13,7 @@ import {
 const Gallery = ({ ...props }) => {
     return (
         <>
-            <ItemContainer onClick={() => {window.scrollTo({top: 0, behavior: "smooth"});}} to={props.linkId}>               
+            <ItemContainer key={props.k} onClick={() => {window.scrollTo({top: 0, behavior: "smooth"});}} to={props.linkId}>               
                 <PreviewImg  src={props.Img} />
                 <Title>
                     <TextWrapper>

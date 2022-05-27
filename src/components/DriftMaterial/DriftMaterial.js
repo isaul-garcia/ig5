@@ -7,21 +7,21 @@ import glsl from 'babel-plugin-glsl/macro'
 
 
 //Shader Projection Width
-let proj = intToFloat(400.0, 1);
-function intToFloat(proj, decPlaces) { return proj.toFixed(decPlaces) };
+// let proj = intToFloat(400.0, 1);
+// function intToFloat(proj, decPlaces) { return proj.toFixed(decPlaces) };
 
-const isMobile = () => {
-  if (window.innerWidth <= 960) {
-    proj = intToFloat(10.0, 1)
-  } else {
-    proj = intToFloat(399.9, 1)
-  }
-};
+// const isMobile = () => {
+//   if (window.innerWidth <= 960) {
+//     proj = intToFloat(10.0, 1);
+//   } else {
+//     proj = intToFloat(399.9, 1);
+//   }
+// };
 
-isMobile();
-console.log(proj);
+// isMobile();
+// console.log(proj);
 
-window.addEventListener('resize', isMobile);
+// window.addEventListener('resize', isMobile);
 
 const DriftMaterial = shaderMaterial(
   {
@@ -47,7 +47,7 @@ const DriftMaterial = shaderMaterial(
     float a = time * 3.5;
     float d, e, f, g = 0.1 ,h ,i ,r ,q;
 
-    e = ${proj} * ( p.x * 0.9 + 0.7 );
+    e = 400.0 * ( p.x * 0.9 + 0.7 );
     f = 300.0 * ( p.y * 0.5 + 0.5 );
     d = 400.0 + cos( g );
     r = sqrt( pow( abs( i - e ), 2.0 ) + pow( abs( d - f ), 2.0 ) );

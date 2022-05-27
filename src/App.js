@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import WebFont from 'webfontloader';
 import "inter-ui/inter.css";
-import GlobalStyle, { FooterContainer } from './globalStyles';
+import GlobalStyle from './globalStyles';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home, HireMe } from './pages';
 
