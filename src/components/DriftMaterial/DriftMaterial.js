@@ -14,7 +14,7 @@ const isMobile = () => {
   if (window.innerWidth <= 960) {
     proj = intToFloat(10.0, 1)
   } else {
-    proj = intToFloat(400.0, 1)
+    proj = intToFloat(399.9, 1)
   }
 };
 
