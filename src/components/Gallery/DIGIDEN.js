@@ -34,7 +34,7 @@ const Gallery = () => {
                     <Name>
                         <TextWrapper>
                             <HeadText>Digiden</HeadText>
-                            <ButtonText href="https://isaul-garcia.github.io/digiden/" target="_blank">mock-up ↗</ButtonText>
+                            <ButtonText href="https://isaul-garcia.github.io/digiden/" target="_blank">Link ↗</ButtonText>
                         </TextWrapper>
                     </Name>
                     <TextContainer>

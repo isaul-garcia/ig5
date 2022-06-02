@@ -40,10 +40,10 @@ export const myProjects = ([
     },
 
     {
-        helperId: 'someware',
+        helperId: 'antillias',
         k: '1',
-        header: 'Someware',
-        description: 'A way to build your own phygital place',
+        header: 'Antillias',
+        description: 'A demonstration of phygital places',
         tags: 'Three.js, Arduino',
         Img: require('../../assets/sq_antillia.png').default
     },

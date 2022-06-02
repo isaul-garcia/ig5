@@ -71,7 +71,7 @@ function App() {
         <Route path='/gridy' render={(props) => <GRIDY {...props} />} />
         <Route path='/markado' render={(props) => <MARKADO {...props} />} />
         <Route path='/anaquel' render={(props) => <ANAQUEL {...props} />} />
-        <Route path='/someware' render={(props) => <SOMEWARE {...props} />} />
+        <Route path='/antillias' render={(props) => <SOMEWARE {...props} />} />
 
         <Route path='/room-x' render={(props) => <ROOMX {...props} />} />
         <Route path='/treehouse' render={(props) => <TH {...props} />} />

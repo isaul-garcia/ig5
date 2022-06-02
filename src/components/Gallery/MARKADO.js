@@ -32,7 +32,7 @@ const Gallery = () => {
                     <Name>
                         <TextWrapper>
                             <HeadText>Markado</HeadText>
-                            <ButtonText href="https://isaul-garcia.github.io/markado/" target="_blank">mock-up ↗</ButtonText>
+                            <ButtonText href="https://isaul-garcia.github.io/markado/" target="_blank">Link ↗</ButtonText>
                         </TextWrapper>
                     </Name>
                     <TextContainer>

@@ -31,8 +31,8 @@ const Gallery = () => {
                     <ProjNameSection />
                     <Name>
                         <TextWrapper>
-                            <HeadText>Someware</HeadText>
-                            <ButtonText disabled={true}>WIP</ButtonText>
+                            <HeadText>Antillias</HeadText>
+                            <ButtonText href="https://isaul-garcia.github.io/antillias/" target="_blank">Link ↗</ButtonText>
                         </TextWrapper>
                     </Name>
                     <TextContainer>
@@ -60,7 +60,7 @@ const Gallery = () => {
                     <MediumSpacer />
                     <TextWrapper>
                         <MainText>
-                            With Someware, you'll be able to create your own phygital web place. At the moment, what that is remains a mystery to be explored. But from what we have until now, the goal is to create a project that intersects multiple tools to merge the physical and the digital world into a compatible experience. Mixing parts from open source projects like Home Assistant and WebGL, to create an experience that encourages integration in a secure and open manner when world building. Ideally it allows for a mix of mediums to interact with the same "phygital experience"... or in other words; create an experience that can be interacted with, throughout a multiplicity of devices.
+                            Antillias uses Someware principles. Where you'll be able to create your own phygital web place. At the moment, what that is remains a mystery to be explored. But from what we have until now, the goal is to create a project that intersects multiple tools to merge the physical and the digital world into a compatible experience. Mixing parts from open source projects like Home Assistant and WebGL, to create an experience that encourages integration in a secure and open manner when world building. Ideally it allows for a mix of mediums to interact with the same "phygital experience"... or in other words; create an experience that can be interacted with, throughout a multiplicity of devices.
                         </MainText>
                     </TextWrapper>
 

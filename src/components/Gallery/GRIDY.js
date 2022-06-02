@@ -29,7 +29,7 @@ const Gallery = () => {
                     <Name>
                         <TextWrapper>
                             <HeadText>Gridy</HeadText>
-                            <ButtonText href="https://isaul-garcia.github.io/gridy-spotify/" target="_blank">link ↗</ButtonText>
+                            <ButtonText href="https://isaul-garcia.github.io/gridy-spotify/" target="_blank">Link ↗</ButtonText>
                         </TextWrapper>
                     </Name>
                     <TextContainer>

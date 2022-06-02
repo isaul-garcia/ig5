@@ -26,7 +26,7 @@ const Gallery = () => {
                     <Name>
                         <TextWrapper>
                             <HeadText>Room X</HeadText>
-                            <ButtonText href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">link ↗</ButtonText>
+                            <ButtonText href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">Link ↗</ButtonText>
                         </TextWrapper>
                     </Name>
                     <TextContainer>

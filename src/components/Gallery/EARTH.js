@@ -35,7 +35,7 @@ const Gallery = () => {
                     <Name>
                         <TextWrapper>
                             <HeadText>Here on Earth</HeadText>
-                            <ButtonText href="https://isaul-garcia.github.io/earthfo/" target="_blank">mock-up ↗</ButtonText>
+                            <ButtonText href="https://isaul-garcia.github.io/earthfo/" target="_blank">Link ↗</ButtonText>
                         </TextWrapper>
                     </Name>
                     <TextContainer>
