@@ -356,10 +356,10 @@ export const ParagLink = styled.a`
     font-weight: 500; 
     text-decoration: none;
     color: #222;
-    color: #0449ff;
+    color: #045cff;
 
     &:hover{
-        color: #0038ce;
+        color: #0035bf;
     }
 `
 

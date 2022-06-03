@@ -9,6 +9,25 @@ export const myProjects = ([
     //     Img: require('../../assets/ss-gr.jpg').default
     // },
     
+
+    {
+        helperId: 'antillias',
+        k: '1',
+        header: 'Antillias',
+        description: 'A demonstration of phygital places',
+        tags: 'Three.js, Arduino',
+        Img: require('../../assets/sq_antillia.png').default
+    },
+
+    {
+        helperId: 'gridy',
+        k: '3',
+        header: 'Gridy',
+        description: 'Generate covers grid from your currently listening playlist',
+        tags: 'Spotify API, Axios',
+        Img: require('../../assets/ss-gr.jpg').default
+    },
+
     {
         hasTag: true,
         isArticle: false,
@@ -28,24 +47,6 @@ export const myProjects = ([
         description: 'Customizable product website prototype',
         tags: 'Three.js, React Color',
         Img: require('../../assets/ss-lm.jpg').default
-    },
-
-    {
-        helperId: 'gridy',
-        k: '3',
-        header: 'Gridy',
-        description: 'Generate covers grid from your currently listening playlist',
-        tags: 'Spotify API, Axios',
-        Img: require('../../assets/ss-gr.jpg').default
-    },
-
-    {
-        helperId: 'antillias',
-        k: '1',
-        header: 'Antillias',
-        description: 'A demonstration of phygital places',
-        tags: 'Three.js, Arduino',
-        Img: require('../../assets/sq_antillia.png').default
     },
 
     // {
