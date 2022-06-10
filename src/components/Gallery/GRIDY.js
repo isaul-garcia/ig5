@@ -14,8 +14,9 @@ import {
 } from './Gallery.elements';
 
 import Image1 from '../../assets/gridy-ss.webp'
-import { MediumSpacer, TextContainer, SubText, FullContainer } from '../../globalStyles';
+import { MediumSpacer, TextContainer, SubText, FullContainer, MainText } from '../../globalStyles';
 import { Info } from '..';
+import VideoModule from './VideoModule';
 
 const Gallery = () => {
     return (
@@ -51,8 +52,27 @@ const Gallery = () => {
                             <ImgSS backdrop={'#131313'} src={Image1} style={{ border: "1px solid #333" }} />
                         </SSWrapper>
                     </GalleryWrapper>
-                </ProjectContainer>
-            </FullContainer>
+
+                    <MediumSpacer />
+
+                    <TextWrapper>
+                        <MainText>
+                            Gridy generates a grid of music artworks based on the playlist that you're currently listening to, on Spotify. The project is currently limited to listed users, because the design doesn't comply with some of Spotify's guidelines. For example, needing to have the track names and artists visible, which ruins the intended design. So it's pending a redesign to allow public access.
+                        </MainText>
+                    </TextWrapper>
+
+                    <MediumSpacer />
+
+                    <GalleryWrapper>
+                    <VideoModule
+                        pad
+                        giveWidth={'100%'}
+                        customColor={'#131313'}
+                        videoURL={'./Videos/gridy-demo.mp4'}
+                    />
+                </GalleryWrapper>
+            </ProjectContainer>
+        </FullContainer>
         </>
     )
 }

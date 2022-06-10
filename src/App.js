@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 import "inter-ui/inter.css";
 import GlobalStyle from './globalStyles';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, HireMe } from './pages';
+import { Home, HireMe, ScopeReview } from './pages';
 
 import {
   Footer,
@@ -82,6 +82,7 @@ function App() {
         <Route path='/blog/someware' render={(props) => <BlogSomeware {...props} />} />
 
         <Route path='/hire-me' render={(props) => <HireMe {...props} />} />
+        <Route path='/scope' render={(props) => <ScopeReview {...props} />} />
       </Switch>
 
 
