@@ -2,7 +2,7 @@ import React from 'react';
 import {
     TextContainer,
     TextWrapper,
-    HeadTextDecrease,
+    HeadText,
     IconContainer,
     IconWrapper,
     IgIcon,
@@ -10,8 +10,8 @@ import {
     BackIconWrapper,
     BackIcon,
     TinyTextBox,
-    CrumbContainer,
-    CrumbWrapper,
+    NavContainer,
+    NavWrapper,
 } from './Info.elements';
 import Ig from '../../assets/ig_round_d8-02.svg'
 import Back from '../../assets/arrow_button-01.svg'
@@ -27,8 +27,7 @@ const Info = ({ removeBack, noTabButtons, loading, scrolled }) => {
 
             <TextContainer removeBack={removeBack}>
                 <TextWrapper>
-                    <HeadTextDecrease to="/" textColor={"#dbdbdb"} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadTextDecrease>
-                   
+                    <HeadText onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} >Isaúl García</HeadText>
                 </TextWrapper>
             </TextContainer>
 
@@ -43,11 +42,11 @@ const Info = ({ removeBack, noTabButtons, loading, scrolled }) => {
                 :
                 (
                     <>
-                        <CrumbContainer removeBack={false}>
-                            <CrumbWrapper to="/design">
+                        <NavContainer removeBack={false}>
+                            <NavWrapper to="/design">
                                 <TinyTextBox onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} scrolled={scrolled}>Design</TinyTextBox>
-                            </CrumbWrapper>
-                        </CrumbContainer>
+                            </NavWrapper>
+                        </NavContainer>
 
                     </>
                 )

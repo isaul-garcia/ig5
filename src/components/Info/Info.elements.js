@@ -5,21 +5,6 @@ import {Link} from 'react-router-dom';
 //TOP BAR
 //TOP BAR
 
-export const Boxed = styled.div`
-    width: 100%;
-    transition: all .5s ease-in-out;
-    z-index: 2;  
-    text-align: left;
-    display: inline-block; 
-    vertical-align: top;
-
-    @media screen and (max-width: 991px) {
-        width: 100%;
-        padding-left: 5px;
-        height: 90px;
-    }
-`
-
 export const TextContainer = styled.div`
     transition: all .5s ease-in-out;
     text-align: left;
@@ -57,7 +42,7 @@ export const TextWrapper = styled.div`
     color: ${({ textColor }) => (textColor)};
 `
 
-export const HeadTextDecrease = styled(Link)`
+export const HeadText = styled.span`
     transition: all .1s ease-in-out;
     position: absolute;
     letter-spacing: -1px;
@@ -148,7 +133,7 @@ export const IgIcon = styled.img`
 //breadcrumb
 
 
-export const CrumbContainer = styled.div`
+export const NavContainer = styled.div`
     top: 4vh;
     margin-left: 1em;
     cursor: pointer;
@@ -177,7 +162,7 @@ export const CrumbContainer = styled.div`
     }
 `
 
-export const CrumbWrapper = styled(Link)`
+export const NavWrapper = styled(Link)`
     height: 100%;
     width: 100%;
     white-space: nowrap;
@@ -188,7 +173,7 @@ export const CrumbWrapper = styled(Link)`
     text-decoration: none;
 `
 
-export const TinyTextBox = styled.a`
+export const TinyTextBox = styled.span`
     vertical-align: top;
     font-size: 0.7em;
     font-weight: 500;
@@ -357,7 +342,7 @@ export const EmailTextContainer = styled(FooterTextContainer)`
 //text elements
 
 
-export const FooterText = styled.a`
+export const FooterText = styled.span`
     font-size: 1em;
     font-weight: 500; 
     letter-spacing: 0;
@@ -369,26 +354,6 @@ export const FooterText = styled.a`
 
     &:hover{
         opacity: 0.7;
-    }
-
-    @media screen and (max-width: 991px) {
-        font-size: 1.1em;
-        font-weight: 500;
-    }
-`
-
-export const FooterTextLink = styled(Link)`
-    font-size: 1em;
-    font-weight: 500; 
-    letter-spacing: 0;
-    line-height: 1.25em; 
-    transition: all .1s ease-in-out;
-    color: ${({ darken }) => (darken ? '#666' : '#333')};
-    pointer-events: ${({ darken }) => (darken ? 'none' : '')};
-    text-decoration: none;
-
-    &:hover{
-        opacity: 0.6;
     }
 
     @media screen and (max-width: 991px) {
@@ -413,6 +378,20 @@ export const AliasesContainer = styled(IconContainer)`
 
     @media screen and (max-width: 991px) {
         display: none;
+    }
+`
+
+export const AliasWrapper = styled.div`
+    height: 100%;
+    width: 100%;
+    white-space: nowrap;
+    text-align: right;
+    float: right;
+    transition: all .1s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        opacity: 0.75;
     }
 `
 

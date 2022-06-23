@@ -30,10 +30,10 @@ import {
 
 const Module = ({ scrolled }) => {
     //Loader
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(+true);
     useEffect(() => {
         setTimeout(() => {
-            setLoading(false)
+            setLoading(+false)
         }, 200);
     }, [])
     return (
@@ -53,7 +53,7 @@ const Module = ({ scrolled }) => {
 
                 <MediumSpacer />
 
-                <LargeSpacer disableMobi={true}/>
+                <LargeSpacer disableMobi={true} />
 
                 <TextContainer>
                     <TextWrapper>
@@ -75,7 +75,7 @@ const Module = ({ scrolled }) => {
                     <h4>Featured</h4>
                     <MediumSpacer />
                     {myProjects.map((props) => (
-                        <ListItemOfThree {...props} />
+                        <ListItemOfThree key={props.key} {...props} />
                     ))}
                 </Separator>
 
@@ -85,7 +85,7 @@ const Module = ({ scrolled }) => {
                     <h4>Blog</h4>
                     <MediumSpacer />
                     {myArticles.map((props) => (
-                        <ListItemOfTwo {...props} />
+                        <ListItemOfTwo key={props.key} {...props} />
                     ))}
                 </Separator>
 
@@ -95,7 +95,7 @@ const Module = ({ scrolled }) => {
                     <h4>More</h4>
                     <MediumSpacer />
                     {myOthers.map((props) => (
-                        <ListItemOfThree {...props} />
+                        <ListItemOfThree key={props.key} {...props} />
                     ))}
                 </Separator>
             </HomeContainer>

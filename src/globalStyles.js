@@ -254,7 +254,6 @@ export const TextWrapper = styled.div`
     pointer-events: all;
     padding: 0 0 0 -1px;
     background-color: ${({ backColor }) => (backColor)};
-    color: ${({ textColor }) => (textColor)};
     
     @media screen and (max-width: 991px) {
         width: 100%;
@@ -308,7 +307,7 @@ export const Backdrop = styled.div`
 
 //NEW BUBBLE
 //Used to highlight new blog posts
-export const NewBubble = styled.a`
+export const NewBubble = styled.span`
     font-size: 8px;
     line-height: 13px;
     font-weight: 600;
@@ -330,7 +329,7 @@ export const NewBubble = styled.a`
 
 //BUBBLE TAG
 //Used to provide a tag for particular project like "Mocks"
-export const TagBubble = styled.a`
+export const TagBubble = styled.span`
     font-size: 8px;
     line-height: 13px;
     font-weight: 600;

@@ -2,13 +2,13 @@ import React from 'react';
 import {
     FooterText,
     AliasesContainer,
-    IconWrapper,
     AliasesIcons,
     Footer,
     EmailTextContainer,
     SocialIconContainer,
     SocialIconWrapper,
-    SocialIcon
+    SocialIcon,
+    AliasWrapper
 } from './Info.elements';
 
 import Alias from '../../assets/alias_line_light-03-01.svg'
@@ -36,9 +36,9 @@ const Info = () => {
                 </SocialIconContainer>
 
                 <AliasesContainer>
-                    <IconWrapper>
+                    <AliasWrapper>
                         <AliasesIcons src={Alias} alt="Aliases" />
-                    </IconWrapper>
+                    </AliasWrapper>
                 </AliasesContainer>
             </Footer>
         </>

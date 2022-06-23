@@ -37,7 +37,7 @@ import { BlogHello, BlogSomeware } from './blogs';
 //smaller images on architecture projects
 //neocities el hoyo
 
-function App() {
+const App = () => {
   const [isScroll, setIsScroll] = useState(false);
 
   const changeBackground = () => {
@@ -84,7 +84,6 @@ function App() {
         <Route path='/hire-me' render={(props) => <HireMe {...props} />} />
         <Route path='/scope' render={(props) => <ScopeReview {...props} />} />
       </Switch>
-
 
       <Footer />
     </Router>

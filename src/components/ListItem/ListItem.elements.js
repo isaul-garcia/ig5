@@ -28,36 +28,6 @@ export const ItemContainer = styled(Link)`
     }
 `
 
-export const ItemContainer0 = styled.a`
-    width: 100%;
-    height: 100%;
-    padding: 8px 18px;
-    display: block;
-    position: relative;
-    overflow-y: hidden;
-    border-radius: 15px;
-    cursor: pointer;
-    background-color: #aaa;
-    transition: 0.1s;
-    
-    &:hover {
-        background-color: #888;        
-        padding: 8px 26px;
-    }
-
-    &:nth-child(even){
-        margin-right: 1%;
-    }
-
-    @media screen and (max-width: 991px) {
-        margin-top: 0px;
-        
-        &:hover {
-            background-color: #bcbcbc;
-        }
-    }
-`
-
 export const Boxed = styled.div`
     width: 25%;
     padding: 12px 0px;

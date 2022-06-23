@@ -113,7 +113,7 @@ export const myQuestions = ([
     },
     {
         helperId: 'pages',
-        question: "will this project save your client time and tehreby money?",
+        question: "Will this project save your client time and thereby money?",
         answerPlaceHolder: 'Choose',
         typeOfAnswer: 'Number Blank',
         isSelector: true,

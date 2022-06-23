@@ -6,7 +6,7 @@ export const Loader = styled.div`
     height: 100vh;
     z-index: 1;
     transition: 1s;
-    background-color: ${({ loading }) => (loading ? '#000' : '')};
+    background-color: ${({ loading }) => (loading ? '#000000' : '#00000000')};
     pointer-events: none;
 `
 

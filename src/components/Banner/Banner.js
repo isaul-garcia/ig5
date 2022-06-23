@@ -8,24 +8,25 @@ function ShaderPlane({ projection }) {
   useFrame((state, delta) => (ref.current.time += delta))
 
   const [mobile, setMobile] = useState(true);
-  const isMobile = () => {
-    if(window.innerWidth <= 960) {
+
+
+  useEffect(() => {
+    const isMobile = () => {
+      if (window.innerWidth <= 960) {
         setMobile(true)
-    } else {
+      } else {
         setMobile(false)
+      }
     }
-};
-
-useEffect(() => {
     isMobile();
-}, []);
 
-window.addEventListener('resize', isMobile);
+    window.addEventListener('resize', isMobile);
+  }, [mobile]);
 
   return (
     <mesh scale={[width, height, 1]}>
       <planeGeometry />
-        <driftMaterial ref={ref} key={DriftMaterial.key} toneMapped={true} projection={projection} />
+      <driftMaterial ref={ref} key={DriftMaterial.key} toneMapped={true} projection={projection} />
     </mesh>
   )
 }
@@ -36,17 +37,16 @@ const Banner = () => {
   //Shader Projection Width
   const [projection, setProjection] = useState(400);
 
-  const isMobile = () => {
-    if (window.innerWidth <= 960) {
-      setCdpr([2.0, 2.0])
-      setProjection(10)
-    } else {
-      setCdpr([1.5, 2])
-      setProjection(400)
-    }
-  };
-
   useEffect(() => {
+    const isMobile = () => {
+      if (window.innerWidth <= 960) {
+        setCdpr([2.0, 2.0])
+        setProjection(10)
+      } else {
+        setCdpr([1.5, 2])
+        setProjection(400)
+      }
+    };
     isMobile();
   }, []);
 

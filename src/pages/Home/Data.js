@@ -1,8 +1,8 @@
 export const myProjects = ([
 
     // {
-    //     helperId: 'artefactos',
-    //     k: '2',
+    //     linkId: 'artefactos',
+    //     key: '2',
     //     header: 'Artefactos',
     //     description: 'A collection of digital artifacts',
     //     tags: 'WebGL, Three.js',
@@ -11,8 +11,8 @@ export const myProjects = ([
     
 
     {
-        helperId: 'antillias',
-        k: '1',
+        linkId: 'antillias',
+        key: '1',
         header: 'Antillias',
         description: 'A demonstration of phygital places',
         tags: 'Three.js, Arduino',
@@ -20,8 +20,8 @@ export const myProjects = ([
     },
 
     {
-        helperId: 'gridy',
-        k: '3',
+        linkId: 'gridy',
+        key: '2',
         header: 'Gridy',
         description: 'Generate covers grid from your currently listening playlist',
         tags: 'Spotify API, Axios',
@@ -31,8 +31,8 @@ export const myProjects = ([
     {
         hasTag: true,
         isArticle: false,
-        helperId: 'digiden',
-        k: '11',
+        linkId: 'digiden',
+        key: '3',
         header: 'Digiden',
         description: 'Tech news website prototype',
         tags: 'React',
@@ -41,8 +41,8 @@ export const myProjects = ([
 
     {
         hasTag: true,
-        helperId: 'loma',
-        k: '12',
+        linkId: 'loma',
+        key: '4',
         header: 'Loma',
         description: 'Customizable product website prototype',
         tags: 'Three.js, React Color',
@@ -50,8 +50,8 @@ export const myProjects = ([
     },
 
     // {
-    //     helperId: 'fontree',
-    //     k: '3',
+    //     linkId: 'fontree',
+    //     key: '5',
     //     header: 'Fontree',
     //     description: 'Descentralized platform for font distribution',
     //     tags: 'Frontend',
@@ -59,8 +59,8 @@ export const myProjects = ([
     // },
 
     // {
-    //     helperId: 'guava-ui',
-    //     k: '4',
+    //     linkId: 'guava-ui',
+    //     key: '6',
     //     header: 'Guava UI',
     //     description: 'UI components library for React',
     //     tags: 'Frontend',
@@ -73,7 +73,7 @@ export const myArticles = ([
     {
         isNew: false,
         linkId: 'blog/someware',
-        k: '8',
+        key: '7',
         header: 'Building my place wide web',
         tags: '5/19/2022',
         Img: require('../../assets/sq_sw.webp').default
@@ -82,7 +82,7 @@ export const myArticles = ([
     {
         isNew: false,
         linkId: 'blog/hello-internet',
-        k: '9',
+        key: '8',
         header: 'Hello, Internet',
         tags: '2/18/2022',
         Img: require('../../assets/unknown.png').default
@@ -92,8 +92,8 @@ export const myArticles = ([
 export const myOthers = ([
 
     {
-        helperId: 'anaquel',
-        k: '10',
+        linkId: 'anaquel',
+        key: '9',
         header: 'Anaquel',
         description: 'Bookmark manager and Chrome extension',
         tags: 'Chrome API',
@@ -102,8 +102,8 @@ export const myOthers = ([
 
     {
         hasTag: true,
-        helperId: 'earth',
-        k: '13',
+        linkId: 'earth',
+        key: '10',
         header: 'Here on Earth',
         description: 'Informational website prototype',
         tags: ' Victory, Three.js',
@@ -112,8 +112,8 @@ export const myOthers = ([
 
     {
         hasTag: true,
-        helperId: 'markado',
-        k: '14',
+        linkId: 'markado',
+        key: '11',
         header: 'Markado',
         description: 'Online commerce website prototype',
         tags: 'React',
@@ -121,8 +121,8 @@ export const myOthers = ([
     },
 
     {
-        helperId: 'room-x',
-        k: '15',
+        linkId: 'room-x',
+        key: '12',
         header: 'Room X',
         description: 'My quarantined reality: Merging my digital and physical life',
         tags: 'Artwork, Javascript',
@@ -130,28 +130,30 @@ export const myOthers = ([
     },
 
     // {
-    //     helperId: 'sketchbook',
+    //     linkId: 'sketchbook',
     //     header: 'Sketchbook',
+    //     key: '13',
     //     description: 'Drawings and notes and graphics and more',
     //     tags: 'Artwork',
-    //     buttonlink: '/',
+    //     buttonlinkey: '/',
     //     Img: require('../../assets/unknown.png').default
     // },
 
     
 
     // {
-    //     helperId: 'el-hoyo',
+    //     linkId: 'el-hoyo',
     //     header: 'El Hoyo',
+    //     key: '14',
     //     description: `Documenting eveything that happens in "el hoyo"`,
     //     tags: 'Artwork',
-    //     buttonlink: '/',
+    //     buttonlinkey: '/',
     //     Img: require('../../assets/ss-hoyo.jpg').default
     // },
 
     {
-        helperId: 'treehouse',
-        k: '16',
+        linkId: 'treehouse',
+        key: '15',
         header: ':treehouse',
         description: 'Self-mantained short term rental network',
         tags: 'Architecture, IoT',
@@ -159,8 +161,8 @@ export const myOthers = ([
     },
 
     {
-        helperId: 'roca',
-        k: '17',
+        linkId: 'roca',
+        key: '16',
         header: 'Roca',
         description: 'Environmentally conscious elementary school',
         tags: 'Parametric Design',
@@ -168,8 +170,8 @@ export const myOthers = ([
     },
 
     {
-        helperId: 'mods',
-        k: '18',
+        linkId: 'mods',
+        key: '17',
         header: 'MODs',
         description: 'Modular urban intervention for the future of cities',
         tags: 'Smart Cities',
