@@ -1,5 +1,10 @@
 import styled from 'styled-components/macro';
 
+export const HomeWrap = styled.div`
+    position: relative;
+    z-index: 100;
+`
+
 export const Loader = styled.div`
     position: absolute;
     width: 100vw;
@@ -10,91 +15,84 @@ export const Loader = styled.div`
     pointer-events: none;
 `
 
-export const HeadText = styled.h1`
-    letter-spacing: -0.04em;
-    font-size: 5em;
-    font-weight: 800;
-    line-height: 1.27em;
-    color: ${({ customColor }) => (customColor)};
+export const TitleSection = styled.div`
+    width: 100%;
+    height: 76px; 
+`
 
+export const SectionText = styled.div`
+    width: 100%;
+    height: 76px; 
+    
     @media screen and (max-width: 991px) {
-        font-size: 2em;        
-        line-height: 2.2em;        
-        padding: 0% 25%;
+        height: 50px;
     }
 `
 
 export const Separator = styled.div`
-    width: 100%;
+    width: ${({ tiled }) => (tiled ? `calc(100% + 16px)` : '100%')};
     display: inline-block;
     position: relative;
-    overflow-x: none;
-    cursor: pointer;
-    vertical-align: top;
-    border-bottom: 1px solid #222;
-
-
-    &:nth-child(even){
-        margin-right: 1%;
-    }
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: ${({ tiled }) => (tiled ? '-8px' : '0')};
 `
 
-///BANNER
-//Use for the WEBGL shader
-export const BannerContainer = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin-left: 0%;
-    background-color: #000000;
-    transition: 0.5s;
-    overflow: hidden;
-    z-index: -1;
-
-    //Size adjustment for small DESKTOP displays
-    @media screen and (min-width: 991px) {
-        ${({ scrolled }) => (scrolled ? `
-            width: 62%;
-            height: 90%;
-            margin-left: 19%;
-        ` : ``)}
-    }
-    //Size adjustment for bigger DESKTOP displays
-    @media screen and (min-width: 1300px) {
-        ${({ scrolled }) => (scrolled ? `
-            width: 50%;
-            height: 90%;
-            margin-left: 25%;
-        ` : ``)}
-    }
-
-    //Mobile static banner size
-    @media screen and (max-width: 991px) {
-        width: 100%;
-        height: 130%;
-        position: fixed;
-    border-radius: 10px 10px 0px 0px;
-    }
-`
-
-export const BannerWrapper = styled.div`
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-`
-
-export const SparkImg = styled.img`
-    object-fit: contain;
+export const TextWrapper = styled.div`
     display: inline-block;
-    position: relative;
+    pointer-events: all;
     width: 100%;
-    margin-top: -100vh;
-    opacity: 0;
-    z-index: -1;
     
     @media screen and (max-width: 991px) {
-        margin-top: 8vh;
-        margin-bottom: -2vh;
-        height: 100%;
+        width: 100%;
+    }
+`
+
+export const SubText = styled.h4`
+    font-size: 1.75em;
+    font-weight: 500;
+    line-height: 1.1em;
+    letter-spacing: -0.04em;
+    transition: all .2s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding: 2vw 2vw 0 2vw;
+
+    color: #bcbcbc;
+`
+export const MediumText = styled.h1 `
+    font-size: 2.75em;
+    line-height: 1.2em;
+    font-weight: 700;    
+    letter-spacing: -0.04em;    
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 2.2em;
+        line-height: 1.65em;
+    }
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.75em;
+        line-height: 1.2em;
+    }
+`
+
+export const LargeText = styled.h1 `
+    font-size: 6em;
+    line-height: 1.2em;
+    font-weight: 900;    
+    letter-spacing: -0.025em;
+`
+
+export const TagWrapper = styled.div`  
+    margin-top: 10vh;
+
+    @media screen and (max-width: 1300px) {
+    margin-top: 4vh;
+    }
+
+    @media screen and (max-width: 991px) {
+    margin-top: 27vh;
     }
 `

@@ -21,20 +21,7 @@ export const blogHello = ([
     }
 ]);
 
-//ELEMENTS NEEDED::
-//
-//Link button for images (maybe make whole image clickable??)
-//Link as text within paragraph
-//Title Bold text
-//Image description text
-//
-
 export const blogSomeware = ([
-    
-    //play wiht the idea of place as in virtual place and physical place. not space in general and whatever computing entity
-
-    //make shorter, and quick youre too focused
-
     {
         isTitle: true,
         articleTitle: `Building my place wide web`,
@@ -43,7 +30,7 @@ export const blogSomeware = ([
     },
     
     {
-        articleText: `For this first blog I'm revisiting part of the project I did for my thesis, "Someware: Exploring Place Computing". I wanted to get a temp check on where the idea is, and how some of my beliefs have evolved after a few years. The project is currently in the Master's thesis documentation website, but I wanted to migrate some of it here and add a little bit more commentary before taking the topic any further, so that you can get a frame of reference of where I was, where I am, and the future projects I do on here.`,
+        articleText: `For this first blog I'm revisiting part of the project I did for my thesis, "Someware: Exploring Place Computing". I wanted to get a temp check on where the idea is, and how some of my beliefs and ideas around the subject have evolved over these past few years. The project is currently in the thesis documentation website, but I wanted to migrate some of it here, and add a little bit more commentary, before taking the topic any further. As well as having a frame of reference of where I was, for the future projects I post on here.`,
         isText: true
     },
 
@@ -59,7 +46,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-scan-ball.webp').default
+        Img: require('../assets/sw-scan-ball.webp')
     },
     
     {
@@ -80,7 +67,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-firstsens.webp').default
+        Img: require('../assets/sw-firstsens.webp')
     },
 
     {
@@ -91,7 +78,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-sens.webp').default
+        Img: require('../assets/sw-sens.webp')
     },
 
     {
@@ -102,13 +89,13 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-pwwui.webp').default
+        Img: require('../assets/sw-pwwui.webp')
     },
 
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw_big.webp').default
+        Img: require('../assets/sw_big.webp')
     },
 
     {
@@ -124,13 +111,13 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/swi1-opt.gif').default
+        Img: require('../assets/swi1-opt.gif')
     },
 
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/swi2-opt.gif').default
+        Img: require('../assets/swi2-opt.gif')
     },
 
     {
@@ -141,7 +128,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-guyfloor.webp').default
+        Img: require('../assets/sw-guyfloor.webp')
     },
 
     {
@@ -152,7 +139,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/swgameplay-opt.gif').default
+        Img: require('../assets/swgameplay-opt.webp')
     },
 
     {
@@ -168,7 +155,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/ss-rx.jpg').default
+        Img: require('../assets/ss-rx.jpg')
     },
     
     {
@@ -189,7 +176,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-devic.webp').default
+        Img: require('../assets/sw-devic.webp')
     },
 
     {
@@ -205,7 +192,7 @@ export const blogSomeware = ([
     {
         articleText: ``,
         isImage: true,
-        Img: require('../assets/sw-ballnet-l.webp').default
+        Img: require('../assets/sw-ballnet-l.webp')
     },
 
     {
@@ -235,16 +222,6 @@ export const blogSomeware = ([
     {
         articleText: `All of this has reshaped my beliefs around Someware. The project as it currently is, involves a lot of different topics. It is still a mystery for me whether this project is just a means of learning and exploration, or whether it has the potential to become something else. Regardless, it's something I will keep developing for now.`,
         isText: true
-    },
-    
-    // {
-    //     isText: true,
-    //     articleText: `References`
-    // },
-
-    // {
-    //     isDesc: true,
-    //     descText: `[Book] "Everyware" by Adam Greenfield (2006)`
-    // }
+    }
 
 ]);

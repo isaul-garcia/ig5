@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { MediumSpacer } from '../../globalStyles';
 import * as s from './Form.elements'
 
-const Question = ({ Answer, ...props }) => {
+const Question = ({ Answer }) => {
     
     const [total, setTotal] = useState([])
 
     const handleNumberChange = (event) => {
         setTotal(event.target.value)
     }
-    
-//quitar total de medium spacer
 
     return (
         <>

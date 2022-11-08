@@ -7,7 +7,7 @@ import {
     VWrapper,
 } from './Gallery.elements';
 
-const VideoModule = ({ giveWidth, giveHeight, customColor, videoURL, fill, pad }) => {
+const VideoModule = ({ giveWidth, giveHeight, customColor, videoURL, small,  fill, pad }) => {
     let [shouldPlay, updatePlayState] = useState(false);
 
     let handleEnterViewport = function () {
@@ -22,7 +22,7 @@ const VideoModule = ({ giveWidth, giveHeight, customColor, videoURL, fill, pad }
             <Waypoint onEnter={handleEnterViewport} onLeave={handleExitViewport}>
                 <VModule giveWidth={giveWidth} giveHeight={giveHeight} pad={pad}>
                     <VContainer customColor={customColor}>
-                        <VWrapper fill={fill} pad={pad} giveHeight={giveHeight}>
+                        <VWrapper fill={fill} small={small} pad={pad} giveHeight={giveHeight}>
                             <ReactPlayer
                                 playing={shouldPlay} loop={true} muted={true} width={'100%'} height={'100%'}
                                 url={videoURL}

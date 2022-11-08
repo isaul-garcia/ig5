@@ -1,96 +1,92 @@
 import React from 'react';
-import { Info } from '../components';
-import { MediumSpacer, LargeSpacer, TextWrapper, MainText, BlogContainer, SubText } from '../globalStyles';
+import { MediumSpacer, TextWrapper, MainText, SubText } from '../globalStyles';
 import * as s from './Data';
 import Image from '../assets/sw_big.webp'
 import Sep from '../assets/sep.svg'
-import { ArticleFrame, ArticleImg, ArticleTitle, Separator, SubTitle } from './Article.elements';
-
+import { ArticleFrame, ArticleImg, ArticleTitle, Fixer, Separator, SubTitle } from './Article.elements';
+import BackButton from '../components/BackButton/BackButton'
 const Archive = () => {
     return (
         <>
-            <BlogContainer>
-                <Info />
-                <LargeSpacer />
+            <Fixer />
+            <BackButton reduce />
+            <ArticleImg src={Image} />
 
-                <ArticleImg src={Image} />
+            <MediumSpacer />
 
-                <MediumSpacer />
+            {s.blogSomeware.map((props, key) => (
+                <div key={key}>
 
-                {s.blogSomeware.map((props) => (
-                    <>
+                    {props.isTitle === true ?
 
-                        {props.isTitle === true ?
+                        <>
+                            <ArticleTitle>{props.articleTitle}</ArticleTitle>
+                            <MediumSpacer />
+                            <SubTitle><i>{props.subTitle}</i></SubTitle>
+                            <MediumSpacer />
+                            <h5>{props.datePosted}</h5>
+                        </>
+                        :
+                        null
+                    }
 
-                            <>
-                                <ArticleTitle>{props.articleTitle}</ArticleTitle>
-                                <MediumSpacer />
-                                <SubTitle><i>{props.subTitle}</i></SubTitle>
-                                <MediumSpacer />
-                                <h5>{props.datePosted}</h5>
-                            </>
-                            :
-                            null
-                        }
+                    {props.isDesc === true ?
 
-                        {props.isDesc === true ?
+                        <>
+                            <h5 style={{ color: "#777" }}>{props.descText}</h5>
+                        </>
+                        :
+                        null
+                    }
 
-                            <>
-                                <h5 style={{color: "#777"}}>{props.descText}</h5>
-                            </>
-                            :
-                            null
-                        }
+                    <MediumSpacer />
 
-                        <MediumSpacer />
+                    {props.isText === true ?
 
-                        {props.isText === true ?
+                        <TextWrapper>
+                            <MainText>
+                                {props.articleText}
+                            </MainText>
+                        </TextWrapper>
+                        :
+                        null
+                    }
 
-                            <TextWrapper>
-                                <MainText>
-                                    {props.articleText}
-                                </MainText>
-                            </TextWrapper>
-                            :
-                            null
-                        }
+                    {props.isImage === true ?
+                        <ArticleImg src={props.Img} />
+                        :
+                        null
+                    }
 
-                        {props.isImage === true ?
-                            <ArticleImg src={props.Img} />
-                            :
-                            null
-                        }
+                    {props.isFrame === true ?
+                        <ArticleFrame src={props.Img}>Empty</ArticleFrame>
+                        :
+                        null
+                    }
 
-                        {props.isFrame === true ?
-                            <ArticleFrame src={props.Img}>Empty</ArticleFrame>
-                            :
-                            null
-                        }
+                    {props.isSeparator === true ?
+                        (<>
+                            <MediumSpacer />
+                            <Separator src={Sep} />
+                            <MediumSpacer />
+                        </>)
+                        :
+                        null
+                    }
 
-                        {props.isSeparator === true ?
-                            (<>
-                                <MediumSpacer />
-                                <Separator src={Sep} />
-                                <MediumSpacer />
-                            </>)
-                            :
-                            null
-                        }
+                    {props.isRefs === true ?
+                        <TextWrapper>
+                            <SubText>
+                                {props.articleText}
+                            </SubText>
+                        </TextWrapper>
+                        :
+                        null
+                    }
+                </div>
+            ))}
 
-                        {props.isRefs === true ?
-                            <TextWrapper>
-                                <SubText>
-                                    {props.articleText}
-                                </SubText>
-                            </TextWrapper>
-                            :
-                            null
-                        }
-                    </>
-                ))}
-
-                <MediumSpacer />
-            </BlogContainer>
+            <MediumSpacer />
 
         </>
     )

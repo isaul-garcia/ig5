@@ -1,180 +1,178 @@
-export const myProjects = ([
-
-    // {
-    //     linkId: 'artefactos',
-    //     key: '2',
-    //     header: 'Artefactos',
-    //     description: 'A collection of digital artifacts',
-    //     tags: 'WebGL, Three.js',
-    //     Img: require('../../assets/ss-gr.jpg').default
-    // },
-    
-
+export const allSnippets = ([
     {
-        linkId: 'antillias',
         key: '1',
-        header: 'Antillias',
-        description: 'A demonstration of phygital places',
-        tags: 'Three.js, Arduino',
-        Img: require('../../assets/sq_antillia.png').default
+        linkId: 'https://earth-nodes.vercel.app/',
+        header: 'Earth Nodes',
+        tags: 'React Three Fiber',
+        Img: require('../../assets/just-earth.webp'),
+        tag: ['snippet', 'r3f', 'react']
     },
 
     {
-        linkId: 'gridy',
         key: '2',
-        header: 'Gridy',
-        description: 'Generate covers grid from your currently listening playlist',
-        tags: 'Spotify API, Axios',
-        Img: require('../../assets/ss-gr.jpg').default
+        linkId: 'https://just-cards.vercel.app/',
+        header: 'Just Cards',
+        description: 'Axo cards displayed',
+        tags: 'React',
+        Img: require('../../assets/just-cards.jpg'),
+        tag: ['snippet', 'react']
     },
 
     {
-        hasTag: true,
-        isArticle: false,
-        linkId: 'digiden',
         key: '3',
-        header: 'Digiden',
-        description: 'Tech news website prototype',
-        tags: 'React',
-        Img: require('../../assets/ss-dg2.jpg').default
-    },
-
-    {
-        hasTag: true,
-        linkId: 'loma',
-        key: '4',
-        header: 'Loma',
-        description: 'Customizable product website prototype',
-        tags: 'Three.js, React Color',
-        Img: require('../../assets/ss-lm.jpg').default
-    },
-
-    // {
-    //     linkId: 'fontree',
-    //     key: '5',
-    //     header: 'Fontree',
-    //     description: 'Descentralized platform for font distribution',
-    //     tags: 'Frontend',
-    //     Img: require('../../assets/ss-gr.jpg').default
-    // },
-
-    // {
-    //     linkId: 'guava-ui',
-    //     key: '6',
-    //     header: 'Guava UI',
-    //     description: 'UI components library for React',
-    //     tags: 'Frontend',
-    //     Img: require('../../assets/ss-gr.jpg').default
-    // },
-]);
-
-export const myArticles = ([
-
-    {
-        isNew: false,
-        linkId: 'blog/someware',
-        key: '7',
-        header: 'Building my place wide web',
-        tags: '5/19/2022',
-        Img: require('../../assets/sq_sw.webp').default
-    },
-
-    {
-        isNew: false,
-        linkId: 'blog/hello-internet',
-        key: '8',
-        header: 'Hello, Internet',
-        tags: '2/18/2022',
-        Img: require('../../assets/unknown.png').default
-    },
-]);
-
-export const myOthers = ([
-
-    {
-        linkId: 'anaquel',
-        key: '9',
-        header: 'Anaquel',
-        description: 'Bookmark manager and Chrome extension',
-        tags: 'Chrome API',
-        Img: require('../../assets/ss-an2.jpg').default
-    },   
-
-    {
-        hasTag: true,
-        linkId: 'earth',
-        key: '10',
-        header: 'Here on Earth',
-        description: 'Informational website prototype',
-        tags: ' Victory, Three.js',
-        Img: require('../../assets/ss-ee.jpg').default
-    },
-
-    {
-        hasTag: true,
-        linkId: 'markado',
-        key: '11',
-        header: 'Markado',
-        description: 'Online commerce website prototype',
-        tags: 'React',
-        Img: require('../../assets/ss-mk.jpg').default
-    },
-
-    {
-        linkId: 'room-x',
-        key: '12',
+        linkId: 'https://isauljosue.gitlab.io/isaul.garcia/room360x.html',
         header: 'Room X',
-        description: 'My quarantined reality: Merging my digital and physical life',
+        description: 'My quarantined reality',
         tags: 'Artwork, Javascript',
-        Img: require('../../assets/ss-rx.jpg').default
+        Img: require('../../assets/cc-rx.jpg'),
+        tag: ['snippet', 'artwork', 'vanilla']
+    },
+
+    {
+        key: '4',
+        linkId: 'https://isaul-garcia.github.io/loma/',
+        header: 'Loma',
+        description: ``,
+        tags: 'React Three Fiber',
+        buttonlinkey: '/',
+        Img: require('../../assets/loma-tmb2.png'),
+        tag: ['snippet', 'r3f', 'react']
     },
 
     // {
-    //     linkId: 'sketchbook',
-    //     header: 'Sketchbook',
-    //     key: '13',
-    //     description: 'Drawings and notes and graphics and more',
-    //     tags: 'Artwork',
-    //     buttonlinkey: '/',
-    //     Img: require('../../assets/unknown.png').default
-    // },
-
-    
-
-    // {
+    //     key: '5',
     //     linkId: 'el-hoyo',
     //     header: 'El Hoyo',
-    //     key: '14',
     //     description: `Documenting eveything that happens in "el hoyo"`,
     //     tags: 'Artwork',
     //     buttonlinkey: '/',
-    //     Img: require('../../assets/ss-hoyo.jpg').default
-    // },
+    //     Img: require('../../assets/ss-hoyo.jpg'),
+    //     tag: ['snippet', 'html/css', 'neocities']
+    // }
+]);
 
+export const allProjects = ([
     {
-        linkId: 'treehouse',
-        key: '15',
-        header: ':treehouse',
-        description: 'Self-mantained short term rental network',
-        tags: 'Architecture, IoT',
-        Img: require('../../assets/sq_th.png').default
+        key: '13',
+        isBlog: true,
+        linkId: '/someware',
+        header: 'Building my place wide web',
+        tags: '5/19/2022',
+        Img: require('../../assets/cc-sw.jpg'),
+        tag: ['blogs']
     },
 
     {
-        linkId: 'roca',
-        key: '16',
-        header: 'Roca',
-        description: 'Environmentally conscious elementary school',
-        tags: 'Parametric Design',
-        Img: require('../../assets/sq_roca.png').default
+        key: '12',
+        isBlog: true,
+        linkId: '/hello-internet',
+        header: 'Hello, Internet',
+        tags: '2/18/2022',
+        Img: require('../../assets/cc-unk.jpg'),
+        tag: ['blogs']
     },
 
     {
-        linkId: 'mods',
-        key: '17',
+        key: '10',
+        linkId: '/gridy',
+        header: 'Gridy',
+        description: "Generate music visualizer of album artworks",
+        tags: 'Spotify API, Axios',
+        Img: require('../../assets/cc-gr.jpg'),
+        tag: ['projects']
+    },
+
+    {
+        key: '9',
+        hasTag: true,
+        linkId: '/digiden',
+        header: 'Digiden',
+        description: 'Tech news website prototype',
+        tags: 'React',
+        Img: require('../../assets/cc-dg.jpg'),
+        tag: ['mocks']
+    },
+
+    {
+        key: '6',
+        linkId: '/anaquel',
+        header: 'Anaquel',
+        description: 'Bookmark manager and Chrome extension',
+        tags: 'Redux, MongoDB',
+        Img: require('../../assets/ss-an.jpg'),
+        tag: ['projects']
+    },
+
+    {
+        key: '11',
+        linkId: '/antillias',
+        header: 'Antillias',
+        description: 'A demonstration of phygital places',
+        tags: 'Three.js, Arduino',
+        Img: require('../../assets/cc-antillias.jpg'),
+        tag: ['projects']
+    },
+
+    {
+        key: '5',
+        hasTag: true,
+        linkId: '/earth',
+        header: 'Here on Earth',
+        description: 'Informational website prototype',
+        tags: ' Victory, Three.js',
+        Img: require('../../assets/cc-ee.jpg'),
+        tag: ['mocks']
+    },
+
+    {
+        key: '4',
+        hasTag: true,
+        linkId: '/markado',
+        header: 'Markado',
+        description: 'Online commerce website prototype',
+        tags: 'React',
+        Img: require('../../assets/cc-mk.jpg'),
+        tag: ['mocks']
+    },
+
+    {
+        key: '8',
+        hasTag: true,
+        linkId: '/loma',
+        header: 'Loma',
+        description: 'Customizable product website prototype',
+        tags: 'Three.js, React Color',
+        Img: require('../../assets/cc-lm.jpg'),
+        tag: ['mocks']
+    },
+
+    {
+        key: '7',
+        linkId: '/mods',
         header: 'MODs',
         description: 'Modular urban intervention for the future of cities',
         tags: 'Smart Cities',
-        Img: require('../../assets/sq_mods.png').default
+        Img: require('../../assets/cc-mds.jpg'),
+        tag: ['projects']
+    },
+
+    {
+        key: '2',
+        linkId: '/treehouse',
+        header: ':treehouse',
+        description: 'Self-sustainable network of tree houses',
+        tags: 'Architecture, IoT',
+        Img: require('../../assets/cc-th.jpg'),
+        tag: ['projects']
+    },
+
+    {
+        key: '1',
+        linkId: '/roca',
+        header: 'Roca',
+        description: 'Environmentally conscious elementary school',
+        tags: 'Parametric Design',
+        Img: require('../../assets/cc-rca.jpg'),
+        tag: ['projects']
     },
 ]);

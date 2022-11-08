@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { rad } from '../../globalStyles';
 
 export const IndicatorHelper = styled.span`
     width: 1.25vh;
@@ -13,11 +14,11 @@ export const IndicatorHelper = styled.span`
 `
 
 export const ProjectContainer = styled.div`
-    width: 101.1%;
+    width: calc(100% + 10px);
+    margin-left: -5px;
     display: inline-block;
     position: relative;
-    overflow-x: none;
-    margin: -0.5vh;    
+    overflow-x: none;  
     
     @media screen and (max-width: 991px) {
         margin-top: 5px;
@@ -25,25 +26,21 @@ export const ProjectContainer = styled.div`
 `
 
 export const ProjNameSection = styled.div`
-    @media screen and (max-width: 991px) {        
-        border-bottom: none;
-        padding-top: 90px;
-        margin: 4px;
-        margin-bottom: 9px;
-        height: 10.7em;
-        margin-bottom: -8.5em;
+    @media screen and (max-width: 991px) {     
     }
 `
 
 export const Boxed = styled.div`
     width: 30%;
-    height: 80px;
     transition: all .5s ease-in-out;
     z-index: 2;
     text-align: left;
     position: sticky;
     display: block;
-    mix-blend-mode: difference;
+
+    ${({ difference }) => (difference ? `
+        mix-blend-mode: difference;
+    ` : '')}
 
     @media screen and (max-width: 1500px) {
     }
@@ -57,19 +54,10 @@ export const Boxed = styled.div`
 
 export const Name = styled(Boxed)`
     width: 80%;
-    top: 3.85em;
+    top: 3vh;
     z-index: 9;
     cursor: default;
-
-    @media screen and (max-width: 1500px) {
-        top: 48px;
-    }
-
-    @media screen and (max-width: 991px) {
-        width: 100%;
-        top: 75px;
-        margin-bottom: 10px;
-    }
+    margin-top: -30px;
 `
 
 export const Description = styled(Boxed)`
@@ -148,8 +136,11 @@ export const HeadText = styled.h1`
     color: #d8d8d8;
     font-size: 2.5em;
     font-weight: 800;
-    line-height: 0.75em;
+    line-height: 0.63em;
     transition: all .3s ease-in-out;
+    display: inline;
+    vertical-align: top;
+    margin-left: 55px;
 
     @media screen and (max-width: 1500px) {
         line-height: 1em;
@@ -162,37 +153,44 @@ export const HeadText = styled.h1`
 `
 
 export const SubText = styled.h4`
-    font-size: 1.4em;
-    color: #d8d8d8;
-    font-weight: 400;
+    color: #222;
+    font-size: 1.5em;  
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
     letter-spacing: 0;
     line-height: 1.25em;
     margin-top: 0.20em;
     transition: all .3s ease-in-out;
+`
 
-    @media screen and (max-width: 1500px) {
-        font-size: 1.1em;
-        line-height: 0.9em;
-    }
-
-    @media screen and (max-width: 960px) {
-        color: #888;
-        line-height: 1.1em;
-    }
+export const IText = styled.h4`
+    color: #222;
+    font-size: 1.1em;  
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    letter-spacing: 0;
+    font-style: italic;
+    line-height: 1.15em;
+    margin-top: 1.5em;
+    transition: all .3s ease-in-out;
 `
 
 export const ButtonText = styled.a`
+    padding: 4px 10px 4px 11px;
+    margin-top: -6px;
+    border-radius: 12px;  
+    position: absolute;
     text-decoration: none;
     font-size: 0.9em;
-    line-height: 4em;
-    width: 4.5em;
-    padding: 0.3em 0.4em 0.4em 0.4em;
+    line-height: 1.9em;
     font-weight: 400; 
     transition: all .3s ease-in-out;
-    border: 1px solid #d8d8d8;
-    border-radius: 0.5em;
+    outline: 1px solid #d8d8d8;
+    outline-offset: -1px;
     cursor: pointer;
-    margin-left: 1px;
+    vertical-align: top;
+    margin-left: 8px;
+    display: inline;
     background-color: ${({ disabled }) => (disabled ? 'rgba(216,216,216,1)' : '')};
     color: ${({ disabled }) => (disabled ? '#000' : '#d8d8d8')};
 
@@ -218,14 +216,11 @@ export const ButtonText = styled.a`
 
 export const GalleryWrapper = styled.div`
     width: 100%;
-    height: 100%;
-    display: block;
-    position: relative;
-    overflow: hidden;
+    display: inline-block;
 `
 
 export const BaseImg = styled.img`
-    border-radius: 0.75em;
+    border-radius: ${rad};
     object-fit: cover;
     text-align: right;
     padding: 0.5vh;    
@@ -243,13 +238,14 @@ export const Img100 = styled(BaseImg)`
     width: 100%;
     height: 77vh;
     height: ${({ customHeight }) => (customHeight)}; 
+    border-radius: calc(${rad} + 4px);
     
     ${({ screenShot }) => (screenShot ? `
         padding: 50px;
         object-fit: contain;
         background-color: #121212;
         height: 100%;
-        border-radius: 0.5em;
+        border-radius: ${rad};
     ` : '')}
 
     @media screen and (max-width: 991px) {
@@ -293,9 +289,10 @@ export const Img100Art = styled(BaseImg)`
 export const Img50 = styled(BaseImg)`
     width: 50%;
     width: ${({ customWidth }) => (customWidth)};
-    height: 55vh;
+    height: 40vh;
     height: ${({ customHeight }) => (customHeight)};
     object-fit: cover;
+    border-radius: calc(${rad} + 4px);
 
     @media screen and (max-width: 991px) {
         width: 100%;
@@ -325,7 +322,8 @@ export const Img33 = styled(BaseImg)`
 
 export const Img33100 = styled(BaseImg)`
     width: 33.33%;
-    height: 50vh;
+    height: 40vh;
+    border-radius: calc(${rad} + 4px);
 
     @media screen and (max-width: 991px) {
         width: 100%;        
@@ -346,10 +344,13 @@ export const Img25 = styled(BaseImg)`
 export const ImgSS = styled(BaseImg)`
     width: 100%;
     height: 100%;
-    padding: 2em;
+    padding: 0.75em;
     object-fit: contain;
-    border-radius: 0.5em;
     background-color: ${({ backdrop }) => (backdrop)}; 
+
+    ${({ addpad }) => (addpad ? `
+        padding: 1.25em;
+    ` : '')}
 
     @media screen and (max-width: 991px) {
         width: 100%;
@@ -371,7 +372,7 @@ export const SSWrapper = styled.div`
     padding:0.5vh;
     position: relative;
     width: 66.66%;
-    height: 50vh;
+    height: 40vh;
 
     ${({ fill100 }) => (fill100 ? `
     width: 100%;
@@ -429,7 +430,7 @@ export const OtherWorkImgMobi = styled(OtherWorkImg)`
 export const VModule = styled.div`
     width: 100%;
     width: ${({ giveWidth }) => (giveWidth)};
-    height: 77vh;
+    height: 55vh;
     height: ${({ giveHeight }) => (giveHeight)};
     padding: 0.5vh;
     display: block;
@@ -463,7 +464,7 @@ export const VModule100 = styled(VModule)`
 export const VContainer = styled.div`
     width: 100%;
     height: 100%;
-    border-radius: 0.5em;
+    border-radius: ${rad};
     overflow: hidden;
     background-color: ${({ customColor }) => (customColor)};    
     transform: translate3d(0, 0, 0);
@@ -472,7 +473,7 @@ export const VContainer = styled.div`
 export const VWrapper = styled.div`
     width: 100%;
     height: ${({ fill }) => (fill ? '' : '100%')};
-    padding: ${({ pad }) => (pad ? '2em' : '0')};
+    padding: ${({ pad, small }) => (pad ? (small ? '1em' : '2em') : '0')};
     vertical-align: middle;
 
     @media screen and (max-width: 991px) {
@@ -495,7 +496,7 @@ export const SingleVideoHelper = styled.div`
 
 export const DivisorSection = styled.div`
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     padding: 0.5vh;
     display: block;
     float: left;
@@ -509,7 +510,7 @@ export const DivisorSection = styled.div`
 export const DivisorContainer = styled.div`
     width: 100%;
     height: 100%;
-    border-radius: 0.5em;
+    border-radius: ${rad};
     overflow: hidden;
     transition: 0.2s;
     background-color: ${({ accentColor }) => (accentColor)};
@@ -554,7 +555,7 @@ export const Mimg = styled.img`
 ///Interactive logo
 export const InteractiveSection = styled.div`
     width: 33.33%;
-    height: 50vh;
+    height: 40vh;
     padding: 0.5vh;
     display: block;
     float: left;
@@ -570,7 +571,7 @@ export const InteractiveSecContainer = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    border-radius: 0.5em;
+    border-radius: ${rad};
     overflow: hidden;
     background-color: ${({ customColor }) => (customColor)};
 `
@@ -585,7 +586,7 @@ export const InteractiveSecWrapper = styled.div`
 
 export const DigidenSecWrapper = styled.div`
     background: radial-gradient(circle, rgba(223,254,28,1) 40%, rgba(253,249,240,1) 71%, rgba(253,249,240,1) 100%);
-    height: 100%;
+    height: 104%;
     width: 100%;
     transition: all .3s ease-in-out;
     position: relative;
@@ -607,7 +608,7 @@ export const IntLogo = styled.img`
     width: 100%;
     padding: 0px 50px;
     position: absolute;
-    top: 43%;
+    top: 45%;
     z-index: 10;
     pointer-events: none;
     transition: all .3s ease-in-out;
@@ -641,8 +642,10 @@ export const EarthLogo = styled(IntLogo)`
 `
 
 export const AnaquelLogo = styled(IntLogo)`
-    padding: 0 20%;
-    top: 42%;
+    padding: 0;
+    margin: 0 10%;
+    width: 80%;
+    top: 43%;
     pointer-events: all;
 
     &:hover:nth-child(2) {
@@ -707,7 +710,7 @@ export const OtherId = styled.a`
     margin-top: 0.20em;
     transition: all .3s ease-in-out;
     padding: 0.2em 0.5em;
-    border-radius: 1em;
+    border-radius: ${rad};
     display: inline-block;
     cursor: ${({ isLink }) => ( isLink ? 'pointer' : 'default')};
     text-decoration: none;

@@ -1,106 +1,131 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import {
-    Banner,
-    Info,
-    ListItemOfThree,
-    ListItemOfTwo,
+    AnaquelThumbnail,
+    AntilliasThumbnail,
+    Ascend,
+    GridItemLast,
+    GridItems,
+    Header,
+    ListThree,
+    ListTwo,
+    More,
+    Tag
 } from '../../components';
+import FadeIn from '../../components/Animations/FadeIn';
 import {
     MediumSpacer,
     LargeSpacer,
-    GiantSpacer,
-    SmallSpacer,
-    Backdrop,
-    SubText,
-    HomeContainer,
-    TextContainer,
-    TextWrapper,
+    Dit,
+    Dity
 } from '../../globalStyles';
 import {
-    myProjects,
-    myArticles,
-    myOthers,
+    allSnippets,
+    allProjects
 } from './Data';
 import {
-    Loader,
     Separator,
-    BannerContainer,
-    BannerWrapper
+    HomeWrap,
+    MediumText,
+    SectionText
 } from './Home.elements';
 
-const Module = ({ scrolled }) => {
-    //Loader
-    const [loading, setLoading] = useState(+true);
-    useEffect(() => {
-        setTimeout(() => {
-            setLoading(+false)
-        }, 200);
-    }, [])
+const Home = ({ collapse }) => {
+    const [numBlogs, setNumBlogs] = useState(4)
+
+    const gatherTags = () => {
+        const all = allProjects.map((item) => item.tag)
+        const uniq = [...new Set(all.flat(1))]
+        let newArr = []
+        while (uniq.length > 0) { newArr.push(uniq.splice(0, 1)) }
+        return newArr
+    }
+    const [myTags] = useState(gatherTags())
+
+    const [foundProjects, setFoundProjects] = useState(allProjects)
+    const [active, setActive] = useState('all')
+
+    const filter = (keyword) => {
+        setActive(keyword?.toString())
+        setFoundProjects(allProjects)
+        if (keyword !== '') {
+            const resultsProjects = allProjects.filter((item) => {
+                return item.tag?.toString().toLowerCase().startsWith(keyword.toLowerCase())
+            })
+            setFoundProjects(resultsProjects)
+        } else {
+            setFoundProjects(allProjects)
+        }
+    }
+
+    const showAll = (keyword) => {
+        setActive(keyword.toString())
+        setFoundProjects(allProjects)
+    }
+
     return (
         <>
-            <BannerContainer scrolled={scrolled}>
-                <BannerWrapper>
-                    <Loader loading={loading} />
-                    <Banner />
-                </BannerWrapper>
-            </BannerContainer>
+            <Helmet>
+                <title>Isaúl García</title>
+            </Helmet>
+            <FadeIn>
+                {/* Header */}
+                <Header collapse={collapse} id={"header"} />
 
-            <GiantSpacer />
+                <HomeWrap>
+                    {/* Featured */}
+                    <LargeSpacer collapse={collapse} />
+                    <Dit collapse={collapse} toRight><Dity /></Dit>
+                    <SectionText collapse={collapse}>
+                        <MediumText collapse={collapse}>Featured</MediumText>
+                    </SectionText>
+                    <Ascend>
+                        <Separator tiled>
+                            <MediumSpacer />
+                            <AnaquelThumbnail collapse={collapse} />
+                            <AntilliasThumbnail collapse={collapse} />
+                        </Separator>
+                    </Ascend>
 
-            <HomeContainer scrolled={scrolled}>
-                <Backdrop scrolled={scrolled} />
-                <Info removeBack={true} scrolled={scrolled} />
+                    {/* Snippets */}
+                    <LargeSpacer collapse={collapse} />
+                    <Dit collapse={collapse} toRight><Dity collapse={collapse} /></Dit>
+                    <SectionText collapse={collapse}>
+                        <MediumText collapse={collapse}>Snippets</MediumText>
+                    </SectionText>
+                    <Ascend>
+                        <Separator tiled>
+                            <MediumSpacer />
+                            {allSnippets.slice(0, 4).map((props) => (
+                                <GridItems collapse={collapse} snippets={+true} key={props.key} {...props} />
+                            ))}
+                            <GridItemLast collapse={collapse} header='See all Snippets' linkId={'/snippets'} snippets={+true} freeze />
+                        </Separator>
+                    </Ascend>
 
-                <MediumSpacer />
-
-                <LargeSpacer disableMobi={true} />
-
-                <TextContainer>
-                    <TextWrapper>
-                        <SubText>
-                            I'm a creative developer with an interest in the evolution of the web, data visualization and mixed realities. I enjoy exploring digital technologies and experimenting for fun innovative interactions.
-                        </SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <SmallSpacer />
-                <TextContainer>
-                    <TextWrapper>
-                        <SubText><i>Frontend Engineer, Designer</i></SubText>
-                    </TextWrapper>
-                </TextContainer>
-
-                <LargeSpacer />
-
-                <Separator>
-                    <h4>Featured</h4>
-                    <MediumSpacer />
-                    {myProjects.map((props) => (
-                        <ListItemOfThree key={props.key} {...props} />
+                    {/* Blogs */}
+                    <LargeSpacer collapse={collapse} />
+                    <Dit collapse={collapse} toRight><Dity collapse={collapse} /></Dit>
+                    <SectionText collapse={collapse}>
+                        <MediumText collapse={collapse}>More</MediumText>
+                    </SectionText>
+                    {myTags.map((props, key) => (
+                        <Tag key={key} filter={filter} active={active} val={props} />
                     ))}
-                </Separator>
-
-                <LargeSpacer />
-
-                <Separator>
-                    <h4>Blog</h4>
-                    <MediumSpacer />
-                    {myArticles.map((props) => (
-                        <ListItemOfTwo key={props.key} {...props} />
-                    ))}
-                </Separator>
-
-                <LargeSpacer />
-
-                <Separator>
-                    <h4>More</h4>
-                    <MediumSpacer />
-                    {myOthers.map((props) => (
-                        <ListItemOfThree key={props.key} {...props} />
-                    ))}
-                </Separator>
-            </HomeContainer>
+                    <Tag filter={showAll} val={'all'} active={active} />
+                    <Ascend>
+                        <Separator>
+                            <MediumSpacer />
+                            {foundProjects.slice(0, numBlogs).map((props) => (
+                                props.description && !props.hasTag ? <ListThree collapse={collapse} key={props.key} {...props} /> : props.hasTag ? <ListThree collapse={collapse} key={props.key} {...props} /> : <ListTwo collapse={collapse} key={props.key} {...props} />
+                            ))}
+                            <More collapse={collapse} setNumBlogs={setNumBlogs} />
+                        </Separator>
+                    </Ascend>
+                </HomeWrap>
+            </FadeIn>
         </>
     )
 }
 
-export default Module;
+export default Home;

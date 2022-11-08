@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-
     *{
         box-sizing: border-box;
         margin: 0;
@@ -20,15 +19,30 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
         height: 100%;
         width: 100%;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: auto;
+        border-radius: 10px;
+    }
 
-        &::-webkit-scrollbar {
-        display: none;
-        }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;    
+    }
 
-        @media screen and (max-width: 991px) {
-            background-color: #000000;
-        }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border-radius: 20px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+        border-radius: 20px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;   
     }
 
     h1 {
@@ -39,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h2 {
-        font-family: 'Baskervville', sans-serif;
+        font-family: 'Inter', sans-serif;
         font-weight: 700;
         font-size: 4.5em;
     }
@@ -56,7 +70,6 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         font-size: 1.35em;
         cursor: default;
-        letter-spacing: -1px;
     }
 
     h5 {
@@ -72,12 +85,6 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.25em;
     }
 
-    .path {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: dash 5s linear infinite;
-    }
-
     @keyframes cyclingColor {
         0% {
             background-color: #1e31e3;
@@ -86,35 +93,40 @@ const GlobalStyle = createGlobalStyle`
             background-color: #ff00ff;
         }
         100% {
-            background-color: #e0ae01;
+            background-color: #ff9606;
         }
     }
 
-    @media screen and (max-width: 991px) {
+    @keyframes cyclingBorder {
+        0% {
+            border: 1px #1e31e3 dotted;
+        }
+        50% {
+            border: 1px #ff00ff dotted;
+        }
+        100% {
+            border: 1px #f28b00 dotted;
+        }
     }
 
-    @keyframes dash {
-        from {
-            stroke-dashoffset: 2000;
+    @keyframes pulse {
+        0% {
+            opacity: 0;
         }
-        to {
-            stroke-dashoffset: 0;
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
         }
     }
-
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }  
 `
+
+export const rad = '1.2rem' //border radius
 
 // SPACERS
 export const SmallSpacer = styled.div`
-    height: 10px;
+    height: 6px;
     cursor: default;
 
     @media screen and (max-width: 991px) {
@@ -123,8 +135,8 @@ export const SmallSpacer = styled.div`
 `
 
 export const MediumSpacer = styled.div`
-    height: 20px;
-    cursor: default;
+    height: 30px;
+    cursor: default; 
 
     @media screen and (max-width: 991px) {
         height: 20px;
@@ -132,102 +144,44 @@ export const MediumSpacer = styled.div`
 `
 
 export const LargeSpacer = styled.div`
-    height: 60px;
+    height: 80px;
     cursor: default;
 
+    @media screen and (max-width: 1500px) {
+        height: 52px;
+    }   
+
     @media screen and (max-width: 991px) {
-        height: ${({ disableMobi }) => (disableMobi ? '0px' : '80px')};
+        height: 80px;
+        height: ${({ disableMobi }) => (disableMobi ? '0px' : '50px')};
     }
 `
-export const GiantSpacer = styled.div`
-    height: 86vh;
-    cursor: default;
 
+export const MobileSpacer = styled.div`
+    display: none;
     @media screen and (max-width: 991px) {
-        height: 107vh;
+        height: 30px;
+        display: block;
     }
 `
 
 //CONTAINERS
-//Mainly to ensure side margins
-export const OverContainer = styled.div`
-    top: 0;
-    float: right;
-    width: 50vw;
-    margin-right: 25vw;
-    margin-top: 4vh;
-    padding-top: 4vh;
-    border-top: 1px solid #222;
-    z-index: 2;
-    transition: all .5s ease-in-out;
-    position: relative;
-    
-    @media screen and (max-width: 1780px) {
-        width: 62vw;
-        margin-right: 19vw;
-    }
-
-    @media screen and (max-width: 991px) {        
-        border-radius: 10px 10px 0px 0px;
-        width: 100vw;
-        margin-right: 0;
-        padding-top: 0;
-        padding: 0 5vw;
-        margin-bottom: 10vw;
-        margin-top: 0;
-        border-top: 0px solid #222;
-        border-bottom: 0px;
-        position: relative;
-        margin: 0;
-        margin-top: 0;
-        transition: 0.5s;
-    }
-`
-
-export const HomeContainer = styled(OverContainer)`    
-    @media screen and (max-width: 991px) {
-        background-color: #bcbcbc;
-    }
-`
-
-export const FullContainer = styled(OverContainer)`
-    background-color: #bcbcbc;
-`
-
-export const BlogContainer = styled(OverContainer)`
-    background-color: #bcbcbc;
+export const OverallContainer = styled.div`
     width: 40vw;
-    margin-right: 30vw;
-    
-    @media screen and (max-width: 991px) {
-        width: 100vw;
-        margin-right: 0;
-    }
-`
+    margin-left: 30vw;
+    transition: all .2s ease-in-out;
+    padding-top: 10vh;
 
-export const FillContainer = styled.div`
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: -4.1vh;
-    left: -25vw;
-    background-color: #bcbcbc;
-    z-index: 999;
-    overflow: hidden;
-    z-index: 2;
-
-    @media screen and (max-width: 1300px) {
-        left: -19vw;
+    @media screen and (max-width: 1500px) {
+        width: 44vw;
+        margin-left: 28vw;
     }
 
     @media screen and (max-width: 991px) {
-        position: absolute;
-        width: 100vw;
-        overflow-x: visible;        
-        top: 0;
-        left: 0;
-        margin: -5vw;        
-        margin-top: -5.1vw;
+        width: 95vw;
+        margin-left: 2.25vw;
+        padding-top: 8.5vh;
+        overflow-x: hidden;
     }
 `
 
@@ -262,9 +216,8 @@ export const TextWrapper = styled.div`
 
 //Actual text components
 export const SubText = styled.h4`
-    font-size: 1em;
+    font-size: 1.4em;
     font-weight: 500;
-    letter-spacing: 0;
     line-height: 1.5em;
     transition: all .2s ease-in-out;
     -webkit-font-smoothing: antialiased;
@@ -283,28 +236,14 @@ export const SubTitle = styled.h4`
 `
 
 export const MainText = styled(SubText)`
-    font-size: 1.25em;  
-    font-family: Georgia;
-    font-weight: 500; 
-`
-
-//BACKDROP
-//Backdrop to ensure the blend effect of the "Info" component with the name and the logo
-export const Backdrop = styled.div` 
-    position: absolute;
-    height: 99%;
-    width: 100%;
-    background-color: #bcbcbc;
-    transition: 0.5s;
-    z-index: -2;
-    margin-top: ${({ scrolled }) => (scrolled ? '-4vh' : '6vh')};
-
+    font-size: 1.35em;  
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; 
+    
     @media screen and (max-width: 991px) {
-        width: 90%;
-        margin-top: ${({ scrolled }) => (scrolled ? '3vh' : '3vh')};
+        font-size: 1.2em;
     }
 `
-
 //NEW BUBBLE
 //Used to highlight new blog posts
 export const NewBubble = styled.span`
@@ -325,6 +264,10 @@ export const NewBubble = styled.span`
     text-decoration: none;
     display: ${({ isNew }) => (isNew ? '' : 'none')};
     letter-spacing: 0px;
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 6px;
+    }
 `
 
 //BUBBLE TAG
@@ -344,6 +287,34 @@ export const TagBubble = styled.span`
     text-decoration: none;
     display: ${({ hasTag }) => (hasTag ? '' : 'none')};
     letter-spacing: 0px;
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 6px;
+    }
+`
+
+//BLOG TAG
+//Used to provide a tag for particular project like "Mocks"
+export const BlogBubble = styled.span`
+    font-size: 8px;
+    line-height: 13px;
+    font-weight: 600;
+    color: #2f2f2f;
+    vertical-align: top;
+    padding: 1px 3px;
+    margin-left: 0.35vh;
+    max-width: 50px;
+    max-height: 22px;
+    border-radius: 4px;
+    background-color: #2f2f2f00;
+    outline: 1px solid #2f2f2f;
+    text-decoration: none;
+    display: ${({ hasTag }) => (hasTag ? '' : 'none')};
+    letter-spacing: 0px;
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 6px;
+    }
 `
 
 //PARAGRAPH LINK
@@ -351,7 +322,7 @@ export const TagBubble = styled.span`
 //[[ Doesn't work on blog posts yet !!! ]]
 export const ParagLink = styled.a`
     font-size: 1em;  
-    font-family: Georgia;
+    font-family: 'Inter', sans-serif;
     font-weight: 500; 
     text-decoration: none;
     color: #222;
@@ -359,6 +330,162 @@ export const ParagLink = styled.a`
 
     &:hover{
         color: #0035bf;
+    }
+`
+
+//BACKDROP
+//Backdrop to ensure the blend effect of the "Info" component with the name and the logo
+export const Backdrop = styled.div` 
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    background-color: #bcbcbc;
+    transition: 0.5s;
+    z-index: -2;
+    margin-top: ${({ scrolled }) => (scrolled ? '-4vh' : '6vh')};
+
+    @media screen and (max-width: 991px) {
+        width: 90%;
+        margin-top: ${({ scrolled }) => (scrolled ? '3vh' : '3vh')};
+    }
+`
+
+//DIT THINGY FOR HOME
+//T shaped line for corners
+const col = '#555555'
+export const Ditail = styled.div`
+    width: 100%;
+    bottom: 70px;
+    position: absolute;
+`
+
+export const Dit = styled.span`
+    height: 40px;
+    height: ${({ single }) => (single ? '30px' : '')};
+    width: 20px;
+    margin-top: ${({ single }) => (single ? '16px' : '10px')};
+    object-fit: contain;
+    display: inline-block;
+    float: ${({ toRight }) => (toRight ? 'right' : '')};
+
+    ${({ toRight }) => (toRight ? `
+    border-right: 1px solid ${col};` : `
+    border-left: 1px solid ${col};`)};
+
+    @media screen and (max-width: 991px) {
+        margin-top: -6px;
+    }
+`
+
+export const Dity = styled.span`
+    height: 20px;
+    width: 20px;
+    object-fit: contain;
+    display: block;
+    float: ${({ toRight }) => (toRight ? 'right' : '')};
+    border-bottom: 1px solid ${col};
+`
+
+export const Separator = styled.div`
+    width: ${({ tiled }) => (tiled ? `calc(100% + 16px)` : '100%')};
+    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: ${({ tiled }) => (tiled ? '-8px' : '0')};
+`
+
+export const MediumText = styled.h1`
+    font-size: 2.75em;
+    line-height: 1.2em;
+    font-weight: 700;    
+    letter-spacing: -0.04em;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.75em;
+    }
+`
+
+export const SmallText = styled.h4`
+    font-size: 1.25em;
+    line-height: 1.2em;
+    font-weight: 300;    
+    letter-spacing: -0.04em;
+
+    @media screen and (max-width: 991px) {
+        font-size: 1em;
+    }
+`
+
+export const SectionText = styled.div`
+    width: 100%;
+`
+
+export const BigMessage = styled.div`
+    display: inline-block; 
+    transition: all .2s ease-in-out;
+    padding: 20px 120px 20px 26px;
+    border: 1px dotted #333;  
+    border-right: none;
+
+    @media screen and (max-width: 991px) {
+        font-size: 0.9em;
+        font-weight: 500;
+        padding: 3.2vw 40vw 3.2vw 3.25vw;
+        width: 85vw;
+    }
+`
+
+export const BigMessageText = styled.span`
+    font-size: 1.25em;
+    line-height: 1.25em;
+    font-weight: 300;    
+    letter-spacing: -0.04em;
+    transition: all .1s ease-in-out;
+    color: #333;
+    text-decoration: none;  
+
+    @media screen and (max-width: 991px) {
+        font-size: 0.9em;
+        font-weight: 500;
+    }
+`
+
+export const LinkContainer = styled.div`
+    display: inline-block; 
+    transition: all .2s ease-in-out;
+    padding: 20px 20px 20px 26px;
+    background-color: #d0d0d0;  
+    border-radius: ${rad};
+    position: absolute;
+    right: calc(30vw - 8px);
+    cursor: pointer;
+    
+    &:hover {
+        background-color:  #cacaca;
+    }
+
+    @media screen and (max-width: 1300px) {
+        right: calc(27.5vw - 8px);
+    }
+    
+    @media screen and (max-width: 991px) {
+        right: 2.5vw;
+    }
+`
+
+export const LinkText = styled.span`
+    font-size: 1.35em;
+    font-weight: 500; 
+    letter-spacing: 0;
+    line-height: 1.25em; 
+    transition: all .1s ease-in-out;
+    color: #333;
+    text-decoration: none;  
+
+    @media screen and (max-width: 991px) {
+        font-size: 1.1em;
+        font-weight: 500;
     }
 `
 
