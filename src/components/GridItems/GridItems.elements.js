@@ -81,7 +81,7 @@ export const TextContainer = styled.div`
 
     ${({ freeze }) => (freeze &&
         `opacity: 1;
-        background: #d0d0d077;
+        background: #d0d0d099;
         padding-top: 1vw;
         color: #777;
         outline: 10px solid #d0d0d0;
@@ -167,7 +167,6 @@ export const ShadowContainer = styled.div`
     width: 100%;
     height: 100%;  
     border-radius: ${rad};
-    box-shadow: 0px 0px 5px #bcbcbc;
     overflow: hidden;
     transition: all .2s ease-in-out;
     position: relative;

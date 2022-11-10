@@ -49,7 +49,7 @@ export const NavLink = styled(Link)`
     font-size: 1.175em;
     font-weight: 500;
     text-decoration: none;
-    color: #bcbcbc;
+    color: #c5c5c5;
     border-radius: ${rad};
     background-color: #222;
     padding: 7px 12px;

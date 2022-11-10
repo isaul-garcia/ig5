@@ -40,7 +40,7 @@ export const Wallpaper = styled.div`
     width: 100%;
     height: 100%;
     z-index: -10;
-    background-color: #adacad;
+    background-color: #bababa;
     border-radius: ${rad};
 `
 

@@ -156,17 +156,16 @@ export const ShowMore = styled(Boxed)`
     width: 100%;
     text-align: right;
     float: right;
-    background-color: #c4c4c4;
+    background-color: #cbcbcb;
 
     &:hover{
-        background-color: #d1d1d1;
+        background-color: #d0d0d0;
     }
 
     @media screen and (max-width: 991px) {
         width: 100%;
         opacity: 0.3;
         padding: 20px 0;
-        background-color: #b4b4b4;
     }
 `
 

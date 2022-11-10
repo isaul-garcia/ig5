@@ -30,7 +30,7 @@ export const allSnippets = ([
 
     {
         key: '4',
-        linkId: 'https://isaul-garcia.github.io/loma/',
+        linkId: 'https://loma-snippet.vercel.app/',
         header: 'Loma',
         description: ``,
         tags: 'React Three Fiber',

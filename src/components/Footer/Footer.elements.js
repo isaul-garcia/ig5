@@ -58,7 +58,7 @@ export const IconWrapper = styled.a`
     }
 
     &:hover{        
-        background-color: #cacaca;
+        background-color: #ccc;
     }
 `
 
