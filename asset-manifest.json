@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2dbb4cf9.css",
-    "main.js": "/static/js/main.47e50eab.js",
+    "main.js": "/static/js/main.e8171f20.js",
     "static/media/mods10.png": "/static/media/mods10.aae352b9a737a3bd5fe5.png",
     "static/media/anaquel-2-ss.jpg": "/static/media/anaquel-2-ss.b3153d873ca0ec5b7fb2.jpg",
     "static/media/roca7.png": "/static/media/roca7.0d69d32b37dd4740f09e.png",
@@ -128,10 +128,10 @@
     "static/media/sep.svg": "/static/media/sep.1785728da8190fd7044d2eb4b716533b.svg",
     "static/media/tao3.svg": "/static/media/tao3.0504a439bc2005678ab1089f1dda88bb.svg",
     "main.2dbb4cf9.css.map": "/static/css/main.2dbb4cf9.css.map",
-    "main.47e50eab.js.map": "/static/js/main.47e50eab.js.map"
+    "main.e8171f20.js.map": "/static/js/main.e8171f20.js.map"
   },
   "entrypoints": [
     "static/css/main.2dbb4cf9.css",
-    "static/js/main.47e50eab.js"
+    "static/js/main.e8171f20.js"
   ]
 }
