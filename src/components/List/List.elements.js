@@ -8,7 +8,7 @@ export const ItemContainer = styled(Link)`
     display: block;
     position: relative;
     overflow-y: hidden;
-    background-color: #d0d0d0;
+    background-color: #1d1d1d;
     cursor: pointer;
     border-radius: ${rad};
     margin-bottom: 8px;
@@ -41,13 +41,17 @@ export const Name = styled(Boxed)`
     ${ItemContainer}:hover & {
         margin-left: 13%;
         width: 19%;
-        padding: 30px 0px;        
-    }   
-    
-    @media screen and (max-width: 1500px) {
-        ${ItemContainer}:hover & {
+        padding: 30px 0px;  
+        
+        @media screen and (max-width: 1500px) {
             padding: 22px 0px;     
         }   
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+            padding: 10px 0px;    
+            margin-left: 0; 
+        }
     }
 
     @media screen and (max-width: 991px) {
@@ -64,13 +68,17 @@ export const Desc = styled(Boxed)`
         margin-left: 0%;
         width: 47%;
         padding: 30px 0px;
-    }      
-    
-    @media screen and (max-width: 1500px) {
-        ${ItemContainer}:hover & {
+
+        @media screen and (max-width: 1500px) {
             padding: 22px 0px;     
         }   
-    }
+
+        @media screen and (max-width: 991px) {
+            width: 75%;
+            opacity: 0.3;
+            padding: 0 0 10px 13px;
+        }
+    }          
 
     @media screen and (max-width: 991px) {
         width: 75%;
@@ -87,12 +95,16 @@ export const Tag = styled(Boxed)`
         width: 17%;
         margin-right: 3%;
         padding: 30px 0px;
-    }   
-    
-    @media screen and (max-width: 1500px) {
-        ${ItemContainer}:hover & {
+
+        @media screen and (max-width: 1500px) {
             padding: 22px 0px;     
         }   
+
+        @media screen and (max-width: 991px) {
+            width: 25%;
+            opacity: 0.3;
+            display: none;
+        }
     }
 
     @media screen and (max-width: 991px) {
@@ -111,15 +123,22 @@ export const Title = styled(Boxed)`
     ${ItemContainer}:hover & {
         margin-left: 13%;
         width: 70%;
-        padding: 30px 0px;        
-        } 
-    
-    @media screen and (max-width: 1500px) {
-        ${ItemContainer}:hover & {
+        padding: 30px 0px;  
+        
+        @media screen and (max-width: 1500px) {
             padding: 22px 0px;     
         }   
-    }
 
+        @media screen and (max-width: 991px) {
+            width: 75%;
+            line-height: 1.6em;
+            padding: 10px 0 0 0;  
+            overflow: hidden;
+            display: block;
+            margin-left: 0; 
+        }
+    } 
+    
     @media screen and (max-width: 991px) {
         width: 75%;
         line-height: 1.6em;
@@ -136,14 +155,18 @@ export const Date = styled(Boxed)`
     ${ItemContainer}:hover & {
         width: 10%;
         margin-right: 4%;
-        padding: 30px 0px;     
+        padding: 30px 0px;   
+        
+        @media screen and (max-width: 1500px) {
+            padding: 22px 0px; 
+        }
+
+        @media screen and (max-width: 991px) {
+            width: 10%;
+            margin-right: 11%;
+            padding: 10px 0px;  
+        }
     }      
-    
-    @media screen and (max-width: 1500px) {
-        ${ItemContainer}:hover & {
-            padding: 22px 0px;     
-        }   
-    }
 
     @media screen and (max-width: 991px) {
         width: 10%;
@@ -156,10 +179,10 @@ export const ShowMore = styled(Boxed)`
     width: 100%;
     text-align: right;
     float: right;
-    background-color: #cbcbcb;
+    background-color: #171717;
 
     &:hover{
-        background-color: #d0d0d0;
+        background-color: #1d1d1d;
     }
 
     @media screen and (max-width: 991px) {
@@ -174,14 +197,14 @@ export const TextWrapper = styled.div`
     width: 100%;
     display: inline-block;
     cursor: pointer;
-    color: #222;
+    color: #bcbcbc;
     text-align: ${({ isLast }) => (isLast ? 'right' : 'left')};
 `
 
 export const PreviewImg = styled.img`
     width: 10%;
-    height: 100%;
     margin-left: -10%;
+    height: 100%;
     position: absolute;
     transition: all .25s ease-in-out;
     object-fit: cover;
@@ -189,6 +212,12 @@ export const PreviewImg = styled.img`
     ${ItemContainer}:hover & {
         margin-left: 0%;
         width: 11%;
+
+        @media screen and (max-width: 991px) {
+            display: none;
+            width: 10%;
+            margin-left: -10%;
+        }
     }   
 
     @media screen and (max-width: 991px) {
@@ -209,7 +238,7 @@ export const HeadText = styled.h1`
     cursor: pointer;
 
     ${({ last }) => (last ? `
-        color: #777;
+        color: #666;
         font-size: 1em;
         font-weight: 600;
         letter-spacing: 0px;

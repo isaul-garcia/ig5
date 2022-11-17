@@ -48,21 +48,26 @@ export const TextContainer = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #d0d0d0;
+    background: #171717;
     transition: all 0.2s ease-in-out;
     opacity: 0;
-    color: #222;    
+    color: #aaa;    
     padding: 20px;
     padding-top: 40px;
     border-radius: ${rad};
 
     ${ItemContainer}:hover & {
         opacity: 1;
-        background: #d0d0d0;
+        background: #1d1d1d;
         padding-top: 20px;
 
         @media screen and (max-width: 1500px) {
                 padding-top: 1vw;
+        }
+
+        @media screen and (max-width: 991px) {
+            padding-top: 40px;
+            opacity: 0;
         }
     }   
     
@@ -73,15 +78,20 @@ export const TextContainer = styled.div`
 
     ${ItemContainerLast}:hover & {
         opacity: 1;
-        background: #d0d0d0;
+        background: #222;
         padding-top: 1vw;
+
+        @media screen and (max-width: 991px) {
+            padding: 15px;
+            padding-top: 15px;
+        }
     }  
 
     ${({ freeze }) => (freeze &&
         `opacity: 1;
-        background: #d0d0d099;
+        background: #1d1d1d;
         padding-top: 1vw;
-        color: #777;
+        color: #666;
         z-index: 999;`
     )}
 
@@ -158,6 +168,10 @@ export const PreviewImg = styled.img`
             opacity: 1;
         }
     }  
+
+    ${({ freeze }) => (freeze &&
+        `display: none;`
+    )}
 `
 
 export const ShadowContainer = styled.div`

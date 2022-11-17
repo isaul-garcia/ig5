@@ -13,9 +13,9 @@ import Plu from './Things/Plu';
 
 THREE.ColorManagement.legacyMode = false
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28)
-const spheres = [...Array(7)].map(() => ({ args: 1.15, mass: 1, angularDamping: 0.2, linearDamping: 0.95 }))
-const pluses = [...Array(3)].map(() => ({ args: 1.1, mass: 1, angularDamping: 0.2, linearDamping: 0.95 }))
-const trises = [...Array(2)].map(() => ({ args: 1.1, mass: 1, angularDamping: 0.2, linearDamping: 0.95 }))
+const spheres = [...Array(7)].map(() => ({ args: 1.15, mass: 1, angularDamping: 0.02, linearDamping: 0.85 }))
+const pluses = [...Array(3)].map(() => ({ args: 1.1, mass: 1, angularDamping: 0.2, linearDamping: 0.85 }))
+const trises = [...Array(2)].map(() => ({ args: 1.1, mass: 1, angularDamping: 0.2, linearDamping: 0.85 }))
 
 const colorA = new THREE.Color('#0032A5').convertSRGBToLinear()
 const colorB = new THREE.Color('#44eecc').convertSRGBToLinear()
@@ -81,17 +81,29 @@ function Collisions() {
 }
 
 const Banner = () => {
+  const [res, setRes] = useState(1.1);
+
+  const checkRes = () => {
+    if (window.innerWidth <= 960) {
+      setRes(2.2)
+    } else {
+      setRes(1.1)
+    }
+  };
+
+  useEffect(() => {
+    checkRes();
+  }, []);
+
+  window.addEventListener('resize', checkRes);
+  
   return (
     <>
       <Canvas
-        dpr={1.1}
+        dpr={res}
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
         camera={{ position: [0, 0, 20], fov: 35, near: 10, far: 40 }}
         onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}>
-        <ambientLight intensity={0.5} />
-        <spotLight intensity={0.4} position={[5, 20, 20]} />
-        <spotLight intensity={0.2} position={[-170, 150, 150]} />
-        <spotLight intensity={0.9} position={[200, 250, 150]} />
         <group position={[0, -5.5, 0]} dispose={null}>
           <Physics gravity={[0, 0.5, 0]}>
             <Collisions />

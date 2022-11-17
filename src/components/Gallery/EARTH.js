@@ -55,7 +55,7 @@ const Gallery = () => {
                 <MediumSpacer />
 
                 <SSWrapper>
-                    <ImgSS backdrop={'#dcdbdd'} src={Image2} />
+                    <ImgSS backdrop={'#333'} src={Image2} />
                 </SSWrapper>
 
                 <InteractiveSection>
@@ -70,7 +70,7 @@ const Gallery = () => {
                 <VideoModule
                     giveWidth={'100%'}
                     pad={true}
-                    customColor={'#dcdbdd'}
+                    customColor={'#333'}
                     videoURL={'./Videos/earth2s.mp4'}
                 />
             </ProjectContainer>

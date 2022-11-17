@@ -40,7 +40,7 @@ export const Wallpaper = styled.div`
     width: 100%;
     height: 100%;
     z-index: -10;
-    background-color: #bababa;
+    background-color: #181818;
     border-radius: ${rad};
 `
 
@@ -140,7 +140,7 @@ export const SubText = styled.h4`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    color: #333;    
+    color: #bcbcbc;    
     
     @media screen and (max-width: 1500px) {
         font-size: 1.5em;

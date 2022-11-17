@@ -11,7 +11,7 @@ export const EmailContainer = styled.div`
     cursor: text;
     user-select: all;
     padding: 20px 25px;
-    background-color: #d0d0d0;  
+    background-color: #1d1d1d;  
     border-radius: ${rad};
 
     @media screen and (max-width: 1500px) {
@@ -30,7 +30,7 @@ export const EmailText = styled.span`
     letter-spacing: 0;
     line-height: 1.25em; 
     transition: all .1s ease-in-out;
-    color: #666;
+    color: #bcbcbc;
     text-decoration: none;  
 
     @media screen and (max-width: 1300px) {
@@ -47,7 +47,7 @@ export const EmailText = styled.span`
 export const IconWrapper = styled.a`
     border-radius: ${rad};
     padding: 20px;        
-    background-color: #d0d0d0;
+    background-color: #1d1d1d;
     outline-offset: -1px;
     transition: all 0.1s ease-in-out;
     float: right;
@@ -58,7 +58,7 @@ export const IconWrapper = styled.a`
     }
 
     &:hover{        
-        background-color: #ccc;
+        background-color: #222;
     }
 `
 

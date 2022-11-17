@@ -9,7 +9,7 @@ export const BackWrapper = styled.div`
     cursor: pointer;
     transition: all .2s ease-in-out;
     outline-offset: -1px;
-    background-color: #999999;
+    background-color: #2d2d2d;
     position: absolute;
     display: inline-block;
     z-index: 204;

@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
+import { ReactComponent as IGL } from "../../assets/ig-gray.svg";
 
 export const rad = '0.7rem'
 
@@ -20,7 +21,7 @@ export const NavContainer = styled.div`
     transition: all .1s ease-in-out;
 
     @media screen and (max-width: 1500px) {
-        height: 55px;
+        height: 53px;
     }
     
     @media screen and (max-width: 991px) {
@@ -29,8 +30,8 @@ export const NavContainer = styled.div`
         overflow: hidden;
         padding: 2vw;
         margin: 0 1.5vw;
-        outline: ${({ view }) => (view ? '15px solid #cbcbcb' : '15px solid #ff00ff00')};
-        background-color: ${({ view }) => (view ? ' #cbcbcb' : ' #ff00ff00')};
+        outline: ${({ view }) => (view ? '15px solid #111' : '15px solid #ff00ff00')};
+        background-color: ${({ view }) => (view ? ' #111' : ' #ff00ff00')};
         transition: all .2s ease-in-out;
     }
 `
@@ -49,9 +50,9 @@ export const NavLink = styled(Link)`
     font-size: 1.175em;
     font-weight: 500;
     text-decoration: none;
-    color: #c5c5c5;
+    color: ${({ active }) => (active ? '#222222' : '#c5c5c5')};
     border-radius: ${rad};
-    background-color: #222;
+    background-color: ${({ active }) => (active ? '#00ea75' : '#222222')};
     padding: 7px 12px;
     transition: all .2s ease-in-out;
     cursor: pointer;    
@@ -73,7 +74,9 @@ export const NavLink = styled(Link)`
 
     @media screen and (max-width: 991px) {
         width: 100%;
+        font-size: 2em;
         margin: 1vw 0.25vw;
+        padding: 12px 18px;
 
         &:hover{
             color: #bcbcbc;
@@ -110,11 +113,12 @@ export const IconWrapper = styled(Link)`
     pointer-events: all;
 
     &:hover{
-        background-color: #5f5f5f;
+        background-color: #44ccee;
     }
 
     @media screen and (max-width: 1500px) {
         padding: 0.48em;
+        height: 31px;
     }
 
     @media screen and (max-width: 991px) {
@@ -127,10 +131,25 @@ export const IconWrapper = styled(Link)`
     }
 `
 
-export const Icon = styled.img`
+export const IGIcon = styled(IGL)`
     height: 100%;
+    width: 100%;
     position: relative;
-    display: inline-block;
+    display: inline-block;    
+    fill: #bcbcbc;
+    transition: all .2s ease-in-out;
+
+    ${IconWrapper}:hover &  {
+        fill: #222;
+    }
+
+    @media screen and (max-width: 991px) {
+        width: 56px; 
+
+        ${IconWrapper}:hover &  {
+            fill: #bcbcbc;
+        }
+    }
 `
 
 export const BackWrapper = styled(Link)`
@@ -184,11 +203,7 @@ export const BackIcon = styled.img`
 `
 
 export const MagicButton = styled.span`
-    border: 1px #f28b00 dotted;
-    animation-name: cyclingBorder;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    border: 1px #44ccee dotted;
     transition: all .2s ease-in-out;
     cursor: default;    
     vertical-align: top;
@@ -204,7 +219,7 @@ export const MiniText = styled.span`
     font-size: 0.75em;
     font-weight: 500;
     text-decoration: none;
-    color: #333;
+    color: #ddd;
     padding: 0.8em 1em;
     transition: all .2s ease-in-out;
     cursor: default;    

@@ -39,6 +39,11 @@ export const LogoType = styled.img`
         @media screen and (max-width: 1500px) {
             bottom: 19%;
         }
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+            bottom: 25%;
+        }
     }   
     
     @media screen and (max-width: 991px) {
@@ -59,6 +64,11 @@ export const IslandBackground = styled.img`
 
     ${ItemWrapper}:hover & {
         margin-top: -47%;
+
+        @media screen and (max-width: 991px) {
+            opacity: 1;
+            margin-top: -28%;
+        }
     }   
     
     @media screen and (max-width: 991px) {

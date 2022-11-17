@@ -164,7 +164,7 @@ export const SubText = styled.h4`
 `
 
 export const IText = styled.h4`
-    color: #222;
+    color: #666;
     font-size: 1.1em;  
     font-family: 'Inter', sans-serif;
     font-weight: 400; 
@@ -619,11 +619,12 @@ export const IntLogo = styled.img`
 `
 
 export const LomaLogo = styled(IntLogo)`
-    padding: 0px 80px;
+    padding: 0px 40px;
     top: 40%;
 
     @media screen and (max-width: 991px) {
         top: 33%;
+        padding: 0px 80px;
     }
 `
 

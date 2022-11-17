@@ -65,7 +65,7 @@ const Gallery = () => {
                         </InteractiveSecContainer>
                     </InteractiveSection>
                     <SSWrapper fill100={true}>
-                        <ImgSS addpad backdrop={'#111'} src={Image2} />
+                        <ImgSS addpad backdrop={'#222'} src={Image2} />
                     </SSWrapper>
                 </GalleryWrapper>
             </ProjectContainer>

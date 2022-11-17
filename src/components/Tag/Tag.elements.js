@@ -8,12 +8,12 @@ export const Button = styled.div`
     cursor: pointer;
     transition: 0.2s;
     padding: 6px;
-    outline: 1px dotted #222;
+    outline: 1px dotted #777;
     outline-offset: -1px;
     margin: 0 0 18px 2px;
 
     @media screen and (max-width: 991px) {
-        padding: 3px;
+        padding: 9px 3px;
     }
 
     &:hover {
@@ -25,9 +25,12 @@ export const Text = styled.h1`
     font-size: 0.95em;
     font-weight: 400;
     font-family: 'Slabo 27px';
-    color: ${({ customColor }) => (customColor)};
-    color: #222222;
+    color: ${({ active }) => (active ? '#222222' : '#bcbcbc')};
+    transition: 0.2s;
     
+    ${Button}:hover & {
+        color: #222;
+    }  
 
     @media screen and (max-width: 1500px) {
         font-size: 0.75em;        

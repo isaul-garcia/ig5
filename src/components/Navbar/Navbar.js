@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import {
-    Icon,
     NavContainer,
     NavWrapper,
     NavLink,
@@ -9,30 +8,33 @@ import {
     Navigation,
     MagicButton,
     MiniText,
+    IGIcon,
 } from './Navbar.elements';
-import IgG from '../../assets/ig-gray.svg';
-
 import { IconContext } from 'react-icons/lib';
 import Descend from '../Animations/Descend';
 import { TiThMenu } from 'react-icons/ti'
 import { MobileSpacer } from '../../globalStyles';
+import { useLocation } from 'react-router-dom';
 
 const Navs = ({ handleClick }) => {
+    const location = useLocation();
+    const active = +true;
+
     return (
         <>
             <MobileSpacer />
             <NavWrapper toRight onClick={handleClick}>
-                <NavLink last={+true} to="/more" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                <NavLink last={+true} active={location.pathname === "/more" ? active : undefined} to="/more" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                     Blogs
                 </NavLink>
             </NavWrapper>
             <NavWrapper toRight onClick={handleClick}>
-                <NavLink to="/snippets" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                <NavLink active={location.pathname === "/snippets" ? active : undefined} to="/snippets" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                     Snippets
                 </NavLink>
             </NavWrapper>
             <NavWrapper toRight onClick={handleClick}>
-                <NavLink to="/about" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                <NavLink active={location.pathname === "/about" ? active : undefined} to="/about" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                     About
                 </NavLink>
             </NavWrapper>
@@ -53,20 +55,21 @@ const Navbar = () => {
             setButton(false)
         }
     };
-
+    
     useEffect(() => {
         showButton();
     }, []);
 
     window.addEventListener('resize', showButton);
+
     return (
         <>
             <IconContext.Provider value={{ color: '#bcbcbc', size: 22 }}>
                 <Navigation>
                     <Descend>
                         <NavContainer view={view}>
-                            <IconWrapper to="/">
-                                <Icon src={IgG} onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }} />
+                            <IconWrapper to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                                <IGIcon />
                             </IconWrapper>
                             <MagicButton last={+true} to="/more" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                                 <MiniText>LOOKING FOR FRONTEND ROLE!</MiniText>

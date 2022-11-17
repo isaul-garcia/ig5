@@ -7,13 +7,13 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Inter', sans-serif; 
 
-        &::-moz-selection { background: #222; color: #bcbcbc;}
-        &::selection { background: #222; color: #bcbcbc; }
+        &::-moz-selection { background: #44ccee; color: #222222;}
+        &::selection { background: #44ccee; color: #222222; }
     }    
 
     body {
-        background-color: #c5c5c5;
-        color: #222;
+        background-color: #0f0f0f;
+        color: #bcbcbc;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         font-family: 'Inter', sans-serif;
@@ -22,11 +22,16 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
         -webkit-overflow-scrolling: auto;
         border-radius: 10px;
+
+        @media screen and (max-width: 991px) {
+            background-color: #000;
+        }
+
     }
 
     /* width */
     ::-webkit-scrollbar {
-        width: 8px;    
+        width: 6px;    
     }
 
     /* Track */
@@ -69,7 +74,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Inter', sans-serif;
         font-weight: 700;
         font-size: 1.35em;
-        cursor: default;
     }
 
     h5 {
@@ -94,18 +98,6 @@ const GlobalStyle = createGlobalStyle`
         }
         100% {
             background-color: #ff9606;
-        }
-    }
-
-    @keyframes cyclingBorder {
-        0% {
-            border: 1px #1e31e3 dotted;
-        }
-        50% {
-            border: 1px #ff00ff dotted;
-        }
-        100% {
-            border: 1px #f28b00 dotted;
         }
     }
 
@@ -223,7 +215,7 @@ export const SubText = styled.h4`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    color: #222;
+    color: #bcbcbc;
     color: ${({ customColor }) => (customColor)};
 `
 
@@ -283,7 +275,7 @@ export const TagBubble = styled.span`
     max-width: 50px;
     max-height: 22px;
     border-radius: 4px;
-    background-color: #2f2f2f;
+    background-color: #333;
     text-decoration: none;
     display: ${({ hasTag }) => (hasTag ? '' : 'none')};
     letter-spacing: 0px;
@@ -299,15 +291,15 @@ export const BlogBubble = styled.span`
     font-size: 8px;
     line-height: 13px;
     font-weight: 600;
-    color: #2f2f2f;
+    color: #777;
     vertical-align: top;
     padding: 1px 3px;
     margin-left: 0.35vh;
     max-width: 50px;
     max-height: 22px;
     border-radius: 4px;
-    background-color: #2f2f2f00;
-    outline: 1px solid #2f2f2f;
+    background-color: #77777700;
+    outline: 1px solid #777777;
     text-decoration: none;
     display: ${({ hasTag }) => (hasTag ? '' : 'none')};
     letter-spacing: 0px;

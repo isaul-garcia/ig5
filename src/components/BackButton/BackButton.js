@@ -15,7 +15,7 @@ const Info = ({ reduce }) => {
     }
     return (
         <>
-            <IconContext.Provider value={{ color: '#222222', size: 26 }}>
+            <IconContext.Provider value={{ color: '#bcbcbc', size: 26 }}>
                 <BackWrapper reduce={reduce} onClick={() => history(-1)} >
                     <IoIosArrowRoundBack style={ReactIconWrap} />
                 </BackWrapper>

@@ -57,7 +57,7 @@ const Gallery = () => {
                 <GalleryWrapper>
                     <SingleVideoHelper />
                     <SSWrapper>
-                        <ImgSS backdrop={'#dcd5c7'} src={Image1} />
+                        <ImgSS backdrop={'#767063'} src={Image1} />
                     </SSWrapper>
                     <InteractiveSection>
                         <InteractiveSecContainer customColor={'#fdf9f0'}>
@@ -68,7 +68,7 @@ const Gallery = () => {
                     <VideoModule
                         giveWidth={'100%'}
                         pad={true}
-                        customColor={'#e9e4dc'}
+                        customColor={'#a7a398'}
                         videoURL={'./Videos/digiden1s.mp4'}
                     />
                 </GalleryWrapper>

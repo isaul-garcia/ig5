@@ -17,10 +17,9 @@ import Alias from '../../assets/aliases_black.svg'
 import Ascend from '../Animations/Ascend'
 
 const Footer = () => {
-
     return (
         <>
-            <IconContext.Provider value={{ color: '#222222', size: 28 }}>
+            <IconContext.Provider value={{ color: '#bcbcbc', size: 28 }}>
                 <FooterContainer>
                     <Ascend>
                         <EmailContainer>

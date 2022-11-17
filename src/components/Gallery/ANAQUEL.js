@@ -34,7 +34,7 @@ const Gallery = () => {
                     <TextWrapper>
                         <HeadText>Anaquel</HeadText>
                         <ButtonText href="https://anaquel.isaulgarcia.com" target="_blank">
-                            Link <BsLink45Deg color='#fff' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
+                            Link <BsLink45Deg color='#888' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
                         </ButtonText>
                     </TextWrapper>
                 </Name>
@@ -55,7 +55,7 @@ const Gallery = () => {
                 <GalleryWrapper>
                     <SingleVideoHelper />
                     <SSWrapper>
-                        <ImgSS backdrop={'#aaa'} src={Image2} />
+                        <ImgSS backdrop={'#1e1f21'} src={Image2} />
                     </SSWrapper>
                     <InteractiveSection>
                         <InteractiveSecContainer customColor={'#1f1e21'}>
