@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ['Slabo 27px', 'Crimson Text']
+        families: ['Slabo 27px']
       }
     });
   }, []);

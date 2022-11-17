@@ -51,12 +51,13 @@ const Module = () => {
                 <SectionText>
                     <MediumText>Blogs and more</MediumText>
                 </SectionText>
+                <MediumSpacer />
                 <MobileSpacer />
                 <SmallSpacer />
                 <SectionText>
                     <SmallText>Apart from blogs, this space currently serves as some sort of archive. I want to write more, so will try to fill this with more of my thoughts.</SmallText>
                 </SectionText>
-                <SmallSpacer />
+                <MediumSpacer />
 
                 {myTags.map((props, key) => (
                     <Tag key={key} filter={filter} active={active} val={props} />

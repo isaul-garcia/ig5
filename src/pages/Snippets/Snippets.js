@@ -51,13 +51,14 @@ const Module = () => {
                     <MediumText>Snippets</MediumText>
                 </SectionText>
 
+                <MediumSpacer />
                 <MobileSpacer />
                 <SmallSpacer />
                 <SectionText>
                     <SmallText>These are pieces of code I make that showcase specific features or demo tiny digital experiences. Mainly for explorative and educational purposes.</SmallText>
                 </SectionText>
-                <SmallSpacer />
-                
+                <MediumSpacer />
+
                 {myTags.slice(1, myTags.length).map((props, key) => (
                     <Tag key={key} filter={filter} active={active} val={props} />
                 ))}

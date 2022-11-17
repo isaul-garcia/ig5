@@ -363,7 +363,7 @@ export const Dit = styled.span`
     height: 40px;
     height: ${({ single }) => (single ? '30px' : '')};
     width: 20px;
-    margin-top: ${({ single }) => (single ? '16px' : '10px')};
+    margin-top: ${({ single }) => (single ? '16px' : '6px')};
     object-fit: contain;
     display: inline-block;
     float: ${({ toRight }) => (toRight ? 'right' : '')};
@@ -400,6 +400,10 @@ export const MediumText = styled.h1`
     line-height: 1.2em;
     font-weight: 700;    
     letter-spacing: -0.04em;
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 2.4em;
+    }
 
     @media screen and (max-width: 991px) {
         font-size: 1.75em;
@@ -411,6 +415,10 @@ export const SmallText = styled.h4`
     line-height: 1.2em;
     font-weight: 300;    
     letter-spacing: -0.04em;
+    
+    @media screen and (max-width: 1500px) {
+        font-size: 1.1em;
+    }
 
     @media screen and (max-width: 991px) {
         font-size: 1em;

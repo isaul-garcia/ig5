@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Dit, Dity, MediumText, MobileSpacer, SectionText, SmallSpacer, SmallText } from '../../globalStyles';
+import { Dit, Dity, MediumSpacer, MediumText, MobileSpacer, SectionText, SmallSpacer, SmallText } from '../../globalStyles';
 import { TfiEmail } from 'react-icons/tfi'
 import FadeIn from '../../components/Animations/FadeIn';
 
@@ -18,6 +18,7 @@ const Module = () => {
                 <SectionText>
                     <MediumText>About me</MediumText>
                 </SectionText>
+                <MediumSpacer />
                 <MobileSpacer/>
                 <SmallSpacer />
                 <SectionText>

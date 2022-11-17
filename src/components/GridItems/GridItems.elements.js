@@ -54,9 +54,7 @@ export const TextContainer = styled.div`
     color: #222;    
     padding: 20px;
     padding-top: 40px;
-    outline-offset: -1px;
     border-radius: ${rad};
-    outline: 1px solid #d0d0d0;
 
     ${ItemContainer}:hover & {
         opacity: 1;
@@ -84,8 +82,6 @@ export const TextContainer = styled.div`
         background: #d0d0d099;
         padding-top: 1vw;
         color: #777;
-        outline: 10px solid #d0d0d0;
-        outline-offset: 2px;
         z-index: 999;`
     )}
 
@@ -153,6 +149,7 @@ export const PreviewImg = styled.img`
     object-fit: cover;  
     transition: all 0.2s ease-in-out;
     opacity: 1;
+    border-radius: ${rad};
 
     ${ItemContainer}:hover & {
         opacity: 0;
@@ -170,5 +167,4 @@ export const ShadowContainer = styled.div`
     overflow: hidden;
     transition: all .2s ease-in-out;
     position: relative;
-    outline-offset: -1px;
 `

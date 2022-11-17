@@ -184,6 +184,7 @@ export const BackIcon = styled.img`
 `
 
 export const MagicButton = styled.span`
+    border: 1px #f28b00 dotted;
     animation-name: cyclingBorder;
     animation-duration: 3s;
     animation-iteration-count: infinite;
