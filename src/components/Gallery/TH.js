@@ -41,10 +41,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>Self-mantained short term rental network</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Architecture</IText>
                     </TextWrapper>
                 </TextContainer>

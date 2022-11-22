@@ -41,11 +41,7 @@ const Gallery = () => {
                 <SmallSpacer />
                 <TextContainer>
                     <TextWrapper>
-                        <SubText>Bookmark manager and Chrome extension</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
+                        <SubText>Bookmarks manager app</SubText>
                         <IText>React, MongoDB, Redux</IText>
                     </TextWrapper>
                 </TextContainer>

@@ -36,7 +36,7 @@ const Gallery = () => {
                     <TextWrapper>
                         <HeadText>Digiden</HeadText>
                         <ButtonText href="https://isaul-garcia.github.io/digiden/" target="_blank">
-                            Link <BsLink45Deg color='#fff' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
+                            Link <BsLink45Deg color='#888' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
                         </ButtonText>
                     </TextWrapper>
                 </Name>
@@ -44,10 +44,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>Tech news website prototype</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>React</IText>
                     </TextWrapper>
                 </TextContainer>

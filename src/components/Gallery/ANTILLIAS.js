@@ -33,7 +33,7 @@ const Gallery = () => {
                     <TextWrapper>
                         <HeadText>Antillias</HeadText>
                         <ButtonText href="https://isaul-garcia.github.io/antillias/" target="_blank">
-                            Link <BsLink45Deg color='#fff' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
+                            Link <BsLink45Deg color='#888' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
                         </ButtonText>
                     </TextWrapper>
                 </Name>
@@ -41,10 +41,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>An open source way to build your own phygital place</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Three.js, Arduino, IoT, Metaverse</IText>
                     </TextWrapper>
                 </TextContainer>

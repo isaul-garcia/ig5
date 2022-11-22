@@ -58,6 +58,10 @@ export const Name = styled(Boxed)`
     z-index: 9;
     cursor: default;
     margin-top: -30px;
+
+    @media screen and (max-width: 991px) {
+        margin-top: 10px;
+    }
 `
 
 export const Description = styled(Boxed)`
@@ -148,12 +152,14 @@ export const HeadText = styled.h1`
     }
 
     @media screen and (max-width: 991px) {
-        font-size: 2.5em;      
+        font-size: 2.5em;  
+        margin-left: 0;
+        vertical-align: middle;
     }
 `
 
 export const SubText = styled.h4`
-    color: #222;
+    color: #999;
     font-size: 1.5em;  
     font-family: 'Inter', sans-serif;
     font-weight: 400; 
@@ -171,7 +177,7 @@ export const IText = styled.h4`
     letter-spacing: 0;
     font-style: italic;
     line-height: 1.15em;
-    margin-top: 1.5em;
+    margin-top: 0.3em;
     transition: all .3s ease-in-out;
 `
 
@@ -203,9 +209,9 @@ export const ButtonText = styled.a`
         float: right;
         width: 6.75em;        
         padding: 0.35em 0.4em 0.4em 0.7em;
-        line-height: 2em;
+        /* line-height: 2em; */
         margin-right: 0.1em;
-        margin-top: -2.85em;
+        margin-top: -2px;
     }
 `
 

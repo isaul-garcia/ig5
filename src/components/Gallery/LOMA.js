@@ -35,7 +35,7 @@ const Gallery = () => {
                     <TextWrapper>
                         <HeadText>Loma</HeadText>
                         <ButtonText href="https://isaul-garcia.github.io/loma/" target="_blank">
-                            Link <BsLink45Deg color='#fff' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
+                            Link <BsLink45Deg color='#888' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
                         </ButtonText>
                     </TextWrapper>
                 </Name>
@@ -43,10 +43,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>Customizable product website prototype</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Three.js, React Color</IText>
                     </TextWrapper>
                 </TextContainer>

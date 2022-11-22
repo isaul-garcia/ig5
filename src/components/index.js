@@ -10,7 +10,6 @@ export { default as MARKADO } from './Gallery/MARKADO';
 export { default as ROOMX } from './Gallery/ROOMX';
 export { default as EARTH } from './Gallery/EARTH';
 export { default as DIGIDEN } from './Gallery/DIGIDEN';
-export { default as OTHER } from './Gallery/OTHER';
 export { default as GRIDY } from './Gallery/GRIDY';
 export { default as ANAQUEL } from './Gallery/ANAQUEL';
 export { default as ROCA } from './Gallery/ROCA';
@@ -18,6 +17,7 @@ export { default as MODS } from './Gallery/MODS';
 export { default as TH } from './Gallery/TH';
 export { default as ANTILLIAS } from './Gallery/ANTILLIAS';
 export { default as VideoModule } from './Gallery/VideoModule';
+export { default as DESIGN } from './Gallery/DESIGN';
 
 export { default as GridItems } from './GridItems/GridItems';
 export { default as GridItemLast } from './GridItems/GridItemLast';

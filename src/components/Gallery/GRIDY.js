@@ -31,7 +31,7 @@ const Gallery = () => {
                     <TextWrapper>
                         <HeadText>Gridy</HeadText>
                         <ButtonText href="https://isaul-garcia.github.io/gridy-spotify/" target="_blank">
-                            Link <BsLink45Deg color='#fff' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
+                            Link <BsLink45Deg color='#888' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
                         </ButtonText>
                     </TextWrapper>
                 </Name>
@@ -39,10 +39,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>Generate covers grid from your currently listening playlist</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Spotify API, Axios</IText>
                     </TextWrapper>
                 </TextContainer>

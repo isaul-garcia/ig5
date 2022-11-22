@@ -10,6 +10,10 @@ export const Navigation = styled.div`
     z-index: 206;
     transition: all .1s ease-in-out;
     pointer-events: none;
+
+    @media screen and (max-width: 991px) {
+        top: 4px;
+    }
 `
 
 export const NavContainer = styled.div`

@@ -32,7 +32,7 @@ const Gallery = () => {
                     <TextWrapper>
                         <HeadText>Room X</HeadText>
                         <ButtonText href="https://isauljosue.gitlab.io/isaul.garcia/room360x.html" target="_blank">
-                            Link <BsLink45Deg color='#fff' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
+                            Link <BsLink45Deg color='#888' size='20' style={{ marginTop: -10, transform: 'translate(0, 5px)' }} />
                         </ButtonText>
                     </TextWrapper>
                 </Name>
@@ -40,10 +40,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>My quarantined reality: Merging my digital and physical life</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Artwork</IText>
                     </TextWrapper>
                 </TextContainer>

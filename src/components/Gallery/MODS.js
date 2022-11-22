@@ -46,10 +46,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>Modular urban intervention for the future of smart cities</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Architecture</IText>
                     </TextWrapper>
                 </TextContainer>

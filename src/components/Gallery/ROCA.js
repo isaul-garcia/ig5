@@ -42,10 +42,6 @@ const Gallery = () => {
                 <TextContainer>
                     <TextWrapper>
                         <SubText>Parametrically designed elementary school</SubText>
-                    </TextWrapper>
-                </TextContainer>
-                <TextContainer>
-                    <TextWrapper>
                         <IText>Architecture</IText>
                     </TextWrapper>
                 </TextContainer>

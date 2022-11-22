@@ -13,7 +13,8 @@ import {
     TH,
     ROCA,
     MODS,
-    ANTILLIAS
+    ANTILLIAS,
+    DESIGN
 } from './components'
 import { BlogHello, BlogSomeware } from './blogs'
 import { AnimatePresence } from 'framer-motion';
@@ -40,6 +41,7 @@ function AnimatedRoutes() {
                 <Route path='/treehouse' element={<TH />} />
                 <Route path='/roca' element={<ROCA />} />
                 <Route path='/mods' element={<MODS />} />
+                <Route path='/design' element={<DESIGN />} />
                 {/* Blogs */}
                 <Route path='/hello-internet' element={<BlogHello />} />
                 <Route path='/someware' element={<BlogSomeware />} />
