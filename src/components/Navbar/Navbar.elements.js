@@ -104,6 +104,7 @@ export const NavButton = styled(Link)`
 
 export const IconWrapper = styled(Link)`
     height: 100%;
+    width: 60px;
     transition: all .2s ease-in-out;
     text-decoration: none;
     position: relative;
