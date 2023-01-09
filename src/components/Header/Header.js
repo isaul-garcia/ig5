@@ -46,7 +46,7 @@ const Header = () => {
                         <Ascend>
                             <AboutCard>
                                 <SubText >
-                                    Hello! I'm a creative developer who enjoys exploring the digital and making fun engaging interactions.
+                                    Hello! I'm a creative developer who enjoys building for the web and making fun engaging interactions.
                                 </SubText>
                             </AboutCard>
                         </Ascend>

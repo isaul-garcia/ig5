@@ -6,8 +6,6 @@ import {
     NavButton,
     IconWrapper,
     Navigation,
-    MagicButton,
-    MiniText,
     IGIcon,
 } from './Navbar.elements';
 import { IconContext } from 'react-icons/lib';
@@ -71,9 +69,9 @@ const Navbar = () => {
                             <IconWrapper to="/" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                                 <IGIcon />
                             </IconWrapper>
-                            <MagicButton last={+true} to="/more" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
+                            {/* <MagicButton last={+true} to="/more" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
                                 <MiniText>LOOKING FOR FRONTEND ROLE!</MiniText>
-                            </MagicButton>
+                            </MagicButton> */}
 
                             {button ? (
                                 <>
