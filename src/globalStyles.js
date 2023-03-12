@@ -171,7 +171,7 @@ export const OverallContainer = styled.div`
 
     @media screen and (max-width: 991px) {
         width: 95vw;
-        margin-left: 2.25vw;
+        margin-left: 2.5vw;
         padding-top: 8.5vh;
         overflow-x: hidden;
     }
@@ -297,6 +297,7 @@ export const BlogBubble = styled.span`
     margin-left: 0.35vh;
     max-width: 50px;
     max-height: 22px;
+    -webkit-border-radius: 4px;
     border-radius: 4px;
     background-color: #77777700;
     outline: 1px solid #777777;

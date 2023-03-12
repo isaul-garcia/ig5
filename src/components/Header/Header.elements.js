@@ -12,6 +12,11 @@ export const Container = styled.div`
     transition: 0.2s;
     
     @media screen and (max-width: 991px) {
+        height: 64vh;
+        margin-top: 0vh;
+    }
+
+    @media screen and (max-width: 700px) {
         height: 55vh;
         margin-top: 2vh;
     }
@@ -24,6 +29,10 @@ export const Wrapper = styled.div`
     padding: 40px;
 
     @media screen and (max-width: 991px) {
+        padding: 36px;
+    }
+
+    @media screen and (max-width: 700px) {
         padding: 22px;
     }
 `
@@ -89,6 +98,10 @@ export const SmallText = styled.h5`
     }
 
     @media screen and (max-width: 991px) {
+        font-size: 3vw;
+    }
+
+    @media screen and (max-width: 700px) {
         font-size: 3.75vw;
     }
 `
@@ -105,6 +118,10 @@ export const LargeText = styled.h1`
     }
 
     @media screen and (max-width: 991px) {
+        font-size: 6.4em;
+    }
+
+    @media screen and (max-width: 700px) {
         font-size: 4.4em;
     }
 `
@@ -119,6 +136,10 @@ export const AboutContainer = styled.div`
     pointer-events: none;
 
     @media screen and (max-width: 991px) {
+        bottom: 36px;
+    }
+
+    @media screen and (max-width: 700px) {
         bottom: 22px;
     }
 `
@@ -147,6 +168,10 @@ export const SubText = styled.h4`
     }
 
     @media screen and (max-width: 991px) {
+        font-size: 3.7vw;
+    }
+
+    @media screen and (max-width: 700px) {
         font-size: 5vw;
     }
 `

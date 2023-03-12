@@ -31,6 +31,16 @@ export const LogoType = styled.img`
     transform-origin: right;
     opacity: 0;
     z-index: 3;
+    
+    @media screen and (max-width: 991px) {
+        opacity: 1;
+        bottom: 20%;
+        width: 76%;
+    }
+
+    @media screen and (max-width: 700px) {
+        bottom: 25%;
+    }
 
     ${ItemWrapper}:hover & {
         opacity: 1;
@@ -45,11 +55,6 @@ export const LogoType = styled.img`
             bottom: 25%;
         }
     }   
-    
-    @media screen and (max-width: 991px) {
-        opacity: 1;
-        bottom: 25%;
-    }
 `
 
 export const IslandBackground = styled.img`

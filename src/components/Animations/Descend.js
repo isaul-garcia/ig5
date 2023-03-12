@@ -7,27 +7,16 @@ const cardVariants = {
     hidden: { opacity: 0, scaleX: 1, y: -12 }
 };
 
-const FromUnder = (props) => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView();
-
-    useEffect(() => {
-        if (inView) {
-            controls.start("visible");
-        }
-    }, [controls, inView]);
+const Card = (props) => {
     return (
-        <>
-            <motion.div
-                ref={ref}
-                animate={controls}
-                initial="hidden"
-                variants={cardVariants}
-            >
-                {props.children}
-            </motion.div>
-        </>
+      <motion.div
+        animate="visible"
+        initial="hidden"
+        variants={cardVariants}
+      >
+        {props.children}
+      </motion.div>
     )
-}
-
-export default FromUnder;
+  }
+  
+  export default Card;

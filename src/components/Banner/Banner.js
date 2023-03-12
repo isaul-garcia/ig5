@@ -7,6 +7,7 @@ import { LayerMaterial, Color, Depth, Fresnel, Noise } from 'lamina/vanilla'
 import { BannerWrapper } from './Banner.elements';
 import Tri from './Things/Tri';
 import Plu from './Things/Plu';
+import { useRef } from 'react';
 
 //Physics used from React Three Fiber Christmas Baubles Example: https://codesandbox.io/s/bestservedbold-christmas-baubles-zxpv7
 //Material used from React Three Fiber Figma Noodles Example: https://codesandbox.io/s/figma-noodles-iedfg
@@ -70,24 +71,48 @@ function Sfera({ vec = new THREE.Vector3(), ...props }) {
   )
 }
 
-function Collisions() {
-  const viewport = useThree((state) => state.viewport)
-  usePlane(() => ({ position: [0, 0, 0], rotation: [0, 0, 0] }))
-  usePlane(() => ({ position: [0, 0, 8], rotation: [0, -Math.PI, 0] }))
-  usePlane(() => ({ position: [-3, -0.25, 0], rotation: [-Math.PI / 2, 0.8, 0] }))
-  usePlane(() => ({ position: [3, 0, 0], rotation: [Math.PI / 2, -2.4, 0] }))
-  const [, api] = useSphere(() => ({ type: "Kinematic", args: [3] }))
-  return useFrame((state) => api.position.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * 12 + viewport.height) / 2, 2.5))
+function Collisions({ isInsideCanvas }) {
+  const viewport = useThree((state) => state.viewport);
+  const [, api] = useSphere(() => ({ type: "Kinematic", args: [3] }));
+
+  useFrame((state) => {
+    if (isInsideCanvas) {
+      api.position.set(
+        (state.mouse.x * viewport.width) / 2,
+        (state.mouse.y * 12 + viewport.height) / 2,
+        2.5
+      );
+    } else {
+      api.position.set(
+        99999,
+        99999,
+        20.5
+      );
+    }
+  });
+}
+
+function Planes() {
+  usePlane(() => ({ position: [0, 0, 0], rotation: [0, 0, 0] }));
+  usePlane(() => ({ position: [0, 0, 8], rotation: [0, -Math.PI, 0] }));
+  usePlane(() => ({ position: [-3, -0.25, 0], rotation: [-Math.PI / 2, 0.8, 0] }));
+  usePlane(() => ({ position: [3, 0, 0], rotation: [Math.PI / 2, -2.4, 0] }));
+  
+  return null;
 }
 
 const Banner = () => {
+  const [isInsideCanvas, setIsInsideCanvas] = useState(true);
   const [res, setRes] = useState(1.1);
+  const [tap, setTap] = useState(false);
 
   const checkRes = () => {
     if (window.innerWidth <= 960) {
-      setRes(2.2)
+      setRes(2.2);
+      setTap(true);
     } else {
-      setRes(1.1)
+      setRes(1.1);
+      setTap(false);
     }
   };
 
@@ -95,21 +120,68 @@ const Banner = () => {
     checkRes();
   }, []);
 
-  window.addEventListener('resize', checkRes);
-  
+  window.addEventListener("resize", checkRes);
+
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const handleMouseEnter = () => {
+      setIsInsideCanvas(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsInsideCanvas(false);
+    };
+
+    const handleMouseMove = (event) => {
+      const rect = canvasRef.current.getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      const isInsideViewport = x >= 0 && x <= window.innerWidth && y >= 0 && y <= window.innerHeight;
+
+      if (!isInsideViewport ) {
+        setIsInsideCanvas(false);
+      }
+    };
+
+    const canvas = canvasRef.current;
+    
+    if (tap === true) {
+      canvas.addEventListener("touchstart", handleMouseEnter);
+      canvas.addEventListener("touchend", handleMouseLeave);
+    } else {
+      window.addEventListener("mousemove", handleMouseMove);
+      canvas.addEventListener("mouseenter", handleMouseEnter);
+      canvas.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("mouseenter", handleMouseEnter);
+      canvas.removeEventListener("mouseleave", handleMouseLeave);
+      canvas.addEventListener("touchstart", handleMouseEnter);
+      canvas.addEventListener("touchend", handleMouseLeave);
+    };
+  }, [tap]);
+
   return (
     <>
       <Canvas
+        ref={canvasRef}
         dpr={res}
         gl={{ alpha: true, stencil: false, depth: false, antialias: false }}
         camera={{ position: [0, 0, 20], fov: 35, near: 10, far: 40 }}
         onCreated={(state) => (state.gl.toneMappingExposure = 1.5)}>
         <group position={[0, -5.5, 0]} dispose={null}>
           <Physics gravity={[0, 0.5, 0]}>
-            <Collisions />
+          {/* <Debug> */}
+            <Planes />
+            <Collisions isInsideCanvas={isInsideCanvas} />
             {spheres.map((props, i) => <Sfera key={i} {...props} />)}
             {pluses.map((props, i) => <Plu key={i} mat={DarkBlue} {...props} />)}
             {trises.map((props, i) => <Tri key={i} mat={MagentaOrange} {...props} />)}
+          {/* </Debug> */}
           </Physics>
         </group>
         <EffectComposer multisampling={0} />
@@ -135,7 +207,5 @@ const BannerContainer = () => {
     </>
   )
 }
-
-
 
 export default BannerContainer;

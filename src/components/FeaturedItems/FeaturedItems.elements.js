@@ -13,8 +13,11 @@ export const ItemContainer = styled.a`
         height: 22vw;
     }
 
-
     @media screen and (max-width: 991px) {
+        height: 33vh; 
+    }
+
+    @media screen and (max-width: 700px) {
         height: 26vh; 
     }
 `

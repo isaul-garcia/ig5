@@ -3,6 +3,7 @@ import { rad } from '../../globalStyles';
 
 export const FooterContainer = styled.div`
     margin-top: 10vh;
+    margin-bottom: 2.25vw;
 `
 
 export const EmailContainer = styled.div`
@@ -19,8 +20,8 @@ export const EmailContainer = styled.div`
     }
 
     @media screen and (max-width: 991px) {
-        width: 56%;
-        padding: 17px 21px;
+        width: auto;
+        padding: 17px 22px;
     }
 `
 
@@ -88,7 +89,7 @@ export const LargeText = styled.h1`
         margin-left: -4vw;
         margin-right: -3.5vw;
         font-size: 17.05vw;
-        margin-bottom: 15px;
+        margin-bottom: 3vw;
     }
 `
 

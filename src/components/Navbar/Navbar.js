@@ -47,7 +47,7 @@ const Navbar = () => {
     const handleClick = () => setView(!view);
 
     const showButton = () => {
-        if (window.innerWidth <= 960) {
+        if (window.innerWidth <= 900) {
             setButton(true)
         } else {
             setButton(false)

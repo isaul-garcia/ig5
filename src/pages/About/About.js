@@ -22,7 +22,7 @@ const Module = () => {
                 <MobileSpacer/>
                 <SmallSpacer />
                 <SectionText>
-                    <SmallText>Hello, my name is Isaúl. I'm a designer and a web developer who enjoys exploring the digital. I like building products for the web, as some of my main interests are in the evolution of the web itself and mixed realities.</SmallText>
+                    <SmallText>Hello. I'm Isaúl, a designer and a web developer who enjoys exploring the digital. I like building products for the web, as some of my main interests are in the evolution of the web itself and mixed realities.</SmallText>
                     <br />
                     <SmallText>I'm open for work! Need a website for your business? Or, Have an idea for a collaboration? Shoot me an email. Let's build something!</SmallText>
                     <br />

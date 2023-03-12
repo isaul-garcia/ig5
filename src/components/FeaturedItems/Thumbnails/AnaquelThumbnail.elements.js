@@ -33,15 +33,20 @@ export const LogoWrapper = styled.div`
     width: 100%;
     position: absolute;
     display: block;
-    transition: all 0.3s;
+    transition: all 0.3s; 
+
+    @media screen and (max-width: 991px) {
+        transform: translateY(68%);
+        width: 118%;
+    }
+
+    @media screen and (max-width: 700px) {
+        transform: translateY(58%);
+    }
 
     ${ItemWrapper}:hover & {
         transform: translateY(58%);
-    }   
-
-    @media screen and (max-width: 991px) {
-        transform: translateY(58%);
-    }
+    }  
 `
 
 export const Logo = styled.img`
@@ -79,9 +84,13 @@ export const LogoType = styled.h2`
     @media screen and (max-width: 1500px) {
         font-size: 2.2rem; 
     }
-    
+
     @media screen and (max-width: 991px) {
         opacity: 1;
+        font-size: 2.5rem;    
+    }
+    
+    @media screen and (max-width: 700px) {
         font-size: 1.3rem;    
     }
 `

@@ -38,58 +38,88 @@ export const Boxed = styled.div`
 export const Name = styled(Boxed)`
     width: 25%;
 
+    @media screen and (max-width: 1500px) { 
+    }  
+    
+    @media screen and (max-width: 991px) {
+        width: 100%;
+        padding: 18px 0 2px 6px;    
+    }
+    
+    @media screen and (max-width: 700px) { 
+    }  
+    
     ${ItemContainer}:hover & {
-        margin-left: 13%;
+        margin-left: 14%;
         width: 19%;
         padding: 30px 0px;  
         
         @media screen and (max-width: 1500px) {
             padding: 22px 0px;     
         }   
-
+        
         @media screen and (max-width: 991px) {
             width: 100%;
-            padding: 10px 0px;    
+            padding: 18px 0 2px 6px; 
             margin-left: 0; 
         }
-    }
-
-    @media screen and (max-width: 991px) {
-        width: 100%;
-        padding: 10px 0px;     
+        
+        @media screen and (max-width: 700px) { 
+        }  
     }
 `
 
 export const Desc = styled(Boxed)`
     width: 50%; 
-    cursor: pointer;
+    cursor: pointer;       
+    
+    @media screen and (max-width: 1500px) { 
+    }  
+    
+    @media screen and (max-width: 991px) {
+        width: 75%;
+        opacity: 0.3;
+        padding: 0 0 18px 20px;
+    }
+    
+    @media screen and (max-width: 700px) { 
+    }  
     
     ${ItemContainer}:hover & {
         margin-left: 0%;
         width: 47%;
         padding: 30px 0px;
-
+        
         @media screen and (max-width: 1500px) {
             padding: 22px 0px;     
         }   
-
+        
         @media screen and (max-width: 991px) {
             width: 75%;
             opacity: 0.3;
-            padding: 0 0 10px 13px;
+            padding: 0 0 18px 20px;
         }
-    }          
-
-    @media screen and (max-width: 991px) {
-        width: 75%;
-        opacity: 0.3;
-        padding: 0 0 10px 13px;
-    }
+        
+        @media screen and (max-width: 700px) { 
+        }  
+    }   
 `
 export const Tag = styled(Boxed)`
     width: 25%;
     float: right;
-    cursor: pointer;
+    cursor: pointer;    
+    
+    @media screen and (max-width: 1500px) { 
+    }   
+    
+    @media screen and (max-width: 991px) {
+        width: 25%;
+        opacity: 0.3;
+        display: none;
+    }
+    
+    @media screen and (max-width: 700px) {
+    }
 
     ${ItemContainer}:hover & {
         width: 17%;
@@ -105,12 +135,9 @@ export const Tag = styled(Boxed)`
             opacity: 0.3;
             display: none;
         }
-    }
 
-    @media screen and (max-width: 991px) {
-        width: 25%;
-        opacity: 0.3;
-        display: none;
+        @media screen and (max-width: 700px) {
+        }
     }
 `
 
@@ -119,60 +146,83 @@ export const Tag = styled(Boxed)`
 export const Title = styled(Boxed)`
     width: 80%;
     margin-left: -1px;
+    outline-offset: -1px;
+
+    @media screen and (max-width: 1500px) {
+        width: 80%;
+        margin-left: -1px;
+        outline-offset: -1px;
+    }   
+    
+    @media screen and (max-width: 991px) { 
+        width: 80%;
+        padding: 19px 8px;
+    }
+    
+    @media screen and (max-width: 700px) {
+        width: 74%;
+    }
 
     ${ItemContainer}:hover & {
-        margin-left: 13%;
+        margin-left: 14%;
         width: 70%;
         padding: 30px 0px;  
         
         @media screen and (max-width: 1500px) {
-            padding: 22px 0px;     
+            width: 70%;
+            margin-left: 14%;
+            padding: 19px 8px;
         }   
 
         @media screen and (max-width: 991px) {
-            width: 75%;
-            line-height: 1.6em;
-            padding: 10px 0 0 0;  
-            overflow: hidden;
-            display: block;
-            margin-left: 0; 
+            width: 80%;
+            margin-left: -1px;
+        }
+        
+        @media screen and (max-width: 700px) {
+            width: 74%;
         }
     } 
-    
-    @media screen and (max-width: 991px) {
-        width: 75%;
-        line-height: 1.6em;
-        padding: 10px 0 0 0;  
-        overflow: hidden;
-        display: block;
-    }
 `
 
 export const Date = styled(Boxed)`
     width: 18%;
-    float: right;
+    float: right;     
+
+    @media screen and (max-width: 1500px) {
+        width: 18%;
+        float: right;     
+    }
     
+    @media screen and (max-width: 991px) {
+        width: 18%;
+        padding: 18px 19px;
+    }
+    
+    @media screen and (max-width: 700px) {
+        width: 25%;
+    }
+
     ${ItemContainer}:hover & {
         width: 10%;
         margin-right: 4%;
         padding: 30px 0px;   
         
         @media screen and (max-width: 1500px) {
-            padding: 22px 0px; 
-        }
-
-        @media screen and (max-width: 991px) {
             width: 10%;
-            margin-right: 11%;
-            padding: 10px 0px;  
+            margin-right: 4%;
+            padding: 18px 19px;
         }
-    }      
-
-    @media screen and (max-width: 991px) {
-        width: 10%;
-        margin-right: 11%;
-        padding: 10px 0px;  
-    }
+        
+        @media screen and (max-width: 991px) {
+            width: 18%; 
+            margin-right: 0;
+        }        
+        
+        @media screen and (max-width: 700px) {
+            width: 25%;
+        }
+    } 
 `
 
 export const ShowMore = styled(Boxed)`
@@ -238,7 +288,7 @@ export const HeadText = styled.h1`
     cursor: pointer;
 
     ${({ last }) => (last ? `
-        color: #666;
+        color: #888;
         font-size: 1em;
         font-weight: 600;
         letter-spacing: 0px;

@@ -73,6 +73,11 @@ export const MediumText = styled.h1 `
     }
 
     @media screen and (max-width: 991px) {
+        font-size: 2.15em;
+        line-height: 0.8em;
+    }
+
+    @media screen and (max-width: 700px) {
         font-size: 1.75em;
         line-height: 1.2em;
     }

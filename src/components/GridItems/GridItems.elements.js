@@ -19,6 +19,12 @@ export const ItemContainer = styled.a`
     @media screen and (max-width: 991px) {
         flex: 33%;  
         max-width: 33.33%;
+        height: 25vh;
+    }
+
+    @media screen and (max-width: 700px) {
+        flex: 33%;  
+        max-width: 33.33%;
         height: 20vh;
     }
 `
@@ -38,6 +44,12 @@ export const ItemContainerLast = styled(Link)`
     }
     
     @media screen and (max-width: 991px) {
+        flex: 33%;  
+        max-width: 33.33%;
+        height: 25.1vh;
+    }
+
+    @media screen and (max-width: 700px) {
         flex: 33%;  
         max-width: 33.33%;
         height: 20vh;
@@ -120,6 +132,9 @@ export const HeadText = styled.h1`
     line-height: 1em;
     margin-bottom: 0.5em;
     cursor: pointer;
+    ${({ freeze }) => (freeze &&
+        `font-weight: 600;`
+    )}
 
     @media screen and (max-width: 1500px) {
         font-size: 1em;  
@@ -129,9 +144,21 @@ export const HeadText = styled.h1`
         font-size: 1.25em;
     }
 
-    ${({ freeze }) => (freeze &&
-        `font-weight: 600;`
-    )}
+    @media screen and (max-width: 700px) {
+        font-size: 1.25em;
+    }
+`
+
+export const HeadTextLast = styled(HeadText)`
+    @media screen and (max-width: 991px) {
+        font-size: 1.75em;
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 700px) {
+        font-size: 1.25em;
+        padding: 0;
+    }
 `
 
 export const SubText = styled.h4`

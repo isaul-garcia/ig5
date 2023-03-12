@@ -2,7 +2,7 @@ import React from 'react';
 import {
     ItemContainerLast,
     TextWrapper,
-    HeadText,
+    HeadTextLast,
     SubText,
     PreviewImg,
     TextContainer,
@@ -16,9 +16,9 @@ const Gallery = ({ freeze, ...props }) => {
                 <ShadowContainer>
                     <TextContainer freeze={freeze}>
                         <TextWrapper>
-                            <HeadText freeze={freeze}>
+                            <HeadTextLast freeze={freeze}>
                                 {props.header}
-                            </HeadText>
+                            </HeadTextLast>
                         </TextWrapper>
                         <TextWrapper>
                             <SubText>

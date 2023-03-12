@@ -99,7 +99,7 @@ const Home = ({ collapse }) => {
                             {allSnippets.slice(0, 4).map((props) => (
                                 <GridItems collapse={collapse} snippets={+true} key={props.key} {...props} />
                             ))}
-                            <GridItemLast collapse={collapse} header='See all Snippets' linkId={'/snippets'} snippets={+true} freeze />
+                            <GridItemLast collapse={collapse} header='See All Snippets' linkId={'/snippets'} snippets={+true} freeze />
                         </Separator>
                     </Ascend>
 

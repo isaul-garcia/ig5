@@ -100,11 +100,19 @@ export const NavButton = styled(Link)`
     pointer-events: all;
     right: 0;
     position: absolute;
+
+    @media screen and (max-width: 991px) {
+        padding: 11px 15px;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding: 6px 9px;
+    }
 `
 
 export const IconWrapper = styled(Link)`
     height: 100%;
-    width: 60px;
+    width: auto;
     transition: all .2s ease-in-out;
     text-decoration: none;
     position: relative;
@@ -127,8 +135,19 @@ export const IconWrapper = styled(Link)`
     }
 
     @media screen and (max-width: 991px) {
+        height: 48px;
+        margin-right: 0px;
+        padding: 11px 7px;
+        
+        &:hover{
+            background-color: #222222;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
         height: 38px;
         margin-right: 0px;
+        padding: 7px 9px;
         
         &:hover{
             background-color: #222222;
@@ -149,6 +168,14 @@ export const IGIcon = styled(IGL)`
     }
 
     @media screen and (max-width: 991px) {
+        width: 76px; 
+
+        ${IconWrapper}:hover &  {
+            fill: #bcbcbc;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
         width: 56px; 
 
         ${IconWrapper}:hover &  {
