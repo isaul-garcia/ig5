@@ -1,22 +1,31 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+    @font-face {
+        font-family: 'Inter';
+        src: url('../node_modules/inter-ui/Inter-Regular.woff2') format('woff2'),
+            url('../node_modules/inter-ui/Inter-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+
     *{
+        font-family: 'Inter' !important; 
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: 'Inter', sans-serif; 
 
         &::-moz-selection { background: #44ccee; color: #222222;}
         &::selection { background: #44ccee; color: #222222; }
     }    
 
     body {
+        font-family: 'Inter', sans-serif;
         background-color: #0f0f0f;
         color: #bcbcbc;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font-family: 'Inter', sans-serif;
         height: 100%;
         width: 100%;
         overflow-x: hidden;
@@ -404,6 +413,7 @@ export const MediumText = styled.h1`
 `
 
 export const SmallText = styled.h4`
+    font-family: Inter, sans-serif;
     font-size: 1.25em;
     line-height: 1.2em;
     font-weight: 300;    
