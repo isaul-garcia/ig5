@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2dbb4cf9.css",
-    "main.js": "/static/js/main.394c34da.js",
+    "main.js": "/static/js/main.5726764f.js",
     "static/media/aq006.jpg": "/static/media/aq006.e4fd131315f683b5dfbc.jpg",
     "static/media/aq007.jpg": "/static/media/aq007.bb6f6e9b5747e59a1f7a.jpg",
     "static/media/ba3.png": "/static/media/ba3.49022c5d48be1c78cfb6.png",
@@ -128,17 +128,17 @@
     "static/media/anaquel_logo_v2_long.svg": "/static/media/anaquel_logo_v2_long.cb343e94355167a788a56f8f58937e7d.svg",
     "static/media/ig-gray.svg": "/static/media/ig-gray.e342ec0c6ba26d9a9cf3ce27a6cd85e7.svg",
     "static/media/digiden-type.svg": "/static/media/digiden-type.48a7dd86098d415cca468a36f2ccd8c2.svg",
+    "index.html": "/index.html",
     "static/media/anaquel_logo_v2.svg": "/static/media/anaquel_logo_v2.bbeb6411db01a8fb50f3c75ff0cec5e8.svg",
     "static/media/tao1.svg": "/static/media/tao1.2c218e5dd89061cd66deb69a71c0d2ba.svg",
-    "index.html": "/index.html",
     "static/media/tao2.svg": "/static/media/tao2.9b0faeb0a72c9ea4409d7e9ee34f22a4.svg",
     "static/media/sep.svg": "/static/media/sep.5acf3a98849c867e4c66b57a8ad8c47a.svg",
     "static/media/tao3.svg": "/static/media/tao3.3a59894028ca59c620cc72318f29973d.svg",
     "main.2dbb4cf9.css.map": "/static/css/main.2dbb4cf9.css.map",
-    "main.394c34da.js.map": "/static/js/main.394c34da.js.map"
+    "main.5726764f.js.map": "/static/js/main.5726764f.js.map"
   },
   "entrypoints": [
     "static/css/main.2dbb4cf9.css",
-    "static/js/main.394c34da.js"
+    "static/js/main.5726764f.js"
   ]
 }
