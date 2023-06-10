@@ -94,7 +94,7 @@ export const SmallText = styled.h5`
     transition: all .2s ease-in-out;
 
     @media screen and (max-width: 1500px) {
-        font-size: 1.19em;
+        font-size: 1.09rem;
     }
 
     @media screen and (max-width: 991px) {
@@ -114,7 +114,8 @@ export const LargeText = styled.h1`
     transition: all .2s ease-in-out;
 
     @media screen and (max-width: 1500px) {
-        font-size: 5.5em;
+        font-size: 4.92em;
+        line-height: 0.85em;
     }
 
     @media screen and (max-width: 991px) {
@@ -135,10 +136,14 @@ export const AboutContainer = styled.div`
     bottom: 40px;
     pointer-events: none;
 
+    @media screen and (max-width: 1500px) {
+        width: 85%;
+    }
+
     @media screen and (max-width: 991px) {
         bottom: 36px;
     }
-
+    
     @media screen and (max-width: 700px) {
         bottom: 22px;
     }
@@ -164,7 +169,7 @@ export const SubText = styled.h4`
     color: #bcbcbc;    
     
     @media screen and (max-width: 1500px) {
-        font-size: 1.5em;
+        font-size: 1.35em;
     }
 
     @media screen and (max-width: 991px) {

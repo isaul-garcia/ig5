@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react';
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React from 'react';
+import { motion } from "framer-motion";
 
 const cardVariants = {
-    visible: { opacity: 1, scaleX: 1, y: 0, transition: { duration: 0.5 } },
-    hidden: { opacity: 0, scaleX: 1, y: -12 }
+    visible: { opacity: 1, transition: { duration: 0.5 } },
+    hidden: { opacity: 0 }
 };
 
 const Card = (props) => {

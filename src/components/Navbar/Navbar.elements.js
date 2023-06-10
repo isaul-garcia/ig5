@@ -65,6 +65,8 @@ export const NavLink = styled(Link)`
     display: inline-block;
     margin-right: ${({ last }) => (last ? '0px' : '10px')};
     pointer-events: all;
+    min-height: 37px;
+    max-height: 37px;
 
     &:hover{
         color: #222222;
@@ -72,7 +74,7 @@ export const NavLink = styled(Link)`
     }
 
     @media screen and (max-width: 1500px) {
-        font-size: 0.9em;
+        font-size: 1.1em;
         padding: 7px 11px;
     }
 
@@ -92,7 +94,7 @@ export const NavLink = styled(Link)`
 export const NavButton = styled(Link)`
     border-radius: ${rad};
     background-color: #222;
-    padding: 6px 9px;
+    padding: 5px 9px;
     transition: all .2s ease-in-out;
     cursor: pointer;    
     vertical-align: top;
@@ -100,44 +102,31 @@ export const NavButton = styled(Link)`
     pointer-events: all;
     right: 0;
     position: absolute;
-
-    @media screen and (max-width: 991px) {
-        padding: 11px 15px;
-    }
-
-    @media screen and (max-width: 700px) {
-        padding: 6px 9px;
-    }
+    min-height: 37px;
+    max-height: 37px;
 `
 
 export const IconWrapper = styled(Link)`
-    height: 100%;
-    width: auto;
     transition: all .2s ease-in-out;
     text-decoration: none;
     position: relative;
     margin-right: 10px;
     background-color: #222222;
-    padding: 9px;
+    padding: 0.6em 0.6em 0.3em 0.6em;
     border-radius: ${rad};
     position: relative;
     display: inline-block;
     vertical-align: top;
     pointer-events: all;
+    min-height: 37px;
+    max-height: 37px;
 
     &:hover{
         background-color: #44ccee;
     }
 
-    @media screen and (max-width: 1500px) {
-        padding: 0.48em;
-        height: 31px;
-    }
-
     @media screen and (max-width: 991px) {
-        height: 48px;
         margin-right: 0px;
-        padding: 11px 7px;
         
         &:hover{
             background-color: #222222;
@@ -145,9 +134,7 @@ export const IconWrapper = styled(Link)`
     }
 
     @media screen and (max-width: 700px) {
-        height: 38px;
         margin-right: 0px;
-        padding: 7px 9px;
         
         &:hover{
             background-color: #222222;
@@ -156,8 +143,8 @@ export const IconWrapper = styled(Link)`
 `
 
 export const IGIcon = styled(IGL)`
-    height: 100%;
-    width: 100%;
+    height: 17px;
+    width: 48px;
     position: relative;
     display: inline-block;    
     fill: #bcbcbc;
@@ -167,17 +154,22 @@ export const IGIcon = styled(IGL)`
         fill: #222;
     }
 
-    @media screen and (max-width: 991px) {
-        width: 76px; 
+    @media screen and (max-width: 1500px) {
+        height: 18px;
+        width: 50px;
 
         ${IconWrapper}:hover &  {
             fill: #bcbcbc;
         }
     }
 
-    @media screen and (max-width: 700px) {
-        width: 56px; 
+    @media screen and (max-width: 991px) {
+        ${IconWrapper}:hover &  {
+            fill: #bcbcbc;
+        }
+    }
 
+    @media screen and (max-width: 700px) {
         ${IconWrapper}:hover &  {
             fill: #bcbcbc;
         }
@@ -241,6 +233,10 @@ export const MagicButton = styled.span`
     vertical-align: top;
     display: inline-block;
     pointer-events: all;
+    border-radius: 0.7em;
+
+    min-height: 37px;
+    max-height: 37px;
 
     @media screen and (max-width: 991px) {
         display: none;
@@ -256,8 +252,4 @@ export const MiniText = styled.span`
     transition: all .2s ease-in-out;
     cursor: default;    
     display: inline-block;
-
-    @media screen and (max-width: 1500px) {
-        font-size: 0.65em;
-    }
 `
