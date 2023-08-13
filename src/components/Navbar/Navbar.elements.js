@@ -243,7 +243,7 @@ export const MagicButton = styled.span`
     }
 `
 
-export const MiniText = styled.span`
+export const MiniText = styled.marquee`
     font-size: 0.75em;
     font-weight: 500;
     text-decoration: none;
@@ -252,4 +252,5 @@ export const MiniText = styled.span`
     transition: all .2s ease-in-out;
     cursor: default;    
     display: inline-block;
+    width: 140px;
 `
