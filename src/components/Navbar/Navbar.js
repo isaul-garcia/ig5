@@ -72,7 +72,7 @@ const Navbar = () => {
                                 <IGIcon />
                             </IconWrapper>
                             <MagicButton last={+true} to="/more" onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" }); }}>
-                                <MiniText>hello</MiniText>
+                                <MiniText scrollamount="4">hello</MiniText>
                             </MagicButton>
 
                             {button ? (
